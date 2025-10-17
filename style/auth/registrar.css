@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-registrar {
+    width: 50rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.registrar-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.registrar-input label {
+    font-size: 1.7rem;
+}
+
+.registrar-input input {
+    padding: 1.3rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #F0F0F0;
+}
+
+.registrar-input input:focus {
+    outline: none;
+}
+
+.button-submit {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    background-color: #1f75eb;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.button-submit:hover {
+    background-color: #fff;
+    color: #1f75eb;
+    border: 1px #1f75eb solid;
+    font-weight: bold;
+}
+
+.own-account {
+    text-decoration: none;
+    color: #2162a1;
+    font-size: 1.5rem;
+}
+
+.termo {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    transition: 0.25s;
+}
+
+.own-account:hover {
+    color: #000;
+    text-decoration: underline;
+}
