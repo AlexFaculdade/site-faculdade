@@ -1,10 +1,12 @@
+// Classe para o objeto do user
 class User {
     nome
     email
     senha
-    constructor(name, email, senha) {
-        this.name = name
+    constructor(nome, email, senha) {
+        this.nome = nome
         this.email = email
         this.senha = senha
     }
+
 }

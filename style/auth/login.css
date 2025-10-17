@@ -85,3 +85,10 @@ body {
     color: #000;
     text-decoration: underline;
 }
+
+#erro {
+    display: none;
+    color: red;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
