@@ -1,0 +1,2 @@
+-- paginacao.js
+Aqui é onde fica a lógica de paginação da página comprar.html. Basicamente, ele faz a paginação de acordo com os filtros escolhidos pelo user na sidebar da esquerda ou se não houver, ele simplesmente faz a paginação da database inteira.

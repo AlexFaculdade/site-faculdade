@@ -1,26 +1,13 @@
 main {
     width: 100%;
-    padding: 10rem 40rem 5rem 15rem;
+    padding: 0rem 15rem 5rem 15rem;
 }
 
 .comprar-grid {
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 30% 70%;
     column-gap: 5rem;
     width: 100%;
-}
-
-.filter-fixed {
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    min-height: 100vh;
-
-    position: sticky;
-}
-
-.container-filter {
-    
-    width: 100%;
-    padding: 1rem;   
 }
 
 .grid-cards-car {
@@ -29,6 +16,7 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 2rem;
     column-gap: 2rem;
+    margin-top: 5rem;
 }
 
 .card-car {
@@ -88,4 +76,25 @@ main {
     background-color: #fff;
     border: 1px #000 solid;
     color: #000;
+}
+
+
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;   
+}
+
+#pagination-controls button {
+    padding: 1rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#pagination-controls button:hover {
+    background-color: #000;
+    color: #fff;
 }

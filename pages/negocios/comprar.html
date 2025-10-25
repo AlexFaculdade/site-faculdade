@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../style/home/home.css">
     <link rel="stylesheet" href="../../style/pages/comprar/comprar.css">
     <link rel="stylesheet" href="../../style/home/footer.css">
+    <link rel="stylesheet" href="../../style/pages/comprar/sidebar.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,68 +55,142 @@
         <section class="comprar-grid">
             <div class="filter-fixed">
                 <div class="container-filter">
-                    <div>
-                        <h2>Localização</h2>
-                        <input type="Digite seu estado ou cidade">
+                    <div class="container-filter--pattern">
+                        <div class="filter-container">
+                            <h2>Localização</h2>
+                            <div class="filtro" id="filtro">
+                                <i class="fa-solid fa-filter"></i>
+                                <p>Aplicar filtros</p>
+                            </div>
+                        </div>
+                        
+                        <div class="container-search">
+                            <input id="localizacao" type="text" placeholder="Digite seu estado ou cidade">
+                            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                        </div>
                     </div>
-                    <div>
+                    <div class="container-filter--pattern">
                         <h2>Marca</h2>
-                        <div>
-    
+                        <div class="container-marcas">
+                            <div class="container-marcas--individual">
+                                <div>
+                                    <img src="../../img/comprar/marcas/chevrolet.webp" alt="">
+                                </div>
+                                <p>Chevrolet</p>
+                            </div>
+                            <div class="container-marcas--individual">
+                                <div>
+                                    <img src="../../img/comprar/marcas/ford.webp" alt="">
+                                </div>
+                                
+                                <p>Ford</p>
+                            </div>
+                            <div class="container-marcas--individual">
+                                <div>
+                                    <img src="../../img/comprar/marcas/honda.webp" alt="">
+                                </div>
+                                <p>Honda</p>
+                            </div>
+                            <div class="container-marcas--individual">
+                                <div>
+                                    <img src="../../img/comprar/marcas/hyundai.webp" alt="">
+                                </div>
+                                
+                                <p>Hyundai</p>
+                            </div>
+                            <div class="container-marcas--individual">
+                                <div>
+                                    <img src="../../img/comprar/marcas/toyota.webp" alt="">
+                                </div>
+                                
+                                <p>Toyota</p>
+                            </div>
+                            <div class="container-marcas--individual">
+                                <div>
+                                    <img src="../../img/comprar/marcas/volkswagen.webp" alt="">
+                                </div>
+                                <p>Volkswagen</p>
+                            </div>
+                            <div class="container-marcas--individual">
+                                <div>
+                                    <img src="../../img/comprar/marcas/renault.webp" alt="">
+                                </div>
+                                <p>Renault</p>
+                            </div>
+                            <div class="container-marcas--individual">
+                                <div>
+                                    <img src="../../img/comprar/marcas/fiat.webp" alt="">
+                                </div>
+                                <p>Fiat</p>
+                            </div>
+                            <div class="container-marcas--individual">
+                                <div>
+                                     <img src="../../img/comprar/marcas/mitsubishi.webp" alt="">
+                                </div>
+                                <p>Mitsubishi</p>
+                            </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="container-filter--pattern">
                         <h2>Ano</h2>
-                        <div>
+                        <div class="container-interval--wrapper">
                             <p>Escolha um intervalo</p>
-                            <input type="text" placeholder="Ano mínimo">
-                            <input type="text" placeholder="Ano máximo">
+                            <div class="container-interval">
+                                <input id="minimoAno" type="text" placeholder="Ano mínimo">
+                                <input id="maximoAno" type="text" placeholder="Ano máximo">
+                            </div>
                         </div>
-                        <p>Escolha por ano específico</p>
-                        <div>
-                            <p>2025</p>
-                            <p>2024</p>
-                            <p>2023</p>
-                            <p>2022</p>
-                            <p>2021</p>
-                            <p>2020</p>
-                            <p>2019</p>
-                            <p>2018</p>
-                            <p>2017</p>
-                            <p>2016</p>
-                            <p>2015</p>
+                        <p class="paragraph-specific">Escolha por ano específico</p>
+                        <div class="container-specific">
+                            <p class="anoEspecifico">2025</p>
+                            <p class="anoEspecifico">2024</p>
+                            <p class="anoEspecifico">2023</p>
+                            <p class="anoEspecifico">2022</p>
+                            <p class="anoEspecifico">2021</p>
+                            <p class="anoEspecifico">2020</p>
+                            <p class="anoEspecifico">2019</p>
+                            <p class="anoEspecifico">2018</p>
+                            <p class="anoEspecifico">2017</p>
+                            <p class="anoEspecifico">2016</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="container-filter--pattern">
                         <h2>Preço</h2>
-                        <p>Escolha um Intervalo</p>
-                        <div>
-                            <input type="text" placeholder="Preço mínimo">
-                            <input type="text" placeholder="Preço máximo">
+                        <div class="container-interval--wrapper">
+                            <p>Escolha um intervalo</p>
+                            <div class="container-interval">
+                                <input id="precoMinimo" type="text" placeholder="Preço mínimo">
+                                <input id="precoMaximo" type="text" placeholder="Preço máximo">
+                            </div>
                         </div>
-                        <p>Escolha uma faixa de preço</p>
-                        <div>
-                            <p>Até 60 mil</p>
-                            <p>Até 70 mil</p>
-                            <p>Até 80 mil</p>
-                            <p>Até 90 mil</p>
-                            <p>Até 100 mil</p>
-                            <p>Até 150 mil</p>
-                            <p>Até 200 mil</p>
-                        </div>
-                    </div>
-                    <div>
-                        <h2>Quilometragem</h2>
-                        <div>
-                            <input type="text" placeholder="Km mínimo">
-                            <input type="text" placeholder="Km máximo">
+                        <p class="paragraph-specific">Escolha uma faixa de preço</p>
+                        <div class="container-specific--price">
+                            <p class="precoEspecifico">Até 60 mil</p>
+                            <p class="precoEspecifico">Até 70 mil</p>
+                            <p class="precoEspecifico">Até 80 mil</p>
+                            <p class="precoEspecifico">Até 90 mil</p>
+                            <p class="precoEspecifico">Até 100 mil</p>
+                            <p class="precoEspecifico">Até 150 mil</p>
+                            <p class="precoEspecifico">Até 200 mil</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="container-filter--pattern">
+                        <div class="container-interval--wrapper">
+                            <h3>Quilometragem</h3>
+                            <div class="container-interval">
+                                <input id="QuilometragemMinima" type="text" placeholder="Km mínimo">
+                                <input id="QuilometragemMaxima" type="text" placeholder="Km máximo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-filter--pattern">
                         <h2>Câmbio</h2>
-                        <select name="" id=""></select>
+                        <select name="" id="select-cambio">
+                            <option value="valor1">Manual</option>
+                            <option value="valor2">Automático</option>
+                        </select>
                     </div>
-                    <div>
+                    <div class="container-filter--pattern container-filter--checkbox">
                         <h2>Cor</h2>
                         <div>
                             <input type="checkbox">
@@ -147,7 +222,7 @@
                         </div>
     
                     </div>
-                    <div>
+                    <div class="container-filter--pattern container-filter--checkbox">
                         <h2>Carroceria</h2>
                         <div>
                             <input type="checkbox">
@@ -170,7 +245,7 @@
                             <p>SUV</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="container-filter--pattern container-filter--checkbox">
                         <h2>Portas</h2>
                         <div>
                             <input type="checkbox">
@@ -184,10 +259,6 @@
                             <input type="checkbox">
                             <p>4</p>
                         </div>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <p>2</p>
                     </div>
                 </div>
             </div>
@@ -218,332 +289,8 @@
                         </div>
                         
                     </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card-car">
-                        <div class="card-car--image">
-                            <img src="../../img/comprar/MITSUBISHI-ECLIPSE.webp" alt="">
-                        </div>
-                        <div class="card-car--content">
-                            <div>
-                                <h2>MITSUBISHI ECLIPSE CROSS</h2>
-                            </div>
-                            <p>1.5 Mivec Turbo Gasolina Rush Cvt</p>
-                            <div class="card-car--content--info">
-                                <div>
-                                    <i class="fa-solid fa-calendar"></i>
-                                <p>2011/2011</p> 
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-gauge"></i>
-                                 <p>0 Km</p>
-                                </div>
-                                
-                            </div>
-                            <h2>R$ 173.888</h2>
-                            <button>Ver Parcelas</button>
-                        </div>
-                        
-                    </div>
                 </div>
+                <div id="pagination-controls"></div>
             </div>
         </section>
     </main>
@@ -608,12 +355,14 @@
         <p class="footer-copyright">&copy;2024-2025 Motors Hub. Todos os direitos Reservados</p>
     </footer>
     <script src="https://kit.fontawesome.com/f2a6af5805.js" crossorigin="anonymous"></script>
-    <script src="./script/Database.js"></script>
-    <script src="./script/util/util.js"></script>
-    <script src="./script/verificarUserLogado.js"></script>
-    <script src="./script/pages/home/HomeAlteravel.js"></script>
-    <script src="./script/pages/loadHomeInfo.js"></script>
-    <script src="./script/pages/home/carrossel.js"></script>
+    <script src="../../script/Database.js"></script>
+    <script src="../../script/util/util.js"></script>
+    <!--<script src="../../script/verificarUserLogado.js"></script>!-->
+    <script src="../../script/util/Filter.js"></script>
+    <script src="../../script/pages/comprar/FilterEvents.js"></script>
+    <script src="../../script/pages/comprar/comprar.js"></script>
+    <script src="../../script/model/Anuncio.js"></script>
+    <script src="../../script/model/Car.js"></script>
+    <script src="../../script/pages/comprar/paginacao.js"></script>
 </body>
-
 </html>

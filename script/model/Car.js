@@ -7,7 +7,9 @@ class Car {
     anoModelo
     quilometragem
     motor
-    constructor(marcam, modelo, cor, chassi, anoFabricacao, anoModelo, quilometragem, motor) {
+    valor
+    cambio
+    constructor(marca, modelo, cor, chassi, anoFabricacao, anoModelo, quilometragem, motor, valor, cambio) {
         this.marca = marca
         this.modelo = modelo
         this.cor = cor
@@ -16,5 +18,7 @@ class Car {
         this.anoModelo = anoModelo
         this.quilometragem = quilometragem
         this.motor = motor
+        this.valor = valor
+        this.cambio = cambio
     }
 }
