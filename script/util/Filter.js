@@ -1,12 +1,22 @@
 class Filter {
     static filterLocalizacao(anuncios, localizacao) {
         // Retorna os anúncios que correspondem à localização fornecida (case insensitive)
+        if(localizacao == '') {
+            return anuncios
+        }
         return anuncios.filter(anuncio => anuncio.car.modelo.toLowerCase().includes(localizacao.toLowerCase()));
     }
 
-    static filterMarca(anuncios, marca) {
+    static filterMarca(anuncios, marcasSelecionadas) {
         // Retorna os anúncios que correspondem à marca fornecida (case insensitive)
-        return anuncios.filter(anuncio => anuncio.car.marca.toLowerCase().includes(marca.toLowerCase()));
+        if (!marcasSelecionadas || marcasSelecionadas.length === 0) return anuncios; // Retorna tudo se a lista de filtros estiver vazia
+        const marcasEmMinusculo = marcasSelecionadas.map(marca => marca.toLowerCase());
+
+        // Filtra os anúncios. O anúncio será mantido se a sua marca
+        // estiver INCLUÍDA no array de marcasEmMinusculo.
+        return anuncios.filter(anuncio => 
+            marcasEmMinusculo.includes(anuncio.car.marca.toLowerCase())
+        );
     }
 
     static filterIntervaloAno(anuncios, anoInicio, anoFim){

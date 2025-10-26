@@ -192,3 +192,17 @@ main {
 .container-filter--checkbox div input {
     transform: scale(1.5);
 }
+
+
+
+/* estilo para mostrar que a marca foi selecionada */
+
+.container-marcas--individual.selecionada {
+    border: 2px solid #007bff;
+    background-color: #e9f5ff;     
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); 
+}
+
+.container-marcas--individual:hover {
+    background-color: #f0f0f0;
+}
