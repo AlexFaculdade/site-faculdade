@@ -21,6 +21,11 @@ class Filter {
 
     static filterIntervaloAno(anuncios, anoInicio, anoFim){
         // Retorna os anúncios que estão dentro do intervalo de ano fornecido
+        if(anoInicio == "" && anoFim != "") {
+            return anuncios.filter(anuncio => anuncio.car.anoFabricacao <= anoFim);
+        } else if(anoFim == "" && anoInicio != "") {
+            return anuncios.filter(anuncio => anuncio.car.anoFabricacao >= anoInicio);
+        }
         return anuncios.filter(anuncio => anuncio.car.anoFabricacao >= anoInicio && anuncio.car.anoFabricacao <= anoFim);
     }
 
@@ -31,6 +36,11 @@ class Filter {
 
     static filterIntervaloPreco(anuncios, precoMinimo, precoMaximo) {
         // Retorna os anúncios que estão dentro do intervalo de preço fornecido
+        if(precoMinimo == "" && precoMaximo != "") {
+            return anuncios.filter(anuncio => anuncio.car.valor <= precoMaximo);
+        } else if(precoMaximo == "" && precoMinimo != "") {
+            return anuncios.filter(anuncio => anuncio.car.valor >= precoMinimo);
+        }
         return anuncios.filter(anuncio => anuncio.car.valor >= precoMinimo && anuncio.car.valor <= precoMaximo);
     }
 
@@ -41,6 +51,11 @@ class Filter {
 
     static filterIntervaloQuilometragem(anuncios, quilometragemMinima, quilometragemMaxima) {
         // Retorna os anúncios no intervalo da quilometragem fornecida
+        if(quilometragemMinima == "" && quilometragemMaxima != "") {
+            return anuncios.filter(anuncio => anuncio.car.quilometragem <= quilometragemMaxima);
+        } else if(quilometragemMaxima == "" && quilometragemMinima != "") {
+            return anuncios.filter(anuncio => anuncio.car.quilometragem >= quilometragemMinima);
+        }
         return anuncios.filter(anuncio => anuncio.car.quilometragem >= quilometragemMinima && anuncio.car.quilometragem <= quilometragemMaxima)
     }
 
@@ -49,5 +64,14 @@ class Filter {
         return anuncios.filter(anuncio => anuncio.car.cambio === cambio)
     }
 
-    static filterCor
+    static filterCor(anuncios, coresSelecionadas) {
+        if (!coresSelecionadas || coresSelecionadas.length === 0) return anuncios; // Retorna tudo se a lista de filtros estiver vazia
+        const coresSelecionadasMinsculo = coresSelecionadas.map(cor => cor.toLowerCase());
+
+        // Filtra os anúncios. O anúncio será mantido se a sua marca
+        // estiver INCLUÍDA no array de marcasEmMinusculo.
+        return anuncios.filter(anuncio => 
+            coresSelecionadasMinsculo.includes(anuncio.car.cor.toLowerCase())
+        );
+    } 
 }

@@ -34,4 +34,19 @@ class Util {
         if(senha !== confirmaSenha) return false
         return true
     }
+
+    static extrairValorInputPreco(texto) {
+        if (texto.toLowerCase().includes('mil')) {
+        // Remove 'Até', 'mil', e espaços, e converte para número
+        const num = texto.toLowerCase().replace('até', '').replace('mil', '').trim();
+        return parseInt(num) * 1000; 
+        }
+        return null;
+    }
+
+    static removerSelecaoEspecifica(elementosNodeList) {
+        elementosNodeList.forEach(elemento => {
+            elemento.classList.remove("selecionada")
+        })
+    }
 }
