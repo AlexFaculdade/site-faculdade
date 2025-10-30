@@ -9,7 +9,19 @@ class Car {
     motor
     valor
     cambio
-    constructor(marca, modelo, cor, chassi, anoFabricacao, anoModelo, quilometragem, motor, valor, cambio) {
+    airbag
+    freios
+    travasEletricas
+    licenciado
+    aceitaTroca
+    ipvaPago
+    tetoSolar
+    vidrosEletricos
+    arCondicionado
+    bancosMaterial
+    alarme
+    retrovisorEletrico
+    constructor(marca, modelo, cor, chassi, anoFabricacao, anoModelo, quilometragem, motor, valor, cambio,airbag, freios, travasEletricas, licenciado, aceitaTroca, ipvaPago, tetoSolar, vidrosEletricos, arCondicionado, bancosMaterial,alarme) {
         this.marca = marca
         this.modelo = modelo
         this.cor = cor
@@ -20,5 +32,17 @@ class Car {
         this.motor = motor
         this.valor = valor
         this.cambio = cambio
+        this.airbag = airbag
+        this.freios = freios
+        this.travasEletricas = travasEletricas
+        this.licenciado = licenciado
+        this.aceitaTroca = aceitaTroca
+        this.ipvaPago = ipvaPago
+        this.tetoSolar = tetoSolar
+        this.vidrosEletricos = vidrosEletricos
+        this.arCondicionado = arCondicionado
+        this.bancosMaterial = bancosMaterial
+        this.alarme = alarme
+        this.retrovisorEletrico = retrovisorEletrico
     }
 }

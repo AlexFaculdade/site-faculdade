@@ -13,6 +13,7 @@ class PaginaProdutoModel {
     static cambio = document.getElementById("cambio-carro")
     static combustivel = document.getElementById("combustivel-carro")
     static blindado = document.getElementById("blindado-carro")
+    static imgs = document.querySelectorAll(".buy-image")
 
 
     static renderizarCarroPagina() {
@@ -32,6 +33,10 @@ class PaginaProdutoModel {
         PaginaProdutoModel.cambio.textContent =  anuncio.car.cambio
         PaginaProdutoModel.combustivel.textContent =  "gasolina"
         PaginaProdutoModel.blindado.textContent = "sim"
+        PaginaProdutoModel.imgs[0].src = anuncio.imagens[0] || "../../img/comprar/MITSUBISHI-ECLIPSE.webp"
+        PaginaProdutoModel.imgs[1].src = anuncio.imagens[1] || "../../img/comprar/MITSUBISHI-ECLIPSE.webp"
+        PaginaProdutoModel.imgs[2].src = anuncio.imagens[2] || "../../img/comprar/MITSUBISHI-ECLIPSE.webp"
+        PaginaProdutoModel.imgs[3].src = anuncio.imagens[3] || "../../img/comprar/MITSUBISHI-ECLIPSE.webp"
 
     }
 

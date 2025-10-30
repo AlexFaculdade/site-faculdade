@@ -2,7 +2,7 @@ class Anuncio {
     id
     car
     price
-    imgens
+    imagens
     titulo
     localizacao
     constructor(car, price, imagens, titulo, localizacao) {

@@ -15,7 +15,16 @@ const listaDeCarrosParaTeste = [
 
 for(let i = 0; i < listaDeCarrosParaTeste.length; i++) {
     try {
-        let anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, "","",["São Paulo","São Paulo"]);
+        let anuncio;
+        if(i == 1) {
+            anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, "","",["São Paulo","São Paulo"]);
+        } else {
+            anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                "../../../img/comprar/carros/rs6/audi-rs6-4.0-v8-tfsi-mhev-avant-performance-tiptronic-wmimagem10362353129.jpg",
+                "../../../img/comprar/carros/rs6/audi-rs6-4.0-v8-tfsi-mhev-avant-performance-tiptronic-wmimagem10362481340.jpg",
+                "../../../img/comprar/carros/rs6/audi-rs6-4.0-v8-tfsi-mhev-avant-performance-tiptronic-wmimagem10362570020.jpg",
+                "../../../img/comprar/carros/rs6/audi-rs6-4.0-v8-tfsi-mhev-avant-performance-tiptronic-wmimagem10362746632.jpg"],"",["São Paulo","São Paulo"]);
+        }   
         Database.addAnuncio(anuncio);
     } catch(err) {
         console.error("Erro ao criar anúncio de teste:", err);
