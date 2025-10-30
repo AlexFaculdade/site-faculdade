@@ -13,14 +13,14 @@ const listaDeCarrosParaTeste = [
     new Car("Hyundai", "Creta", "Preto", "9BHZZZ...", 2018, 2019, 52000, "2.0 Flex", 85000, "Automático"),
 ]
 
-// for(let i = 0; i < listaDeCarrosParaTeste.length; i++) {
-//     try {
-//         let anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, "","",["São Paulo","São Paulo"]);
-//         Database.addAnuncio(anuncio);
-//     } catch(err) {
-//         console.error("Erro ao criar anúncio de teste:", err);
-//     }
-// }
+for(let i = 0; i < listaDeCarrosParaTeste.length; i++) {
+    try {
+        let anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, "","",["São Paulo","São Paulo"]);
+        Database.addAnuncio(anuncio);
+    } catch(err) {
+        console.error("Erro ao criar anúncio de teste:", err);
+    }
+}
 
 const itensPorPagina = 60
 let paginaAtual = 1
@@ -34,7 +34,7 @@ function renderizarCarroCard(anuncio) {
     const precoFormatado = anuncio.car.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     // cria o formato do card
     return `
-        <div class="card-car">
+        <div class="card-car" onclick="Anuncio.cardAnuncio('${anuncio.id}')">
             <div class="card-car--image">
                 <img src="${"https://neonseguros.com.br/wp-content/uploads/2023/10/86a6220be134881c1ddcf2b43bc542df299e62ec-edited.png"}" alt="${anuncio.car.marca} ${anuncio.car.modelo}">
             </div>

@@ -13,4 +13,9 @@ class Anuncio {
         this.titulo = titulo
         this.localizacao = localizacao
     }
+
+    static cardAnuncio(id) {
+        Database.setAnuncioId(id)
+        window.location.href="./paginaproduto.html"
+    }
 }

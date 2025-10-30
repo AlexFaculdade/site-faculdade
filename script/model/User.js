@@ -8,5 +8,4 @@ class User {
         this.email = email
         this.senha = senha
     }
-
 }

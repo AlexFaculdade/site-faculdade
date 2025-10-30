@@ -2,6 +2,7 @@ const USERS = "motorhub_users" // Cria a referência para salvar o objeto dos us
 const ANUNCIO = "motorhub_anuncios" // Cria a referência para salvar o objeto dos carros no localStorage
 const USER_LOGGED = "motorhub_user_logged" // Cria a referência para salvar o user atual logado no localStorage
 const ANUNCIO_ID = "motorhub_anuncios_id"
+const ANUNCIO_CLICADO = "motorhub_anuncio_clicado"
 // Uso de hashmap para salvar os usuários é em decorrência da sua velocidade ser O(1) para busca. 
 
 // Busca todos os users do localStorage, se houver, converte para objeto (quando armazenado no localStorage, é armazenado
@@ -9,6 +10,11 @@ const ANUNCIO_ID = "motorhub_anuncios_id"
 function getFromStorage(key) {
     let keyData = localStorage.getItem(key)
     return keyData ? JSON.parse(keyData) : {}
+}
+
+function getFromStorageAnuncioClicado() {
+     let keyData = localStorage.getItem(ANUNCIO_CLICADO)
+    return keyData ? JSON.parse(keyData) : null
 }
 
 // Função para salvar um user no localStorage. Antes de ser salvo ele é convertido em string
@@ -22,13 +28,15 @@ class Database {
     // o que evita perde de dados quando houver reload da página
     static anuncios =  getFromStorage(ANUNCIO)
 
+    static anuncioClicado = getFromStorageAnuncioClicado()
+
     // method para adicionar um user (tanto no hashmap, quanto no localStorage) e então loga o user
     static addUser(user) {
         Database.users[user.email] = user
         saveToStorage(Database.users, USERS)
         Database.login(user)
     }
-
+    
     static addAnuncio(anuncio) {
         Database.anuncios[anuncio.id] = anuncio
         saveToStorage(Database.anuncios, ANUNCIO)
@@ -39,6 +47,11 @@ class Database {
         currentId++
         localStorage.setItem(ANUNCIO_ID, currentId.toString())
         return currentId
+    }
+
+    static setAnuncioId(id) {
+        let anuncioHash = Database.anuncios[id]
+        localStorage.setItem(ANUNCIO_CLICADO, JSON.stringify(anuncioHash))
     }
 
     // method para buscar no hashmap. Como a chave do hashmap é o email, é só passar o email para o method que ele busca
