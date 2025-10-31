@@ -1,30 +1,134 @@
 const listaDeCarrosParaTeste = [
-    new Car("232Volkswagen", "Gol", "Prata", "9BWZZZ...", 2018, 2019, 45000, "1.0 MPI", 55000, "Manual"),
-    new Car("2323Chevrolet", "Onix Plus", "Branco", "9BRZZZ...", 2022, 2022, 12500, "1.0 Turbo", 92000, "Automático"),
-    new Car("2323Hyundai", "HB20", "Vermelho", "9BHZZZ...", 2017, 2018, 68000, "1.6 Flex", 48500, "Manual"),
-    new Car("232Toyota", "Corolla", "Preto", "9TCZZZ...", 2021, 2022, 22000, "2.0 VVTi", 135000, "Automático"),
-    new Car("Fiat", "Argo", "Azul", "9FZBZZ...", 2020, 2020, 31000, "1.3 Firefly", 61900, "Manual"),
-    new Car("Honda", "HR-V", "Cinza", "93HSY...", 2019, 2019, 38000, "1.8 FlexOne", 105000, "Automático"),
-    new Car("Ford", "Ka", "Branco", "9BFZZZ...", 2015, 2015, 91000, "1.0 TiVCT", 35000, "Manual"),
-    new Car("Renault", "Kwid", "Laranja", "93RZB...", 2023, 2023, 5000, "1.0 SCe", 59900, "Manual"),
-    new Car("Volkswagen", "T-Cross", "Verde", "9BWZZZ...", 2022, 2023, 18000, "1.4 TSI", 128000, "Automático"),
-    new Car("Chevrolet", "Tracker", "Azul", "9BRZZZ...", 2021, 2021, 29000, "1.2 Turbo", 110500, "Automático"),
-    new Car("Hyundai", "Creta", "Preto", "9BHZZZ...", 2018, 2019, 52000, "2.0 Flex", 85000, "Automático"),
-    new Car("Hyundai", "Creta", "Preto", "9BHZZZ...", 2018, 2019, 52000, "2.0 Flex", 85000, "Automático"),
-]
+    new Car("Mitsubishi", "Eclipse", "Azul", "93YZZZ765BT014588", 2019, 2020, 50000, "1.5 Turbo", 125000, "Automático", true, "ABS", true, true, true, true, true, true, true, "Couro", true, true),
+
+    new Car("BMW", "M6", "Preto", "WBSZZZ987HT034112", 2021, 2022, 18000, "4.4 V8 Twin Turbo", 750000, "Automático", true, "ABS", true, true, true, true, true, true, true, "Couro", true, true),
+
+    new Car("Hyundai", "HB20", "Branco", "9BWZZZ377VT004251", 2020, 2021, 45000, "1.6 Flex", 65000, "Automático", true, "ABS", true, true, true, false, true, true, true, "Tecido", true, true),
+
+    new Car("Chevrolet", "Astra", "Prata", "9BGZZZ123ST065487", 2011, 2012, 120000, "2.0 Flex", 35000, "Manual", true, "ABS", true, true, true, false, false, false, true, "Tecido", true, false),
+
+    new Car("Toyota", "Corolla", "Branco", "9BRZZZ377JT054871", 2020, 2021, 38000, "2.0 Flex", 115000, "Automático", true, "ABS", true, true, true, true, true, true, true, "Couro", true, true),
+
+    new Car("Renault", "Duster", "Prata", "93YZZZ765BT014587", 2019, 2020, 60000, "1.6 Flex", 78000, "Manual", true, "ABS", true, true, true, false, true, true, true, "Tecido", true, false),
+
+    new Car("Ford", "Ka", "Vermelho", "9FDZZZ347FT008911", 2012, 2012, 95000, "1.0 Flex", 29000, "Manual", true, "ABS", true, true, false, false, false, false, true, "Tecido", true, false),
+
+    new Car("Volkswagen", "Golf GTI", "Vermelho", "WVWZZZ1KZPW456789", 2019, 2020, 35000, "2.0 Turbo", 180000, "Automático", true, "ABS", true, true, true, true, true, true, true, "Couro", true, true),
+
+    new Car("Fiat", "Cronos", "Cinza", "9BDZZZ1GZKW123456", 2022, 2023, 25000, "1.3 Flex", 85000, "Manual", true, "ABS", true, true, true, true, true, true, true, "Tecido", true, true),
+
+    new Car("BMW", "M6", "Azul", "WBSZZZ987HT034113", 2022, 2023, 15000, "4.4 V8 Twin Turbo", 780000, "Automático", true, "ABS", true, true, true, true, true, true, true, "Couro", true, true),
+
+    new Car("Mitsubishi", "Eclipse", "Vermelho", "93YZZZ765BT014599", 2020, 2021, 42000, "1.5 Turbo", 130000, "Automático", true, "ABS", true, true, true, true, true, true, true, "Couro", true, true),
+
+    new Car("Porsche", "Taycan", "Branco", "WP0ZZZJ123A045891", 2023, 2024, 5000, "Elétrico 761cv", 1100000, "Automático", true, "ABS", true, true, true, true, true, true, true, "Couro", true, true),
+
+    new Car("Honda", "Civic Type R", "Vermelho", "8ADZZZ478KT009322", 2023, 2024, 8000, "2.0 Turbo 310cv", 310000, "Manual", true, "ABS", true, true, true, true, true, true, true, "Couro", true, true)
+];
 
 for(let i = 0; i < listaDeCarrosParaTeste.length; i++) {
     try {
-        let anuncio;
-        if(i == 1) {
-            anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, "","",["São Paulo","São Paulo"]);
-        } else {
-            anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
-                "../../../img/comprar/carros/rs6/audi-rs6-4.0-v8-tfsi-mhev-avant-performance-tiptronic-wmimagem10362353129.jpg",
-                "../../../img/comprar/carros/rs6/audi-rs6-4.0-v8-tfsi-mhev-avant-performance-tiptronic-wmimagem10362481340.jpg",
-                "../../../img/comprar/carros/rs6/audi-rs6-4.0-v8-tfsi-mhev-avant-performance-tiptronic-wmimagem10362570020.jpg",
-                "../../../img/comprar/carros/rs6/audi-rs6-4.0-v8-tfsi-mhev-avant-performance-tiptronic-wmimagem10362746632.jpg"],"",["São Paulo","São Paulo"]);
-        }   
+        let anuncio
+        switch(i) {
+            case 0:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                    "../../img/comprar/carros/eclipse/mitsubishi-eclipse-1.jpg",
+                    "../../img/comprar/carros/eclipse/mitsubishi-eclipse-2.jpg",
+                    "../../img/comprar/carros/eclipse/mitsubishi-eclipse-3.jpg",
+                    "../../img/comprar/carros/eclipse/mitsubishi-eclipse-4.jpg",
+                ], "", ["São Paulo", "São Paulo"]);
+                break;
+        
+            case 1:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                    "../../img/comprar/carros/m6/bmw-m6-1.jpg",
+                    "../../img/comprar/carros/m6/bmw-m6-2.jpg",
+                    "../../img/comprar/carros/m6/bmw-m6-3.jpg",
+                    "../../img/comprar/carros/m6/bmw-m6-4.jpg",
+                ], "", ["São Paulo", "São Paulo"]);
+                break;
+        
+            case 2:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                    "../../img/comprar/carros/hb20/hyundai-hb20-1.jpg",
+                    "../../img/comprar/carros/hb20/hyundai-hb20-2.jpg",
+                    "../../img/comprar/carros/hb20/hyundai-hb20-3.jpg",
+                    "../../img/comprar/carros/hb20/hyundai-hb20-4.jpg",
+                ], "", ["São Paulo", "São Paulo"]);
+                break;
+        
+            case 3:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                    "../../img/comprar/carros/astra/chevrolet-astra-1.jpg",
+                    "../../img/comprar/carros/astra/chevrolet-astra-2.jpg",
+                    "../../img/comprar/carros/astra/chevrolet-astra-3.jpg",
+                    "../../img/comprar/carros/astra/chevrolet-astra-4.jpg",
+                ], "", ["São Paulo", "São Paulo"]);
+                break;
+        
+            case 4:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                    "../../img/comprar/carros/corolla/toyota-corolla-1.jpg",
+                    "../../img/comprar/carros/corolla/toyota-corolla-2.jpg",
+                    "../../img/comprar/carros/corolla/toyota-corolla-3.jpg",
+                    "../../img/comprar/carros/corolla/toyota-corolla-4.jpg",
+                ], "", ["São Paulo", "São Paulo"]);
+                break;
+        
+            case 5:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                    "../../img/comprar/carros/duster/renault-duster-1.jpg",
+                    "../../img/comprar/carros/duster/renault-duster-2.jpg",
+                    "../../img/comprar/carros/duster/renault-duster-3.jpg",
+                    "../../img/comprar/carros/duster/renault-duster-4.jpg",
+                ], "", ["São Paulo", "São Paulo"]);
+                break;
+        
+            case 6:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                    "../../img/comprar/carros/ka/ford-ka-1.jpg",
+                    "../../img/comprar/carros/ka/ford-ka-2.jpg",
+                    "../../img/comprar/carros/ka/ford-ka-3.jpg",
+                    "../../img/comprar/carros/ka/ford-ka-4.jpg",
+                ], "", ["São Paulo", "São Paulo"]);
+                break;
+        
+            case 7:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                    "../../img/comprar/carros/golf gti/volkswagen-gti-1.jpg",
+                    "../../img/comprar/carros/golf gti/volkswagen-gti-2.jpg",
+                    "../../img/comprar/carros/golf gti/volkswagen-gti-3.jpg",
+                    "../../img/comprar/carros/golf gti/volkswagen-gti-4.jpg",
+                ], "", ["São Paulo", "São Paulo"]);
+                break;
+        
+            case 8:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                    "../../img/comprar/carros/cronos/fiat-cronos-1.jpg",
+                    "../../img/comprar/carros/cronos/fiat-cronos-2.jpg",
+                    "../../img/comprar/carros/cronos/fiat-cronos-3.jpg",
+                    "../../img/comprar/carros/cronos/fiat-cronos-4.jpg",
+                ], "", ["São Paulo", "São Paulo"]);
+                break;
+        
+            case 9:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                    "../../img/comprar/carros/taycan/porsche-taycan-1.jpg",
+                    "../../img/comprar/carros/taycan/porsche-taycan-2.jpg",
+                    "../../img/comprar/carros/taycan/porsche-taycan-3.jpg",
+                    "../../img/comprar/carros/taycan/porsche-taycan-4.jpg",
+                ], "", ["São Paulo", "São Paulo"]);
+                break;
+        
+            case 10:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], 25000, [
+                    "../../img/comprar/carros/type-r/honda-type-r-1.jpg",
+                    "../../img/comprar/carros/type-r/honda-type-r-2.jpg",
+                    "../../img/comprar/carros/type-r/honda-type-r-3.jpg",
+                    "../../img/comprar/carros/type-r/honda-type-r-4.jpg",
+                ], "", ["São Paulo", "São Paulo"]);
+                break;
+        }
         Database.addAnuncio(anuncio);
     } catch(err) {
         console.error("Erro ao criar anúncio de teste:", err);
@@ -45,7 +149,7 @@ function renderizarCarroCard(anuncio) {
     return `
         <div class="card-car" onclick="Anuncio.cardAnuncio('${anuncio.id}')">
             <div class="card-car--image">
-                <img src="${"https://neonseguros.com.br/wp-content/uploads/2023/10/86a6220be134881c1ddcf2b43bc542df299e62ec-edited.png"}" alt="${anuncio.car.marca} ${anuncio.car.modelo}">
+                <img src="${anuncio.imagens[0]}" alt="${anuncio.car.marca} ${anuncio.car.modelo}">
             </div>
             <div class="card-car--content">
                 <div>
@@ -105,7 +209,7 @@ function mudarPagina(e) {
     if (target.tagName === 'BUTTON' && target.dataset.pagina) {
         paginaAtual = parseInt(target.dataset.pagina)
         
-        renderizarCarros(anuncios)
+        renderizarCarros(FilterEvents.anuncios)
         
         cardContainer.scrollIntoView({ behavior: 'smooth' })
     }

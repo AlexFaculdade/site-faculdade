@@ -21,7 +21,7 @@ class Car {
     bancosMaterial
     alarme
     retrovisorEletrico
-    constructor(marca, modelo, cor, chassi, anoFabricacao, anoModelo, quilometragem, motor, valor, cambio,airbag, freios, travasEletricas, licenciado, aceitaTroca, ipvaPago, tetoSolar, vidrosEletricos, arCondicionado, bancosMaterial,alarme) {
+    constructor(marca, modelo, cor, chassi, anoFabricacao, anoModelo, quilometragem, motor, valor, cambio,airbag, freios, travasEletricas, licenciado, aceitaTroca, ipvaPago, tetoSolar, vidrosEletricos, arCondicionado, bancosMaterial,alarme, retrovisorEletrico) {
         this.marca = marca
         this.modelo = modelo
         this.cor = cor
