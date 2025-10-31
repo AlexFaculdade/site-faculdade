@@ -20,7 +20,7 @@
 
 <body>
     <header class="home-header">
-        <img class="home-logo" src="../.././img/logo.png" alt="">
+        <img onclick="window.location.href='../index.html'" class="home-logo" src="../.././img/logo.png" alt="">
         <div class="home-nav">
             <a class="home-anchor" href="../../index.html">
                 <p>home</p>
@@ -66,6 +66,11 @@
                         
                         <div class="container-search">
                             <input id="localizacao" type="text" placeholder="Digite seu estado ou cidade">
+                            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h2 style="margin: 2rem 0 1rem 0;">Modelo do carro</h2>
+                        <div class="container-search" >
+                            <input id="modelo" type="text" placeholder="Digite o modelo do carro">
                             <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
@@ -186,38 +191,39 @@
                     <div class="container-filter--pattern">
                         <h2>Câmbio</h2>
                         <select name="" id="select-cambio">
-                            <option value="valor1">Manual</option>
-                            <option value="valor2">Automático</option>
+                            <option value="valor1">Ambos</option>
+                            <option value="valor2">Manual</option>
+                            <option value="valor3">Automático</option>
                         </select>
                     </div>
                     <div class="container-filter--pattern container-filter--checkbox">
                         <h2>Cor</h2>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="checkbox-cor" class="checkbox-cor">
                             <p>Amarelo</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="checkbox-cor">
                             <p>Azul</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="checkbox-cor">
                             <p>Bege</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="checkbox-cor">
                             <p>Branco</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="checkbox-cor">
                             <p>Bronze</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="checkbox-cor">
                             <p>Cinza</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="checkbox-cor">
                             <p>Dourado</p>
                         </div>
     
@@ -225,38 +231,42 @@
                     <div class="container-filter--pattern container-filter--checkbox">
                         <h2>Carroceria</h2>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="carroceria">
+                            <p>Elétrico</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="carroceria">
                             <p>Cupê</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="carroceria">
                             <p>Hatch</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="carroceria">
                             <p>Sedã</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="carroceria">
                             <p>Picape</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="carroceria">
                             <p>SUV</p>
                         </div>
                     </div>
                     <div class="container-filter--pattern container-filter--checkbox">
                         <h2>Portas</h2>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="portas">
                             <p>2</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="portas">
                             <p>3</p>
                         </div>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" class="portas">
                             <p>4</p>
                         </div>
                     </div>
@@ -335,6 +345,8 @@
     <script src="../../script/model/Anuncio.js"></script>
     <script src="../../script/model/Car.js"></script>
     <!--<script src="../../script/verificarUserLogado.js"></script>!-->
+    <script src="../../script/pages/home/HeaderAlteravel.js"></script>
+    <script src="../../script/pages/HeaderInfo.js"></script>
     <script src="../../script/util/Filter.js"></script>
     <script src="../../script/pages/comprar/paginacao.js"></script>
     <script src="../../script/pages/comprar/FilterEvents.js"></script>

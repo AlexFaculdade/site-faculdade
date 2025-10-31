@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="titulo-pagina">JETTA GLI 350 TSI DSG</title>
+    <title id="titulo-pagina">Carro</title>
     <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../style/style.css">
     <link rel="stylesheet" href="../../style/home/home.css">
@@ -20,25 +20,25 @@
 
 <body>
     <header class="home-header">
-        <img class="home-logo" src="../../img/logo.png" alt="">
+        <img onclick="window.location.href='../../index.html'" class="home-logo" src="../../img/logo.png" alt="">
         <div class="home-nav">
-            <a class="home-anchor" href="">
+            <a class="home-anchor" href="../../index.html">
                 <p>home</p>
             </a>
-            <a class="home-anchor" href="">
+            <a class="home-anchor" href="./comprar.html">
                 <p>comprar</p>
             </a>
-            <a class="home-anchor" href="">
+            <a class="home-anchor" href="./vender.html">
                 <p>vender</p>
             </a>
-            <a class="home-anchor" href="">
+            <a class="home-anchor" href="../ajuda/ajuda.html">
                 <p>ajuda</p>
             </a>
 
         </div>
         <div class="home-account">
             <div>
-                <a class="account" href="./auth/login.html">
+                <a class="account" href="../../auth/login.html">
                     <i class="fa-solid fa-user"></i>
                     <p id="nomePerfilHeader">entrar</p>
                 </a>
@@ -56,10 +56,10 @@
                 <div class="carrossel-buttons">
                     <div class="buy-carrossel">
                         <div class="buy-carrossel-img">
-                            <img class="buy-image" src="../../img/comprar/MITSUBISHI-ECLIPSE.webp">
-                            <img class="buy-image" src="../../img/comprar/MITSUBISHI-ECLIPSE.webp">
-                            <img class="buy-image" src="../../img/comprar/MITSUBISHI-ECLIPSE.webp">
-                            <img class="buy-image" src="../../img/comprar/MITSUBISHI-ECLIPSE.webp">
+                            <img class="buy-image" src="">
+                            <img class="buy-image" src="">
+                            <img class="buy-image" src="">
+                            <img class="buy-image" src="">
                         </div>
                     </div>
 
@@ -83,7 +83,7 @@
                                 <h3  style="font-size: 20px;">AirBag: <spa id="carro-airbag"n></spa></h3>
                             </div>
                             <div class="basic-info-specific-container">
-                                <h3 style="font-size: 20px;">Freio: <span id="carro-freio"></span></h3>
+                                <h3 style="font-size: 20px;">Freios ABS: <span id="carro-freio"></span></h3>
                             </div>
                             <div class="basic-info-specific-container">
                                 <h3 style="font-size: 20px;">Travas elétricas: <span id="carro-trava"></span></h3>
@@ -290,9 +290,11 @@
     <script src="../../script/util/util.js"></script>
     <script src="../../script/model/Anuncio.js"></script>
     <script src="../../script/model/Car.js"></script>
+    <script src="../../script/model/PaginaProdutoModel.js"></script>
     <!--<script src="./script/verificarUserLogado.js"></script> REMOVER COISA DE NOTA-->
     <script src="../../script/pages/comprar/paginaprodutojs/carrossel.js"></script>
-    <script src="../../script/pages/home/HomeAlteravel.js"></script>
+    <script src="../../script/pages/home/HeaderAlteravel.js"></script>
+    <script src="../../script/pages/HeaderInfo.js"></script>
     <script src="../../script/model/paginaProdutoModel.js"></script>
     <script src="../../script/pages/comprar/paginaProduto.js"></script>
     

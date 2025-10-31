@@ -1,6 +1,7 @@
 class Car {
     marca
     modelo
+    carroceria
     cor
     chassi
     anoFabricacao
@@ -9,6 +10,7 @@ class Car {
     motor
     valor
     cambio
+    portas
     airbag
     freios
     travasEletricas
@@ -21,9 +23,10 @@ class Car {
     bancosMaterial
     alarme
     retrovisorEletrico
-    constructor(marca, modelo, cor, chassi, anoFabricacao, anoModelo, quilometragem, motor, valor, cambio,airbag, freios, travasEletricas, licenciado, aceitaTroca, ipvaPago, tetoSolar, vidrosEletricos, arCondicionado, bancosMaterial,alarme, retrovisorEletrico) {
+    constructor(marca, modelo, carroceria, cor, chassi, anoFabricacao, anoModelo, quilometragem, motor, valor, cambio, portas, airbag, freios, travasEletricas, licenciado, aceitaTroca, ipvaPago, tetoSolar, vidrosEletricos, arCondicionado, bancosMaterial,alarme, retrovisorEletrico) {
         this.marca = marca
         this.modelo = modelo
+        this.carroceria = carroceria
         this.cor = cor
         this.chassi = chassi
         this.anoFabricacao = anoFabricacao
@@ -32,6 +35,7 @@ class Car {
         this.motor = motor
         this.valor = valor
         this.cambio = cambio
+        this.portas = portas
         this.airbag = airbag
         this.freios = freios
         this.travasEletricas = travasEletricas

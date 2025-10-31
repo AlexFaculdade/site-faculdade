@@ -1,5 +1,5 @@
 // Classe para mapear o que deve poder ser possível de alterar na página home
-class HomeAlteravel {
+class HeaderAlteravel {
     // aqui diz respeito ao nome do perfil
     nomePerfilHeader = document.getElementById("nomePerfilHeader")
 

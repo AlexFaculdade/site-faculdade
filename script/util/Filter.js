@@ -1,10 +1,33 @@
 class Filter {
     static filterLocalizacao(anuncios, localizacao) {
+    if (localizacao === '') {
+        return anuncios;
+    }
+    const termoBusca = localizacao.toLowerCase();
+
+    return anuncios.filter(anuncio => {
+        const localizacaoArray = anuncio.localizacao;
+        
+        return localizacaoArray.some(item => 
+            item.toLowerCase().includes(termoBusca)
+        );
+    });
+}
+
+    static filterModelo(anuncios, modelo) {
         // Retorna os anúncios que correspondem à localização fornecida (case insensitive)
-        if(localizacao == '') {
+        if(modelo == '') {
             return anuncios
         }
-        return anuncios.filter(anuncio => anuncio.car.modelo.toLowerCase().includes(localizacao.toLowerCase()));
+        return anuncios.filter(anuncio => anuncio.car.modelo.toLowerCase().includes(modelo.toLowerCase()));
+    }
+
+    static filterModelo(anuncios, modelo) {
+        // Retorna os anúncios que correspondem à localização fornecida (case insensitive)
+        if(modelo == '') {
+            return anuncios
+        }
+        return anuncios.filter(anuncio => anuncio.car.modelo.toLowerCase().includes(modelo.toLowerCase()));
     }
 
     static filterMarca(anuncios, marcasSelecionadas) {
@@ -60,18 +83,40 @@ class Filter {
     }
 
     static filterCambio(anuncios, cambio) {
-        // Retorna os anúncios que correspondem ao câmbio
-        return anuncios.filter(anuncio => anuncio.car.cambio === cambio)
+        // Retorna os anúncios que correspondem ao câmbio (case insensitive)
+        if (!cambio) return anuncios;
+        const cambioMinusc = cambio.toLowerCase();
+        
+        return anuncios.filter(anuncio => anuncio.car.cambio.toLowerCase() === cambioMinusc);
     }
 
     static filterCor(anuncios, coresSelecionadas) {
-        if (!coresSelecionadas || coresSelecionadas.length === 0) return anuncios; // Retorna tudo se a lista de filtros estiver vazia
+        // Retorna os anúncios que correspondem a UMA das cores selecionadas (case insensitive)
+        if (!coresSelecionadas || coresSelecionadas.length === 0) return anuncios;
         const coresSelecionadasMinsculo = coresSelecionadas.map(cor => cor.toLowerCase());
 
-        // Filtra os anúncios. O anúncio será mantido se a sua marca
-        // estiver INCLUÍDA no array de marcasEmMinusculo.
         return anuncios.filter(anuncio => 
             coresSelecionadasMinsculo.includes(anuncio.car.cor.toLowerCase())
         );
-    } 
+    }
+
+    static filterCarroceria(anuncios, carroceriasSelecionadas) {
+        // Retorna os anúncios que correspondem a UMA das carrocerias selecionadas (case insensitive)
+        if (!carroceriasSelecionadas || carroceriasSelecionadas.length === 0) return anuncios;
+        const carroceriasMinusc = carroceriasSelecionadas.map(c => c.toLowerCase());
+        
+        return anuncios.filter(anuncio => 
+            carroceriasMinusc.includes(anuncio.car.carroceria.toLowerCase())
+        );
+    }
+    
+    static filterPortas(anuncios, portasSelecionadas) {
+        // Retorna os anúncios que correspondem a UM dos números de portas selecionados (números)
+        if (!portasSelecionadas || portasSelecionadas.length === 0) return anuncios;
+        
+        // portasSelecionadas já são números graças ao .map(Number) em FilterEvents
+        return anuncios.filter(anuncio => 
+            portasSelecionadas.includes(anuncio.car.portas)
+        );
+    }
 }

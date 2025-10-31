@@ -1,5 +1,4 @@
 class PaginaProdutoModel {
-    //tituloPagina = document.getElementById("tituloPagina")
     static marca = document.getElementById("marca-carro")
     static modelo = document.getElementById("modelo-carro")
     static motor = document.getElementById("motor-carro")
@@ -44,13 +43,14 @@ class PaginaProdutoModel {
         PaginaProdutoModel.cambio.textContent =  anuncio.car.cambio
         PaginaProdutoModel.blindado.textContent = "sim"
         PaginaProdutoModel.combustivel.textContent =  "gasolina"
-        PaginaProdutoModel.imgs[0].src = anuncio.imagens[0] || "../../img/comprar/MITSUBISHI-ECLIPSE.webp"
-        PaginaProdutoModel.imgs[1].src = anuncio.imagens[1] || "../../img/comprar/MITSUBISHI-ECLIPSE.webp"
-        PaginaProdutoModel.imgs[2].src = anuncio.imagens[2] || "../../img/comprar/MITSUBISHI-ECLIPSE.webp"
-        PaginaProdutoModel.imgs[3].src = anuncio.imagens[3] || "../../img/comprar/MITSUBISHI-ECLIPSE.webp"
+
+        PaginaProdutoModel.imgs[0].src = anuncio.imagens[0]
+        PaginaProdutoModel.imgs[1].src = anuncio.imagens[1]
+        PaginaProdutoModel.imgs[2].src = anuncio.imagens[2] 
+        PaginaProdutoModel.imgs[3].src = anuncio.imagens[3] 
 
         PaginaProdutoModel.airbag.textContent = anuncio.car.airbag ? "sim" : "não"
-        PaginaProdutoModel.freio.textContent = anuncio.car.freio
+        PaginaProdutoModel.freio.textContent = anuncio.car.freios ? "sim" : "não"
         PaginaProdutoModel.trava.textContent = anuncio.car.trava ? "sim" : "não"
         PaginaProdutoModel.licenciado.textContent = anuncio.car.licenciado ? "sim" : "não"
         PaginaProdutoModel.troca.textContent = anuncio.car.troca ? "sim" : "não"
@@ -58,7 +58,7 @@ class PaginaProdutoModel {
         PaginaProdutoModel.tetoSolar.textContent = anuncio.car.tetoSolar ? "sim" : "não"
         PaginaProdutoModel.vidrosEletricos.textContent = anuncio.car.vidrosEletricos ? "sim" : "não"
         PaginaProdutoModel.arCondicionado.textContent = anuncio.car.arCondicionado ? "sim" : "não"
-        PaginaProdutoModel.bancoEmCouro.textContent = anuncio.car.bancoEmCouro ? "sim" : "não"
+        PaginaProdutoModel.bancoEmCouro.textContent = anuncio.car.bancosMaterial
         PaginaProdutoModel.alarme.textContent = anuncio.car.alarme ? "sim" : "não"
         PaginaProdutoModel.retrovisorEletrico.textContent = anuncio.car.retrovisorEletrico ? "sim" : "não"
     }

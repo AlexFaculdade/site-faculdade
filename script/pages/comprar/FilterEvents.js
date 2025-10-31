@@ -3,9 +3,8 @@ class FilterEvents {
   static filtro = document.getElementById("filtro");
 
   static searchLocalizacao = document.getElementById("localizacao");
-  static containerMarcas = document.querySelector(
-    ".container-marcas"
-  );
+  static searchModelo = document.getElementById("modelo");
+  static containerMarcas = document.querySelector(".container-marcas");
   static anoMinimo = document.getElementById("minimoAno");
   static anoMaximo = document.getElementById("maximoAno");
   static anoEspecifico = document.querySelectorAll(".anoEspecifico")
@@ -14,13 +13,55 @@ class FilterEvents {
   static precoEspecifico = document.querySelectorAll(".precoEspecifico");
   static quilometragemMinima = document.getElementById("quilometragemMinima");
   static quilometragemMaxima = document.getElementById("quilometragemMaxima");
+  
+  static selectCambio = document.getElementById("select-cambio");
+  static checkboxesCor = document.querySelectorAll(".checkbox-cor");
+  static checkboxesCarroceria = document.querySelectorAll(".carroceria");
+  static checkboxesPortas = document.querySelectorAll(".portas");
 
   static refreshDatabase() {
     FilterEvents.anuncios = [...Object.values(Database.anuncios)];
   }
 
+  static getCambioSelecionado() {
+    const valor = FilterEvents.selectCambio.value;
+    if (valor === 'valor1') {
+        return null; 
+    }
+    return FilterEvents.selectCambio.options[FilterEvents.selectCambio.selectedIndex].textContent.trim();
+  }
+
+  static getCheckboxValues(checkboxList) {
+    const valores = [];
+    checkboxList.forEach(checkbox => {
+        if (checkbox.checked) {
+            // Pega o texto do parágrafo vizinho (ex: 'Amarelo', 'Hatch', '4')
+            const texto = checkbox.nextElementSibling.textContent.trim();
+            valores.push(texto);
+        }
+    });
+    return valores;
+  }
+
+  static getCoresSelecionadas() {
+      return FilterEvents.getCheckboxValues(FilterEvents.checkboxesCor);
+  }
+
+  static getCarroceriasSelecionadas() {
+      return FilterEvents.getCheckboxValues(FilterEvents.checkboxesCarroceria);
+  }
+
+  static getPortasSelecionadas() {
+      // Os valores das portas são números, vamos convertê-los aqui
+      return FilterEvents.getCheckboxValues(FilterEvents.checkboxesPortas).map(Number);
+  }
+
   static getSearchLocalizacao() {
     return FilterEvents.searchLocalizacao.value;
+  }
+
+  static getSearchModelo() {
+    return FilterEvents.searchModelo.value;
   }
 
   static getAnoMinimo() {
@@ -73,6 +114,14 @@ class FilterEvents {
       );
     }
 
+    const modelo = FilterEvents.getSearchModelo();
+    if (modelo) {
+      resultadosFinais = Filter.filterModelo(
+        resultadosFinais,
+        modelo
+      );
+    }
+
     const marcasAtivas = FilterEvents.getMarcasSelecionadas();
         if (marcasAtivas.length > 0) {
             // Filtra o resultado da localização
@@ -110,11 +159,36 @@ class FilterEvents {
       );
     }
 
+    // NOVO: FILTRO DE CÂMBIO
+    const cambio = FilterEvents.getCambioSelecionado();
+    if (cambio) {
+      resultadosFinais = Filter.filterCambio(resultadosFinais, cambio);
+    }
+
+    const coresAtivas = FilterEvents.getCoresSelecionadas();
+    if (coresAtivas.length > 0) {
+      resultadosFinais = Filter.filterCor(resultadosFinais, coresAtivas);
+    }
+    
+    const carroceriasAtivas = FilterEvents.getCarroceriasSelecionadas();
+    if (carroceriasAtivas.length > 0) {
+      resultadosFinais = Filter.filterCarroceria(resultadosFinais, carroceriasAtivas);
+    }
+
+    const portasAtivas = FilterEvents.getPortasSelecionadas();
+    if (portasAtivas.length > 0) {
+      resultadosFinais = Filter.filterPortas(resultadosFinais, portasAtivas);
+    }
+
     renderizarCarros(resultadosFinais);
   }
 }
 
 FilterEvents.searchLocalizacao.addEventListener("input", ()=> {
+  FilterEvents.handleInputSearch();
+});
+
+FilterEvents.searchModelo.addEventListener("input", ()=> {
   FilterEvents.handleInputSearch();
 });
 
@@ -193,6 +267,22 @@ FilterEvents.precoEspecifico.forEach((elementoPreco) => {
 
     FilterEvents.aplicarTodosFiltros();
   });
+});
+
+FilterEvents.selectCambio.addEventListener("change", () => {
+  FilterEvents.aplicarTodosFiltros();
+});
+
+const todosCheckboxes = [
+    ...FilterEvents.checkboxesCor,
+    ...FilterEvents.checkboxesCarroceria,
+    ...FilterEvents.checkboxesPortas
+];
+
+todosCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+        FilterEvents.aplicarTodosFiltros();
+    });
 });
 
 FilterEvents.filtro.addEventListener("click", () => {

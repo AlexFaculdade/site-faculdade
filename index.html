@@ -82,12 +82,12 @@
         <section class="grid-content">
             <div class="vertudo">
                 <h2 class="maisbuscados-title">Carros mais buscados</h2>
-                <a href="">
+                <a href="./pages/negocios/comprar.html">
                     <p>Ver tudo</p>
                 </a>
             </div>
             <div class="grid-maisbuscados">
-                <a href="">
+                <a href="" onclick=" e => filtroModelo(e)"> 
                     <div class="card-maisbuscados">
                         <div class="card-maisbuscados--container__img">
                             <img src="./img/home/card-gol.png" alt="">
@@ -98,9 +98,9 @@
                         </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="" onclick=" e => filtroModelo(e)">
                     <div class="card-maisbuscados">
-                        <div class="card-maisbuscados--container__img">
+                        <div class="card-maisbuscados--container__img" onclick="w">
                             <img src="./img/home/card-palio.png" alt="">
                         </div>
                         <div class="card-maisbuscados__content">
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="" onclick=" e => filtroModelo(e)">
                     <div class="card-maisbuscados">
                         <div class="card-maisbuscados--container__img">
                             <img src="./img/home/card-civic.png" alt="">
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="" onclick=" e => filtroModelo(e)">
                     <div class="card-maisbuscados">
                         <div class="card-maisbuscados--container__img">
                             <img src="./img/home/card-golf.png" alt="">
@@ -131,7 +131,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="" onclick=" e => filtroModelo(e)">
                     <div class="card-maisbuscados">
                         <div class="card-maisbuscados--container__img">
                             <img src="./img/home/card-hb20.png" alt="">
@@ -149,7 +149,7 @@
             <h2 class="maisbuscados-title">Marcas mais buscadas</h2>
             <div class="grid-maisbuscados">
                 <a class="card-marcas" href="">
-                    <img src="./img/home/marcas/bmw.png" alt="">
+                    <img src="./img/home/marcas/chevrolet.jpeg" alt="">
                 </a>
                 <a class="card-marcas" href="">
                     <img src="./img/home/marcas/fiat.png" alt="">
@@ -174,9 +174,9 @@
                 </a>
             </div>
             <div class="grid-maisbuscados">
-                <a href="">
-                    <div class="card-maisbuscados">
-                        <div class="card-maisbuscados--container__img">
+                <a href="" >
+                    <div class="card-maisbuscados" onclick="filtroCategoria()">
+                        <div class="card-maisbuscados--container__img" >
                             <img src="./img/home/categorias/categorias-eletrico.png" alt="">
                         </div>
                         <div class="card-categorias__content">
@@ -185,7 +185,7 @@
                     </div>
                 </a>
                  <a href="">
-                    <div class="card-maisbuscados">
+                    <div class="card-maisbuscados" onclick="filtroCategoria()">
                         <div class="card-maisbuscados--container__img">
                             <img src="./img/home/categorias/categoriais-hatch.png" alt="">
                         </div>
@@ -194,8 +194,8 @@
                         </div>
                     </div>
                 </a>
-                 <a href="">
-                    <div class="card-maisbuscados">
+                 <a href=""> 
+                    <div class="card-maisbuscados" onclick="filtroCategoria()">
                         <div class="card-maisbuscados--container__img">
                             <img src="./img/home/categorias/categorias-suv.png" alt="">
                         </div>
@@ -205,7 +205,7 @@
                     </div>
                 </a>
                  <a href="">
-                    <div class="card-maisbuscados">
+                    <div class="card-maisbuscados" onclick="filtroCategoria()">
                         <div class="card-maisbuscados--container__img">
                             <img src="./img/home/categorias/categorias-sedan.png" alt="">
                         </div>
@@ -215,7 +215,7 @@
                     </div>
                 </a>
                  <a href="">
-                    <div class="card-maisbuscados">
+                    <div class="card-maisbuscados" onclick="filtroCategoria()">
                         <div class="card-maisbuscados--container__img">
                             <img src="./img/home/categorias/categorias-pickup.png" alt="">
                         </div>
@@ -292,9 +292,9 @@
     <script src="https://kit.fontawesome.com/f2a6af5805.js" crossorigin="anonymous"></script>
     <script src="./script/Database.js"></script>
     <script src="./script/util/util.js"></script>
-    <!-- <script src="./script/verificarUserLogado.js"></script> -->
-    <script src="./script/pages/home/HomeAlteravel.js"></script>
-    <script src="./script/pages/loadHomeInfo.js"></script>
+    <script src="./script/pages/home/filtro.js"></script>
+    <script src="./script/pages/home/HeaderAlteravel.js"></script>
+    <script src="./script/pages/HeaderInfo.js"></script>
     <script src="./script/pages/home/carrossel.js"></script>
 </body>
 

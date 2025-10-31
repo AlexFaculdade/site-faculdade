@@ -2,5 +2,5 @@
 // mostra um alert e redireciona o user para login. Funciona como filter para rotas protegidas
 if(!Database.sessionUser()) {
     alert("Você precisa estar logado para acessar essa página")
-    window.location.href = "./auth/login.html"
+    window.location.href = "../../auth/login.html"
 }

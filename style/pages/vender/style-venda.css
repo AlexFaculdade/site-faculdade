@@ -1,0 +1,169 @@
+body {
+    font-size: 2rem;
+}
+
+.form-container {
+    max-width: 100%;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 3rem 4rem;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.form-header p {
+    font-size: 1.5rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.logo-text.hub {
+    color: #00a9e0; 
+    margin-left: 6px;
+}
+
+.form-header h1 {
+    font-size: 2rem; /* Como "Logue sua Conta" */
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.form-header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilo dos Formulários (Inputs do Login) */
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+legend {
+    /* Estilo "Itens do Veículo" */
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    /* Estilo "Insira seu e-mail" */
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Estilo dos inputs (fundo cinza da pág de login) */
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #e0e0e0; /* Borda sutil */
+    background-color: #f4f7f6; /* Fundo cinza claro */
+    border-radius: 5px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input[type="file"] {
+    padding: 10px;
+}
+
+/* Grid para organizar campos (Estilo pág de detalhes) */
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.checkbox-grid-3 {
+    display: grid;
+    /* 3 colunas como na pág de detalhes */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+.checkbox-item input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+.checkbox-item label {
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Botão de Envio (Estilo pág de login) */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    /* Azul da pág de login */
+    background-color: #3b82f6; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #2563eb;
+}
+
+/* Mensagem de Sucesso (para o JS) */
+.mensagem-sucesso {
+    display: none;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+}

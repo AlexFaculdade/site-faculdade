@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender Veículo - Motor Hub</title>
+    <link rel="stylesheet" href="../../style/pages/vender/style-venda.css">
+    <link rel="stylesheet" href="../../style/home/footer.css">
+    <link rel="stylesheet" href="../../style/home/home.css">
+    <link rel="stylesheet" href="../../style/style.css">
+</head>
+<body>
+    <header class="home-header">
+        <img onclick="window.location.href='../../index.html'" class="home-logo" src="../../img/logo.png" alt="">
+        <div class="home-nav">
+            <a class="home-anchor" href="../../index.html">
+                <p>home</p>
+            </a>
+            <a class="home-anchor" href="./comprar.html">
+                <p>comprar</p>
+            </a>
+            <a class="home-anchor" href="./vender.html">
+                <p>vender</p>
+            </a>
+            <a class="home-anchor" href="../ajuda/ajuda.html">
+                <p>ajuda</p>
+            </a>
+
+        </div>
+        <div class="home-account">
+            <div>
+                <a class="account" href="../../auth/login.html">
+                    <i class="fa-solid fa-user"></i>
+                    <p id="nomePerfilHeader">entrar</p>
+                </a>
+            </div>
+            <a class="favorities" href="">
+                <i class="fa-solid fa-bookmark"></i>
+            </a>
+
+        </div>
+    </header>
+    <hr>
+
+    <main class="form-container">
+        <header class="form-header">
+            <h1>Anuncie seu Veículo</h1>
+            <p>Preencha as informações para criar seu anúncio.</p>
+        </header>
+
+        <form id="form-anuncio">
+            
+            <fieldset>
+                <legend>Informações do Veículo</legend>
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="marca">Marca</label>
+                        <input type="text" id="marca" name="marca" placeholder="Ex: Volkswagen">
+                    </div>
+                    <div class="form-group">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" id="modelo" name="modelo" placeholder="Ex: Jetta GLI">
+                    </div>
+                    <div class="form-group">
+                        <label for="ano">Ano (Mod/Fab)</label>
+                        <input type="text" id="ano" name="ano" placeholder="2021/2022">
+                    </div>
+                    <div class="form-group">
+                        <label for="km">Quilometragem</label>
+                        <input type="number" id="km" name="km" placeholder="Ex: 70.000">
+                    </div>
+                    <div class="form-group">
+                        <label for="cor">Cor</label>
+                        <input type="text" id="cor" name="cor" placeholder="Ex: Nardo Grey">
+                    </div>
+                    <div class="form-group">
+                        <label for="cambio">Câmbio</label>
+                        <select id="cambio" name="cambio">
+                            <option value="">Selecione</option>
+                            <option value="automatico">Automático</option>
+                            <option value="manual">Manual</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Itens do Veículo</legend>
+                <div class="checkbox-grid-3">
+                    <div class="checkbox-item"><input type="checkbox" id="airbag"> <label for="airbag">AirBag</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="freio_abs"> <label for="freio_abs">Freio ABS</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="teto_solar"> <label for="teto_solar">Teto solar</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="travas"> <label for="travas">Travas elétricas</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="vidros"> <label for="vidros">Vidros elétricos</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="ar"> <label for="ar">Ar condicionado</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="bancos"> <label for="bancos">Bancos em couro</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="alarme"> <label for="alarme">Alarme</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="retrovisores"> <label for="retrovisores">Retrovisores elétricos</label></div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Valor e Descrição</legend>
+                <div class="form-group">
+                    <label for="preco">Preço (R$)</label>
+                    <input type="number" id="preco" name="preco" placeholder="Ex: 159.900">
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" name="descricao" rows="4" placeholder="Fale mais sobre o carro, opcionais, estado de conservação, etc."></textarea>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Fotos do Veículo</legend>
+                <div class="form-group">
+                    <label for="fotos">Envie as fotos</label>
+                    <input type="file" id="fotos" name="fotos" multiple>
+                </div>
+            </fieldset>
+            
+            <div id="mensagem-sucesso" class="mensagem-sucesso">
+                Anúncio enviado com sucesso!
+            </div>
+            
+            <button type="submit" class="btn-submit">Logar na conta</button>
+        </form>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-link">
+            <ul class="footer-column">
+                <h2>Comprar e Vender </h2>
+                <li>
+                    <a href="">Comprar Carro</a>
+                </li>
+                <li>
+                    <a href="">Vender Meu Carro</a>
+                </li>
+                <li>
+                    <a href="">Simular Parcelamento</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Institucional</h2>
+                <li>
+                    <a href="">Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="">Blog/Dicas</a>
+                </li>
+                <li>
+                    <a href="">FAQ (Perguntas Frequentes)</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Suporte</h2>
+                <li>
+                    <a href="">Central de Ajuda</a>
+                </li>
+                <li>
+                    <a href="">Fale Conosco</a>
+                </li>
+                <li>
+                    <a href="">Denunciar Anúncio</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Legal</h2>
+                <li><a href="termos.html">Termos de Uso</a></li>
+                <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                <li><a href="seguranca.html">Segurança</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h2>Siga-nos</h2>
+            <div class="footer-social__link">
+                <a href="https://instagram.com/motorhub" target="_blnk">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/motorhub" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy;2024-2025 Motors Hub. Todos os direitos Reservados</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/f2a6af5805.js" crossorigin="anonymous"></script>
+    <script src="../../script/Database.js"></script>
+    <script src="../../script/util/util.js"></script>
+    <script src="../../script/model/Anuncio.js"></script>
+    <script src="../../script/model/Car.js"></script>
+    <script src="../../script/verificarUserLogado.js"></script>
+    <script src="../../script/pages/home/HeaderAlteravel.js"></script>
+    <script src="../../script/pages/HeaderInfo.js"></script>
+    <script src="script-venda.js"></script>
+</body>
+</html>

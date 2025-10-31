@@ -24,7 +24,7 @@ class Util {
 
     // valida a senha do user com uma regex
     static validPassword(senha) {
-        const regexSenhaForte = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\\-=\\[\\]{};\':"\\\\|.<>\\/?]).{8,30}$^')
+        const regexSenhaForte = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\\-=\\[\\]{};\':"\\\\|.<>\\/?]).{8,30}$')
         return regexSenhaForte.test(senha)
     }
 
