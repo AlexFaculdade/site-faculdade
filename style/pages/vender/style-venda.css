@@ -1,16 +1,14 @@
-body {
-    font-size: 2rem;
-}
-
+/* Container Principal do Formulário */
 .form-container {
-    max-width: 100%;
+    max-width: 800px;
     margin: 30px auto;
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    padding: 3rem 4rem;
+    padding: 3rem 4rem; 
 }
 
+/* Cabeçalho do Formulário */
 .form-header {
     text-align: center;
     margin-bottom: 30px;
@@ -18,52 +16,26 @@ body {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.form-header p {
-    font-size: 1.5rem;
-}
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-.logo-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-.logo-text {
-    font-size: 2rem;
-    font-weight: 700;
-}
-.logo-text.hub {
-    color: #00a9e0; 
-    margin-left: 6px;
-}
-
 .form-header h1 {
-    font-size: 2rem; /* Como "Logue sua Conta" */
+    font-size: 2.5rem; 
     font-weight: 700;
     color: #222;
     margin-bottom: 5px;
 }
 
 .form-header p {
-    font-size: 1rem;
+    font-size: 1.25rem; 
     color: #666;
 }
 
-/* Estilo dos Formulários (Inputs do Login) */
+/* Fieldset e Legend */
 fieldset {
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 legend {
-    /* Estilo "Itens do Veículo" */
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #333;
     margin-bottom: 15px;
@@ -72,51 +44,50 @@ legend {
     border-bottom: 1px solid #f0f0f0;
 }
 
+/* Grupos de Formulário */
 .form-group {
     margin-bottom: 15px;
 }
 
 .form-group label {
-    /* Estilo "Insira seu e-mail" */
     display: block;
     margin-bottom: 5px;
-    font-weight: 500;
+    font-weight: 600;
     color: #444;
+    font-size: 1rem;
 }
 
-/* Estilo dos inputs (fundo cinza da pág de login) */
+/* Estilo dos inputs (inclui text, number, url, select e textarea) */
 input[type="text"],
 input[type="number"],
-input[type="file"],
+input[type="url"], /* Inclui o novo tipo para links */
 select,
 textarea {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
-    border: 1px solid #e0e0e0; /* Borda sutil */
-    background-color: #f4f7f6; /* Fundo cinza claro */
+    border: 1px solid #e0e0e0; 
+    background-color: #f4f7f6; 
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
-textarea {
-    min-height: 100px;
-    resize: vertical;
-}
+/* Estilo para campos de arquivo (se houver, mas agora usando URL) */
+/* input[type="file"] {
+    padding: 10px 12px;
+} */
 
-input[type="file"] {
-    padding: 10px;
-}
 
-/* Grid para organizar campos (Estilo pág de detalhes) */
+/* Grid para campos de texto e selects (2 colunas) */
 .form-grid-2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
+/* Grid para Checkboxes (3 colunas) */
 .checkbox-grid-3 {
     display: grid;
-    /* 3 colunas como na pág de detalhes */
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 10px;
 }
@@ -127,36 +98,43 @@ input[type="file"] {
     background: #f9f9f9;
     padding: 8px 10px;
     border-radius: 5px;
+    border: 1px solid #eee;
 }
+
 .checkbox-item input[type="checkbox"] {
     width: auto;
-    margin-right: 10px;
+    margin-right: 1rem;
+    appearance: auto; 
+    height: 16px;
+    width: 16px;
 }
+
 .checkbox-item label {
     margin: 0;
     font-weight: 400;
+    font-size: 1rem;
 }
 
-/* Botão de Envio (Estilo pág de login) */
+/* Botão de Envio */
 .btn-submit {
     width: 100%;
     padding: 15px;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #ffffff;
-    /* Azul da pág de login */
     background-color: #3b82f6; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .btn-submit:hover {
     background-color: #2563eb;
 }
 
-/* Mensagem de Sucesso (para o JS) */
+/* Mensagem de Sucesso */
 .mensagem-sucesso {
     display: none;
     padding: 15px;
@@ -166,4 +144,15 @@ input[type="file"] {
     border: 1px solid #c3e6cb;
     border-radius: 5px;
     text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Estilo para campos com erro (usado no JavaScript para validação) */
+
+#erro {
+    display: none;
+    color: red;
+    font-size: 1.1rem;
+    margin: 1rem 0;
 }

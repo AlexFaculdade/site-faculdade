@@ -3,6 +3,9 @@ const ANUNCIO = "motorhub_anuncios" // Cria a referência para salvar o objeto d
 const USER_LOGGED = "motorhub_user_logged" // Cria a referência para salvar o user atual logado no localStorage
 const ANUNCIO_ID = "motorhub_anuncios_id"
 const ANUNCIO_CLICADO = "motorhub_anuncio_clicado"
+const CATEGORIA_CLICADA = "motorhub_categoria_clicada"
+const MARCA_INICIO_CLICADA = "motorhub_marca_inicio_clicada"
+const CHASSI_INICIO_CLICADO = "motorhub_chassi_inicio_clicado"
 // Uso de hashmap para salvar os usuários é em decorrência da sua velocidade ser O(1) para busca. 
 
 // Busca todos os users do localStorage, se houver, converte para objeto (quando armazenado no localStorage, é armazenado
@@ -12,8 +15,8 @@ function getFromStorage(key) {
     return keyData ? JSON.parse(keyData) : {}
 }
 
-function getFromStorageAnuncioClicado() {
-     let keyData = localStorage.getItem(ANUNCIO_CLICADO)
+function getFromStorageUniqueValue(key) {
+     let keyData = localStorage.getItem(key)
     return keyData ? JSON.parse(keyData) : null
 }
 
@@ -28,7 +31,13 @@ class Database {
     // o que evita perde de dados quando houver reload da página
     static anuncios =  getFromStorage(ANUNCIO)
 
-    static anuncioClicado = getFromStorageAnuncioClicado()
+    static anuncioClicado = getFromStorageUniqueValue(ANUNCIO_CLICADO)
+
+    static categoriaClicada = getFromStorageUniqueValue(CATEGORIA_CLICADA)
+
+    static marcaInicioClicada = getFromStorageUniqueValue(MARCA_INICIO_CLICADA)
+
+    static chassiCarro = getFromStorage(CHASSI_INICIO_CLICADO)
 
     // method para adicionar um user (tanto no hashmap, quanto no localStorage) e então loga o user
     static addUser(user) {
@@ -52,6 +61,26 @@ class Database {
     static setAnuncioId(id) {
         let anuncioHash = Database.anuncios[id]
         localStorage.setItem(ANUNCIO_CLICADO, JSON.stringify(anuncioHash))
+    }
+
+    static setCategoriaValor(categoria, valor) {
+        localStorage.setItem(categoria, JSON.stringify(valor))
+    }
+
+    static limparCategoriaChave(categoria, variavelCategoria) {
+        localStorage.removeItem(categoria)
+        switch(variavelCategoria) {
+            case 0:
+                Database.categoriaClicada = null
+                break;
+            case 1:
+                 Database.marcaInicioClicada = null
+                    break;
+            case 2:
+                 Database.chassiCarro = null
+                 break
+        }
+        
     }
 
     // method para buscar no hashmap. Como a chave do hashmap é o email, é só passar o email para o method que ele busca

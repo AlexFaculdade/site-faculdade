@@ -22,6 +22,26 @@ class Filter {
         return anuncios.filter(anuncio => anuncio.car.modelo.toLowerCase().includes(modelo.toLowerCase()));
     }
 
+    static filterModeloCategoria(anuncios, modelo) {
+        if (!modelo || typeof modelo !== 'string' || modelo.trim() === "") {
+            return anuncios;
+        }   
+        const termoBusca = modelo.toLowerCase().trim();
+        const regexModelo = new RegExp(`^${termoBusca}(\\s|$)`, 'i');
+
+        return anuncios.filter(anuncio => {
+            // Checagem de robustez
+            if (!anuncio.car || !anuncio.car.modelo) {
+                return false; 
+            }
+
+            const modeloAnuncio = anuncio.car.modelo.trim();
+            
+            // Testa se a Regex encontra a palavra principal no início do modelo do anúncio.
+            return regexModelo.test(modeloAnuncio);
+        });
+    }
+
     static filterModelo(anuncios, modelo) {
         // Retorna os anúncios que correspondem à localização fornecida (case insensitive)
         if(modelo == '') {

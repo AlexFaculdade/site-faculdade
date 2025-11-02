@@ -102,9 +102,63 @@ class FilterEvents {
     return marcas
   }
 
+  static forcarSelecaoMarca(marcaNome) {
+    FilterEvents.containerMarcas.querySelectorAll('.container-marcas--individual')
+        .forEach(el => el.classList.remove('selecionada'));
+        
+    let marcaEncontrada = null;
+
+    FilterEvents.containerMarcas.querySelectorAll('.container-marcas--individual').forEach(elemento => {
+        const nomeMarca = elemento.querySelector('p').textContent.trim();
+        
+        if (nomeMarca.toLowerCase() === marcaNome.toLowerCase()) {
+            elemento.classList.add('selecionada');
+            marcaEncontrada = true;
+            
+        }
+    });
+}
+
+static forcarSelecaoCarroceria(valorCarroceria) {
+    if (!valorCarroceria || typeof valorCarroceria !== 'string' || valorCarroceria.trim() === "") {
+        return;
+    }
+    
+    const valorBusca = valorCarroceria.toLowerCase().trim();
+
+    FilterEvents.checkboxesCarroceria.forEach(checkbox => {
+        const textoCarroceria = checkbox.nextElementSibling.textContent.trim().toLowerCase();
+        
+        if (textoCarroceria === valorBusca) {
+            checkbox.checked = true;
+        } else {
+            checkbox.checked = false;
+        }
+    });
+}
+
   static aplicarTodosFiltros() {
     FilterEvents.refreshDatabase();
     let resultadosFinais = FilterEvents.anuncios;
+
+    if(Database.categoriaClicada) {
+      FilterEvents.searchModelo.value = Database.categoriaClicada
+      resultadosFinais = Filter.filterModeloCategoria(
+        resultadosFinais, 
+        FilterEvents.searchModelo.value)
+        Database.limparCategoriaChave(CATEGORIA_CLICADA, 0)
+    }
+
+    if(Database.marcaInicioClicada) {
+      FilterEvents.forcarSelecaoMarca(Database.marcaInicioClicada)
+      Database.limparCategoriaChave(MARCA_INICIO_CLICADA, 1)
+    }
+
+    if(Database.chassiCarro) {
+      FilterEvents.forcarSelecaoCarroceria(Database.chassiCarro)
+      Database.limparCategoriaChave(CHASSI_INICIO_CLICADO, 2)
+    }
+
 
     const localizacao = FilterEvents.getSearchLocalizacao();
     if (localizacao) {
@@ -112,6 +166,7 @@ class FilterEvents {
         resultadosFinais,
         localizacao
       );
+
     }
 
     const modelo = FilterEvents.getSearchModelo();

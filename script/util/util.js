@@ -49,4 +49,9 @@ class Util {
             elemento.classList.remove("selecionada")
         })
     }
+
+    static validarPlacaMercoSul(placa) {
+        const RegexPlacaMercoSul = new RegExp('^[A-Z]{3}[0-9][A-Z][0-9]{2}$')
+        return RegexPlacaMercoSul.test(placa)
+    }
 }

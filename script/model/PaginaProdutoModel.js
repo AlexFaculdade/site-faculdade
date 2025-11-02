@@ -51,14 +51,14 @@ class PaginaProdutoModel {
 
         PaginaProdutoModel.airbag.textContent = anuncio.car.airbag ? "sim" : "não"
         PaginaProdutoModel.freio.textContent = anuncio.car.freios ? "sim" : "não"
-        PaginaProdutoModel.trava.textContent = anuncio.car.trava ? "sim" : "não"
+        PaginaProdutoModel.trava.textContent = anuncio.car.travasEletricas ? "sim" : "não"
         PaginaProdutoModel.licenciado.textContent = anuncio.car.licenciado ? "sim" : "não"
-        PaginaProdutoModel.troca.textContent = anuncio.car.troca ? "sim" : "não"
-        PaginaProdutoModel.ipva.textContent = anuncio.car.ipva ? "sim" : "não"
+        PaginaProdutoModel.troca.textContent = anuncio.car.aceitaTroca ? "sim" : "não"
+        PaginaProdutoModel.ipva.textContent = anuncio.car.ipvaPago ? "sim" : "não"
         PaginaProdutoModel.tetoSolar.textContent = anuncio.car.tetoSolar ? "sim" : "não"
         PaginaProdutoModel.vidrosEletricos.textContent = anuncio.car.vidrosEletricos ? "sim" : "não"
         PaginaProdutoModel.arCondicionado.textContent = anuncio.car.arCondicionado ? "sim" : "não"
-        PaginaProdutoModel.bancoEmCouro.textContent = anuncio.car.bancosMaterial
+        PaginaProdutoModel.bancoEmCouro.textContent = anuncio.car.bancosMaterial ? "sim" : "não"
         PaginaProdutoModel.alarme.textContent = anuncio.car.alarme ? "sim" : "não"
         PaginaProdutoModel.retrovisorEletrico.textContent = anuncio.car.retrovisorEletrico ? "sim" : "não"
     }
