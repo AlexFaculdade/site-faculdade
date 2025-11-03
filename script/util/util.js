@@ -54,4 +54,9 @@ class Util {
         const RegexPlacaMercoSul = new RegExp('^[A-Z]{3}[0-9][A-Z][0-9]{2}$')
         return RegexPlacaMercoSul.test(placa)
     }
+    static validaTelefoneBr(telefone) {
+        const regexBR = new RegExp('^[1-9]{2}(?:[2-9][0-9]{7}|[6-9][0-9]{8})$')
+        const numeroLimpo = telefone.replace(/[^\d]/g, '');
+        return regexBR.test(numeroLimpo);
+    }
 }

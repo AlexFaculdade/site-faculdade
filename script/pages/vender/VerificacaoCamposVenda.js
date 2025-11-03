@@ -24,6 +24,23 @@ class VerificacaoCamposVenda {
     static arCondicionado = document.getElementById("arCondicionado")
     static alarme = document.getElementById("alarme")
     static retrovisorEletrico = document.getElementById("retrovisorEletrico")
+
+    // imagens do carro
+    static img1 = document.getElementById("foto1")
+    static img2 = document.getElementById("foto2")
+    static img3 = document.getElementById("foto3")
+    static img4 = document.getElementById("foto4")
+
+    //titulo
+    static titulo = document.getElementById("titulo")
+
+    // Localização
+    static estado = document.getElementById("estado")
+    static cidade = document.getElementById("cidade")
+
+    // Telefone
+    static telefone = document.getElementById("telefone")
+    static vendedor = document.getElementById("username")
     
     static errorParagraph = document.getElementById("erro")
 
@@ -102,7 +119,27 @@ class VerificacaoCamposVenda {
             AlteracoesPagina.mensagemErroRegistrar("O material do banco deve ser colocado", VerificacaoCamposVenda.errorParagraph)
             return false
         }
-        
+        if(!VerificacaoCamposVenda.titulo.value) {
+            AlteracoesPagina.mensagemErroRegistrar("O título não pode estar vazio", VerificacaoCamposVenda.errorParagraph)
+            return false
+        }
+        if(!VerificacaoCamposVenda.estado.value) {
+            AlteracoesPagina.mensagemErroRegistrar("O Estado da localizacação do carro não pode estar vazio", VerificacaoCamposVenda.errorParagraph)
+            return false
+        }
+        if(!VerificacaoCamposVenda.cidade.value) {
+            AlteracoesPagina.mensagemErroRegistrar("A cidade da localização do carro não pode estar vazia", VerificacaoCamposVenda.errorParagraph)
+            return false
+        }
+        if(!VerificacaoCamposVenda.telefone.value) {
+            AlteracoesPagina.mensagemErroRegistrar("O telefone deve ser preenchido", VerificacaoCamposVenda.errorParagraph)
+            return false
+        } else {
+            if(!Util.validaTelefoneBr(VerificacaoCamposVenda.telefone.value)) {
+                AlteracoesPagina.mensagemErroRegistrar("O telefone está num formato inválido. Ex: 41987654321", VerificacaoCamposVenda.errorParagraph)
+                return false
+            }
+        }
 
         return true
     }
@@ -122,18 +159,18 @@ class VerificacaoCamposVenda {
         let cambio = VerificacaoCamposVenda.cambio.value
         let portas = VerificacaoCamposVenda.portas.value
 
-        let airbag = VerificacaoCamposVenda.airbag.value ? true : false
-        let freiosAbs = VerificacaoCamposVenda.freiosAbs.value ? true : false
-        let travasEletricas = VerificacaoCamposVenda.travasEletricas.value ? true : false
-        let licenciado = VerificacaoCamposVenda.licenciado.value ? true : false
-        let aceitaTroca = VerificacaoCamposVenda.aceitaTroca.value ? true : false
-        let ipvaPago = VerificacaoCamposVenda.ipvaPago.value ? true : false
-        let tetoSolar = VerificacaoCamposVenda.tetoSolar.value ? true : false
-        let vidrosEletricos = VerificacaoCamposVenda.vidrosEletricos.value ? true : false
-        let arCondicionado = VerificacaoCamposVenda.arCondicionado.value ? true : false
-        let bancosMaterial = VerificacaoCamposVenda.bancosMaterial.value ? true : false
-        let alarme = VerificacaoCamposVenda.alarme.value ? true : false
-        let retrovisorEletrico = VerificacaoCamposVenda.retrovisorEletrico.value ? true : false
+        let airbag = VerificacaoCamposVenda.airbag.checked
+        let freiosAbs = VerificacaoCamposVenda.freiosAbs.checked
+        let travasEletricas = VerificacaoCamposVenda.travasEletricas.checked
+        let licenciado = VerificacaoCamposVenda.licenciado.checked
+        let aceitaTroca = VerificacaoCamposVenda.aceitaTroca.checked
+        let ipvaPago = VerificacaoCamposVenda.ipvaPago.checked
+        let tetoSolar = VerificacaoCamposVenda.tetoSolar.checked
+        let vidrosEletricos = VerificacaoCamposVenda.vidrosEletricos.checked
+        let arCondicionado = VerificacaoCamposVenda.arCondicionado.checked
+        let bancosMaterial = VerificacaoCamposVenda.bancosMaterial.checked
+        let alarme = VerificacaoCamposVenda.alarme.checked
+        let retrovisorEletrico = VerificacaoCamposVenda.retrovisorEletrico.checked
         let carroObjeto = {
                 marca,
                 modelo,

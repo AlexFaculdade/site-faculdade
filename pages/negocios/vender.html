@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../../style/home/home.css">
     <link rel="stylesheet" href="../../style/style.css">
 </head>
+
 <body>
     <header class="home-header">
         <img onclick="window.location.href='../../index.html'" class="home-logo" src="../../img/logo.png" alt="">
@@ -47,7 +49,7 @@
         </header>
 
         <form id="form-anuncio">
-            
+
             <fieldset>
                 <legend>Informações Básicas</legend>
                 <div class="form-grid-2">
@@ -112,11 +114,13 @@
                 <div class="form-grid-2">
                     <div class="form-group">
                         <label for="anoFabricacao">Ano Fabricação</label>
-                        <input type="number" id="anoFabricacao" name="anoFabricacao" placeholder="Ex: 2021" min="1900" max="2050" required>
+                        <input type="number" id="anoFabricacao" name="anoFabricacao" placeholder="Ex: 2021" min="1900"
+                            max="2050" required>
                     </div>
                     <div class="form-group">
                         <label for="anoModelo">Ano Modelo</label>
-                        <input type="number" id="anoModelo" name="anoModelo" placeholder="Ex: 2022" min="1900" max="2050" required>
+                        <input type="number" id="anoModelo" name="anoModelo" placeholder="Ex: 2022" min="1900"
+                            max="2050" required>
                     </div>
                     <div class="form-group">
                         <label for="km">Quilometragem</label>
@@ -162,26 +166,37 @@
                         </select>
                     </div>
                 </div>
-                
+
                 <div class="checkbox-grid-3">
-                    <div class="checkbox-item"><input type="checkbox" id="licenciado"> <label for="licenciado">Licenciado</label></div>
-                    <div class="checkbox-item"><input type="checkbox" id="aceitaTroca"> <label for="aceitaTroca">Aceita Troca</label></div>
-                    <div class="checkbox-item"><input type="checkbox" id="ipvaPago"> <label for="ipvaPago">IPVA Pago</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="licenciado"> <label
+                            for="licenciado">Licenciado</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="aceitaTroca"> <label for="aceitaTroca">Aceita
+                            Troca</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="ipvaPago"> <label for="ipvaPago">IPVA
+                            Pago</label></div>
                 </div>
-                 
+
             </fieldset>
 
             <fieldset>
                 <legend>Opcionais e Acessórios</legend>
                 <div class="checkbox-grid-3">
-                    <div class="checkbox-item"><input type="checkbox" id="airbag"> <label for="airbag">AirBag</label></div>
-                    <div class="checkbox-item"><input type="checkbox" id="freios"> <label for="freios">Freio ABS</label></div>
-                    <div class="checkbox-item"><input type="checkbox" id="tetoSolar"> <label for="tetoSolar">Teto Solar</label></div>
-                    <div class="checkbox-item"><input type="checkbox" id="travasEletricas"> <label for="travasEletricas">Travas Elétricas</label></div>
-                    <div class="checkbox-item"><input type="checkbox" id="vidrosEletricos"> <label for="vidrosEletricos">Vidros Elétricos</label></div>
-                    <div class="checkbox-item"><input type="checkbox" id="arCondicionado"> <label for="arCondicionado">Ar Condicionado</label></div>
-                    <div class="checkbox-item"><input type="checkbox" id="alarme"> <label for="alarme">Alarme</label></div>
-                    <div class="checkbox-item"><input type="checkbox" id="retrovisorEletrico"> <label for="retrovisorEletrico">Retrovisor Elétrico</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="airbag"> <label for="airbag">AirBag</label>
+                    </div>
+                    <div class="checkbox-item"><input type="checkbox" id="freios"> <label for="freios">Freio ABS</label>
+                    </div>
+                    <div class="checkbox-item"><input type="checkbox" id="tetoSolar"> <label for="tetoSolar">Teto
+                            Solar</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="travasEletricas"> <label
+                            for="travasEletricas">Travas Elétricas</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="vidrosEletricos"> <label
+                            for="vidrosEletricos">Vidros Elétricos</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="arCondicionado"> <label
+                            for="arCondicionado">Ar Condicionado</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="alarme"> <label for="alarme">Alarme</label>
+                    </div>
+                    <div class="checkbox-item"><input type="checkbox" id="retrovisorEletrico"> <label
+                            for="retrovisorEletrico">Retrovisor Elétrico</label></div>
                 </div>
             </fieldset>
 
@@ -190,23 +205,64 @@
                 <div class="form-grid-2">
                     <div class="form-group">
                         <label for="foto1">Link da Foto 1 (Principal)</label>
-                        <input type="url" id="foto1" name="foto1" placeholder="Ex: https://i.imgur.com/foto_principal.jpg" required>
+                        <input type="url" id="foto1" name="foto1"
+                            placeholder="Ex: https://i.imgur.com/foto_principal.jpg" required>
                     </div>
                     <div class="form-group">
                         <label for="foto2">Link da Foto 2</label>
-                        <input type="url" id="foto2" name="foto2" placeholder="Ex: https://i.imgur.com/foto_traseira.jpg">
+                        <input type="url" id="foto2" name="foto2"
+                            placeholder="Ex: https://i.imgur.com/foto_traseira.jpg">
                     </div>
                     <div class="form-group">
                         <label for="foto3">Link da Foto 3</label>
-                        <input type="url" id="foto3" name="foto3" placeholder="Ex: https://i.imgur.com/foto_interior.jpg">
+                        <input type="url" id="foto3" name="foto3"
+                            placeholder="Ex: https://i.imgur.com/foto_interior.jpg">
                     </div>
                     <div class="form-group">
                         <label for="foto4">Link da Foto 4</label>
                         <input type="url" id="foto4" name="foto4" placeholder="Ex: https://i.imgur.com/foto_motor.jpg">
                     </div>
                 </div>
-                </fieldset>
-            
+            </fieldset>
+            </fieldset>
+
+            <fieldset>
+                <legend>Título do anúncio</legend>
+                <div class="form-group">
+                    <input type="text" id="titulo" name="modelo" placeholder="Ex: Jetta GLI de cor preta..." required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Localização do Veículo</legend>
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione o Estado</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <select id="cidade" name="cidade" required disabled>
+                            <option value="">Selecione a Cidade</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Suas informações de vendedor</legend>
+                <div class="form-group user-info">
+                    <i class="fa-solid fa-user"></i>
+                    <p id="username"></p>
+                </div>
+                <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" name="telefone" placeholder="Ex: 41987654321">
+                </div>
+            </fieldset>
+
             <div id="mensagem-sucesso" class="mensagem-sucesso">
                 Anúncio enviado com sucesso!
             </div>
@@ -278,11 +334,13 @@
     <script src="../../script/Database.js"></script>
     <script src="../../script/util/util.js"></script>
     <script src="../../script/model/Anuncio.js"></script>
-    <script src="../../script/model/Car.js"></script> 
+    <script src="../../script/model/Car.js"></script>
     <script src="../../script/verificarUserLogado.js"></script>
     <script src="../../script/pages/home/HeaderAlteravel.js"></script>
     <script src="../../script/pages/HeaderInfo.js"></script>
     <script src="../../script/pages/vender/VerificacaoCamposVenda.js"></script>
     <script src="../../script/pages/vender/script-venda.js"></script>
+    <script src="../../script/pages/vender/localizacao.js"></script>
 </body>
+
 </html>

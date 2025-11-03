@@ -28,8 +28,17 @@ class PaginaProdutoModel {
     static alarme = document.getElementById("carro-alarme")
     static retrovisorEletrico = document.getElementById("carro-retrovisorEletrico")
 
+    // Localizacação
+    static estado = document.getElementById("estado")
+    static cidade = document.getElementById("cidade")
+
+    // vendedor
+    static vendedor = document.getElementById("vendedor")
+    static telefone = document.getElementById("telefone")
+
     static renderizarCarroPagina() {
         let anuncio = Database.anuncioClicado
+        console.log(anuncio)
         PaginaProdutoModel.marca.textContent = anuncio.car.marca
         PaginaProdutoModel.modelo.textContent = anuncio.car.modelo
         PaginaProdutoModel.motor.textContent = anuncio.car.motor
@@ -61,6 +70,12 @@ class PaginaProdutoModel {
         PaginaProdutoModel.bancoEmCouro.textContent = anuncio.car.bancosMaterial ? "sim" : "não"
         PaginaProdutoModel.alarme.textContent = anuncio.car.alarme ? "sim" : "não"
         PaginaProdutoModel.retrovisorEletrico.textContent = anuncio.car.retrovisorEletrico ? "sim" : "não"
+
+        PaginaProdutoModel.cidade.textContent = anuncio.localizacao[1]
+        PaginaProdutoModel.estado.textContent = anuncio.localizacao[0]
+
+        PaginaProdutoModel.vendedor.textContent = anuncio.vendedor
+        PaginaProdutoModel.telefone.textContent = anuncio.telefone
     }
 
 }

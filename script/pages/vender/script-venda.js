@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById("form-anuncio")
     const buttonAnunciar = document.getElementById("buttonAnunciar");
     const mensagemSucesso = document.getElementById('mensagem-sucesso');
+    VerificacaoCamposVenda.vendedor.textContent = Database.sessionUser().nome
+    console.log(VerificacaoCamposVenda.aceitaTroca.checked)
     buttonAnunciar.addEventListener('click', (event) => {
         
         event.preventDefault();
@@ -12,12 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             car = VerificacaoCamposVenda.criarAnuncioCarro()
             let anuncio = new Anuncio(car, 
-            ["https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202510/20251030/volkswagen-jetta-2-0-350-tsi-gasolina-gli-dsg-wmimagem12464915726.webp?s=fill&w=1920&h=1440&q=75", 
-            "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202510/20251030/volkswagen-jetta-2-0-350-tsi-gasolina-gli-dsg-wmimagem12464922614.webp?s=fill&w=1920&h=1440&q=75", 
-            "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202510/20251030/volkswagen-jetta-2-0-350-tsi-gasolina-gli-dsg-wmimagem12464935844.webp?s=fill&w=1920&h=1440&q=75",
-            "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202510/20251030/volkswagen-jetta-2-0-350-tsi-gasolina-gli-dsg-wmimagem12464947932.webp?s=fill&w=1920&h=1440&q=75"],
-            "",  ["Paraná", "Curitiba"]
+            [VerificacaoCamposVenda.img1.value, VerificacaoCamposVenda.img2.value, VerificacaoCamposVenda.img3.value, VerificacaoCamposVenda.img4.value],
+            VerificacaoCamposVenda.titulo.value,  [VerificacaoCamposVenda.estado.value, VerificacaoCamposVenda.cidade.value], Database.sessionUser().nome, VerificacaoCamposVenda.telefone.value
             )
+            console.log(anuncio)
             Database.addAnuncio(anuncio);
         } catch(error) {
             console.error("Não foi possível anunciar o carro")

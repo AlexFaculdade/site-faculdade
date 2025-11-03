@@ -23,119 +23,119 @@ const listaDeCarrosParaTeste = [
     
     new Car("Audi", "RS6 Avant", "Perua", "Cinza Nardo", "WAUZZZ4G8EN012345","ZAA1A11", 2023, 2024, 5500,"4.0 V8 Biturbo 600cv", 1150000, "Automático", 4, true, true, true, true, false, true, true, true, true, "Couro", true, true)
 ];
-// for(let i = 0; i < listaDeCarrosParaTeste.length; i++) {
-//     try {
-//         let anuncio
-//         switch(i) {
-//             case 0:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/eclipse/mitsubishi-eclipse-1.jpg",
-//                     "../../img/comprar/carros/eclipse/mitsubishi-eclipse-2.jpg",
-//                     "../../img/comprar/carros/eclipse/mitsubishi-eclipse-3.jpg",
-//                     "../../img/comprar/carros/eclipse/mitsubishi-eclipse-4.jpg",
-//                 ], "", ["Paraná", "Curitiba"]);
-//                 break;
+for(let i = 0; i < listaDeCarrosParaTeste.length; i++) {
+    try {
+        let anuncio
+        switch(i) {
+            case 0:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/eclipse/mitsubishi-eclipse-1.jpg",
+                    "../../img/comprar/carros/eclipse/mitsubishi-eclipse-2.jpg",
+                    "../../img/comprar/carros/eclipse/mitsubishi-eclipse-3.jpg",
+                    "../../img/comprar/carros/eclipse/mitsubishi-eclipse-4.jpg",
+                ], "", ["Paraná", "Curitiba"],"","");
+                break;
     
-//             case 1:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/hb20/hyundai-hb20-1.webp",
-//                     "../../img/comprar/carros/hb20/hyundai-hb20-2.webp",
-//                     "../../img/comprar/carros/hb20/hyundai-hb20-3.webp",
-//                     "../../img/comprar/carros/hb20/hyundai-hb20-4.webp",
-//                 ], "", ["Santa Catarina", "Florianópolis"]);
-//                 break;
+            case 1:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/hb20/hyundai-hb20-1.webp",
+                    "../../img/comprar/carros/hb20/hyundai-hb20-2.webp",
+                    "../../img/comprar/carros/hb20/hyundai-hb20-3.webp",
+                    "../../img/comprar/carros/hb20/hyundai-hb20-4.webp",
+                ], "", ["Santa Catarina", "Florianópolis"],"","");
+                break;
         
-//             case 2:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/astra/chevrolet-astra-1.jpg",
-//                     "../../img/comprar/carros/astra/chevrolet-astra-2.jpg",
-//                     "../../img/comprar/carros/astra/chevrolet-astra-3.jpg",
-//                     "../../img/comprar/carros/astra/chevrolet-astra-4.jpg",
-//                 ], "", ["Paraná", "Londrina"]);
-//                 break;
+            case 2:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/astra/chevrolet-astra-1.jpg",
+                    "../../img/comprar/carros/astra/chevrolet-astra-2.jpg",
+                    "../../img/comprar/carros/astra/chevrolet-astra-3.jpg",
+                    "../../img/comprar/carros/astra/chevrolet-astra-4.jpg",
+                ], "", ["Paraná", "Londrina"],"","");
+                break;
         
-//             case 3:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/corolla/toyota-corolla-1.jpg",
-//                     "../../img/comprar/carros/corolla/toyota-corolla-2.jpg",
-//                     "../../img/comprar/carros/corolla/toyota-corolla-3.jpg",
-//                     "../../img/comprar/carros/corolla/toyota-corolla-4.jpg",
-//                 ], "", ["São Paulo", "São Paulo"]);
-//                 break;
+            case 3:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/corolla/toyota-corolla-1.jpg",
+                    "../../img/comprar/carros/corolla/toyota-corolla-2.jpg",
+                    "../../img/comprar/carros/corolla/toyota-corolla-3.jpg",
+                    "../../img/comprar/carros/corolla/toyota-corolla-4.jpg",
+                ], "", ["São Paulo", "São Paulo"],"","");
+                break;
         
-//             case 4:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/duster/renault-duster-1.jpg",
-//                     "../../img/comprar/carros/duster/renault-duster-2.jpg",
-//                     "../../img/comprar/carros/duster/renault-duster-3.jpg",
-//                     "../../img/comprar/carros/duster/renault-duster-4.jpg",
-//                 ], "", ["Rio de Janeiro", "Rio de Janeiro"]);
-//                 break;
+            case 4:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/duster/renault-duster-1.jpg",
+                    "../../img/comprar/carros/duster/renault-duster-2.jpg",
+                    "../../img/comprar/carros/duster/renault-duster-3.jpg",
+                    "../../img/comprar/carros/duster/renault-duster-4.jpg",
+                ], "", ["Rio de Janeiro", "Rio de Janeiro"],"","");
+                break;
         
-//             case 5:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/ka/ford-ka-1.jpg",
-//                     "../../img/comprar/carros/ka/ford-ka-2.jpg",
-//                     "../../img/comprar/carros/ka/ford-ka-3.jpg",
-//                     "../../img/comprar/carros/ka/ford-ka-4.jpg",
-//                 ], "", ["Santa Catarina", "Balneario Camboirú"]);
-//                 break;
+            case 5:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/ka/ford-ka-1.jpg",
+                    "../../img/comprar/carros/ka/ford-ka-2.jpg",
+                    "../../img/comprar/carros/ka/ford-ka-3.jpg",
+                    "../../img/comprar/carros/ka/ford-ka-4.jpg",
+                ], "", ["Santa Catarina", "Balneario Camboirú"],"","");
+                break;
         
-//             case 6:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/golf gti/volkswagen-gti-1.jpg",
-//                     "../../img/comprar/carros/golf gti/volkswagen-gti-2.jpg",
-//                     "../../img/comprar/carros/golf gti/volkswagen-gti-3.jpg",
-//                     "../../img/comprar/carros/golf gti/volkswagen-gti-4.jpg",
-//                 ], "", ["Amazonas", "Manaus"]);
-//                 break;
+            case 6:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/golf gti/volkswagen-gti-1.jpg",
+                    "../../img/comprar/carros/golf gti/volkswagen-gti-2.jpg",
+                    "../../img/comprar/carros/golf gti/volkswagen-gti-3.jpg",
+                    "../../img/comprar/carros/golf gti/volkswagen-gti-4.jpg",
+                ], "", ["Amazonas", "Manaus"],"","");
+                break;
         
-//             case 7:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/cronos/fiat-cronos-1.jpg",
-//                     "../../img/comprar/carros/cronos/fiat-cronos-2.jpg",
-//                     "../../img/comprar/carros/cronos/fiat-cronos-3.jpg",
-//                     "../../img/comprar/carros/cronos/fiat-cronos-4.jpg",
-//                 ], "", ["Minas Gerais", "Belo Horizonte"]);
-//                 break
-//             case 8:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/m6/bmw-m6-1.jpg",
-//                     "../../img/comprar/carros/m6/bmw-m6-2.jpg",
-//                     "../../img/comprar/carros/m6/bmw-m6-3.jpg",
-//                     "../../img/comprar/carros/m6/bmw-m6-4.jpg",
-//                 ], "", ["Tocantins", "Palmas"]);
-//                 break;
-//             case 9:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/porsche taycan/porsche-taycan-1.jpg",
-//                     "../../img/comprar/carros/porsche taycan/porsche-taycan-3.jpg",
-//                     "../../img/comprar/carros/porsche taycan/porsche-taycan-3.jpg",
-//                     "../../img/comprar/carros/porsche taycan/porsche-taycan-4.jpg",
-//                 ], "", ["Bahia", "Salvador"]);
-//                 break;
-//             case 10:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/type r/honda-typeR-1.jpg",
-//                     "../../img/comprar/carros/type r/honda-typeR-2.jpg",
-//                     "../../img/comprar/carros/type r/honda-typeR-3.jpg",
-//                     "../../img/comprar/carros/type r/honda-typeR-4.jpg",
-//                 ], "", ["Rio Grande do Sul", "Porto Alegre"]);
-//                 break;
-//             case 11:
-//                 anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
-//                     "../../img/comprar/carros/rs6/audi-rs6-1.jpg",
-//                     "../../img/comprar/carros/rs6/audi-rs6-2.jpg",
-//                     "../../img/comprar/carros/rs6/audi-rs6-3.jpg",
-//                     "../../img/comprar/carros/rs6/audi-rs6-4.jpg",
-//                 ], "", ["Pernambuco", "Recife"]);
-//                 break;
-//         }
-//         Database.addAnuncio(anuncio);
-//     } catch(err) {
-//         console.error("Erro ao criar anúncio de teste:", err);
-//     }
-// }
+            case 7:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/cronos/fiat-cronos-1.jpg",
+                    "../../img/comprar/carros/cronos/fiat-cronos-2.jpg",
+                    "../../img/comprar/carros/cronos/fiat-cronos-3.jpg",
+                    "../../img/comprar/carros/cronos/fiat-cronos-4.jpg",
+                ], "", ["Minas Gerais", "Belo Horizonte"],"","");
+                break
+            case 8:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/m6/bmw-m6-1.jpg",
+                    "../../img/comprar/carros/m6/bmw-m6-2.jpg",
+                    "../../img/comprar/carros/m6/bmw-m6-3.jpg",
+                    "../../img/comprar/carros/m6/bmw-m6-4.jpg",
+                ], "", ["Tocantins", "Palmas"]);
+                break;
+            case 9:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/porsche taycan/porsche-taycan-1.jpg",
+                    "../../img/comprar/carros/porsche taycan/porsche-taycan-3.jpg",
+                    "../../img/comprar/carros/porsche taycan/porsche-taycan-3.jpg",
+                    "../../img/comprar/carros/porsche taycan/porsche-taycan-4.jpg",
+                ], "", ["Bahia", "Salvador"],"","");
+                break;
+            case 10:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/type r/honda-typeR-1.jpg",
+                    "../../img/comprar/carros/type r/honda-typeR-2.jpg",
+                    "../../img/comprar/carros/type r/honda-typeR-3.jpg",
+                    "../../img/comprar/carros/type r/honda-typeR-4.jpg",
+                ], "", ["Rio Grande do Sul", "Porto Alegre"],"","");
+                break;
+            case 11:
+                anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
+                    "../../img/comprar/carros/rs6/audi-rs6-1.jpg",
+                    "../../img/comprar/carros/rs6/audi-rs6-2.jpg",
+                    "../../img/comprar/carros/rs6/audi-rs6-3.jpg",
+                    "../../img/comprar/carros/rs6/audi-rs6-4.jpg",
+                ], "", ["Pernambuco", "Recife"],"","");
+                break;
+        }
+        Database.addAnuncio(anuncio);
+    } catch(err) {
+        console.error("Erro ao criar anúncio de teste:", err);
+    }
+}
 
 const itensPorPagina = 60
 let paginaAtual = 1

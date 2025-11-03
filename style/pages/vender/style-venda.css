@@ -148,6 +148,13 @@ textarea {
     font-weight: 600;
 }
 
+.user-info {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+
 /* Estilo para campos com erro (usado no JavaScript para validação) */
 
 #erro {
