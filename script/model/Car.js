@@ -12,7 +12,6 @@ class Car {
     valor
     cambio
     portas
-    
     airbag
     freios
     travasEletricas
@@ -25,6 +24,7 @@ class Car {
     bancosMaterial
     alarme
     retrovisorEletrico
+    
     constructor(marca, modelo, carroceria, cor, chassi, placa, anoFabricacao, anoModelo, quilometragem, motor, valor, cambio, portas, airbag, freios, travasEletricas, licenciado, aceitaTroca, ipvaPago, tetoSolar, vidrosEletricos, arCondicionado, bancosMaterial,alarme, retrovisorEletrico) {
         this.marca = marca
         this.modelo = modelo

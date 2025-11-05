@@ -213,3 +213,153 @@ main {
     background-color: #e9f5ff;     
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); 
 }
+
+/* Media Query para Tablets (largura máxima de 768px) */
+@media screen and (max-width: 768px) {
+    /* Container Principal */
+    .filter-fixed {
+        padding: 0.8rem;
+    }
+    
+    .container-filter {
+        gap: 1.5rem; /* Reduzir espaçamento entre as seções */
+        padding: 0.8rem;
+    }
+
+    .container-filter h2 {
+        font-size: 1.8rem; /* Reduzir tamanho dos títulos */
+    }
+
+    .filtro {
+        font-size: 1.1rem; /* Reduzir tamanho do link 'Limpar Filtros' */
+        padding: 0.8rem;
+    }
+
+    /* Campos de Intervalo (Ano, Preço, Km) */
+    .container-interval {
+        gap: 1.5rem; /* Reduzir espaçamento entre inputs de intervalo */
+    }
+
+    .container-interval input {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .container-interval--wrapper {
+        font-size: 1.1rem;
+    }
+
+    /* Marcas */
+    .container-marcas {
+        grid-template-columns: 1fr 1fr; /* Mudar de 3 para 2 colunas */
+        gap: 0.8rem;
+    }
+
+    .container-marcas--individual {
+        font-size: 1.1rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    /* Anos Específicos */
+    .container-specific {
+        grid-template-columns: 1fr 1fr 1fr; /* Mudar de 5 para 3 colunas */
+        gap: 0.8rem;
+    }
+    
+    /* Preços Específicos */
+    .container-specific--price {
+        grid-template-columns: 1fr 1fr; /* Mudar de 3 para 2 colunas */
+        gap: 0.8rem;
+    }
+
+    .container-specific p,
+    .container-specific--price p {
+        font-size: 1.1rem;
+    }
+
+    /* Checkboxes (Cor, Carroceria, Portas) */
+    .container-filter--checkbox div {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+}
+
+/* Media Query para Smartphones (largura máxima de 480px) */
+@media screen and (max-width: 480px) {
+    /* Container Principal */
+    .filter-fixed {
+        /* Se for usado como um modal/drawer, o position sticky pode ser substituído por fixed/absolute 
+           ou o layout de grid da seção .comprar-grid precisará ser ajustado.
+           Por agora, vamos garantir que ele ocupe 100% da largura. */
+        width: 100%;
+        max-height: 80vh; /* Para que o usuário possa rolar o filtro sem que ele ocupe 100% da tela */
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        top: auto; /* Remove o sticky do topo */
+    }
+
+    .container-filter {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .container-filter h2 {
+        font-size: 1.6rem;
+    }
+    
+    /* Marcas */
+    .container-marcas {
+        grid-template-columns: 1fr 1fr; /* Manter 2 colunas */
+        gap: 0.5rem;
+    }
+
+    .container-marcas--individual {
+        font-size: 1rem;
+        padding: 0.8rem 0.3rem;
+    }
+
+    /* Campos de Busca/Input */
+    .container-search input {
+        padding: 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .container-interval {
+        flex-direction: column; /* Empilhar inputs de intervalo (Ano, Preço, Km) */
+        gap: 0.5rem;
+    }
+    
+    .container-interval input {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    /* Anos Específicos */
+    .container-specific {
+        grid-template-columns: 1fr 1fr; /* Mudar para 2 colunas */
+        gap: 0.5rem;
+    }
+    
+    /* Preços Específicos */
+    .container-specific--price {
+        grid-template-columns: 1fr 1fr; /* Manter 2 colunas */
+        gap: 0.5rem;
+    }
+    
+    .container-specific p,
+    .container-specific--price p {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    /* Checkboxes */
+    .container-filter--checkbox div {
+        font-size: 1.1rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    .container-filter--checkbox div input {
+        transform: scale(1.2);
+    }
+}

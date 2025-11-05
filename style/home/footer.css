@@ -54,3 +54,75 @@
 .footer-copyright {
     font-size: 1.5rem;
 }
+
+/* Media Query para Smartphones (largura máxima de 480px) */
+@media screen and (max-width: 480px) {
+    .main-footer {
+        padding: 1rem;
+        gap: 1rem;
+        align-items: flex-start; /* Alinhar o conteúdo à esquerda */
+    }
+
+    .footer-link {
+        /* Mudar de grid para flexbox e empilhar (ou grid de 1 coluna) */
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; /* Espaçamento entre os blocos (colunas) */
+        width: 100%;
+    }
+
+    .footer-column {
+        /* Adicionar um pequeno espaçamento inferior para separar as listas */
+        margin-bottom: 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .footer-column h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem; /* Espaço após o título da coluna */
+    }
+
+    .footer-social {
+        width: 90%;
+        font-size: 1.8rem;
+        gap: 1rem;
+        /* Alinhar com o resto do conteúdo */
+        align-self: flex-start; 
+    }
+
+    .footer-social__link {
+        font-size: 2rem;
+        justify-content: flex-start; /* Alinhar ícones à esquerda */
+        gap: 1.5rem; /* Espaço entre os ícones */
+    }
+    
+    .footer-copyright {
+        font-size: 1.2rem;
+        text-align: left;
+        align-self: flex-start;
+    }
+}
+
+/* Media Query para Tablets (largura máxima de 768px) */
+@media screen and (max-width: 768px) {
+    .main-footer {
+        padding: 1.5rem; /* Reduzir um pouco o padding */
+        gap: 1.5rem;
+    }
+
+    .footer-link {
+        /* Mudar de 4 colunas para 2 colunas */
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem; /* Aumentar o espaçamento entre as novas colunas */
+        width: 90%; /* Limitar um pouco a largura para não colar nas bordas */
+    }
+
+    .footer-column h2 {
+        font-size: 1.8rem; /* Títulos um pouco menores */
+    }
+
+    .footer-column li a,
+    .footer-copyright {
+        font-size: 1.3rem; /* Links e copyright um pouco menores */
+    }
+}

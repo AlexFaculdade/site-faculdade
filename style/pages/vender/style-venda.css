@@ -163,3 +163,85 @@ textarea {
     font-size: 1.1rem;
     margin: 1rem 0;
 }
+
+/* --- Media Queries --- */
+
+/* 1. Tablet Médio e Pequeno (Máximo de 840px - Ajuste fino do container) */
+@media screen and (max-width: 840px) {
+    .form-container {
+        max-width: 90%; /* Aumenta a largura para ocupar mais espaço na tela */
+        padding: 3rem 2rem; /* Reduz o padding lateral */
+    }
+
+    .form-header h1 {
+        font-size: 2rem;
+    }
+
+    .form-header p {
+        font-size: 1.1rem;
+    }
+    
+    legend {
+        font-size: 1.3rem;
+    }
+
+    /* O form-grid-2 já se ajusta automaticamente com minmax(280px, 1fr), mas
+       podemos garantir que ele empilhe mais cedo se as colunas ficarem muito apertadas. */
+    .form-grid-2 {
+        gap: 1.5rem;
+    }
+}
+
+/* 2. Tablet Vertical e Mobile Grande (Máximo de 600px - Garantir que grids se empilhem) */
+@media screen and (max-width: 600px) {
+    .form-container {
+        padding: 2rem 1.5rem; /* Reduz mais o padding */
+        margin: 20px auto;
+        box-shadow: none; /* Em telas menores, a sombra pode ser distrativa */
+        border-radius: 0;
+    }
+
+    /* Garante que o grid de 2 colunas vire uma coluna única */
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 0; /* Espaçamento já é dado pelo form-group */
+    }
+
+    /* Garante que o grid de 3 colunas de checkbox vire duas colunas */
+    .checkbox-grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 8px;
+    }
+
+    /* Reduz o tamanho da fonte para melhor leitura */
+    .btn-submit {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+    
+    .form-group label,
+    .checkbox-item label,
+    input[type="text"],
+    input[type="number"],
+    input[type="url"],
+    select,
+    textarea {
+        font-size: 0.95rem; /* Levemente menor para caber melhor */
+    }
+}
+
+/* 3. Mobile View (Máximo de 400px - Ajuste final para telas muito pequenas) */
+@media screen and (max-width: 400px) {
+    .form-container {
+        padding: 1rem; /* Padding mínimo */
+    }
+    
+    /* Garante que os checkboxes empilhem em uma única coluna */
+    .checkbox-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbox-item {
+        padding: 10px; /* Aumenta o padding para facilitar o clique */
+    }
+}

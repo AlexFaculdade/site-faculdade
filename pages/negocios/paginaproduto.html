@@ -43,7 +43,7 @@
                     <p id="nomePerfilHeader">entrar</p>
                 </a>
             </div>
-            <a class="favorities" href="">
+            <a class="favorities" href="../favorito/favorito.html">
                 <i class="fa-solid fa-bookmark"></i>
             </a>
 
@@ -61,16 +61,14 @@
                             <img class="buy-image" src="">
                             <img class="buy-image" src="">
                         </div>
+                        <button id="previous" class="button">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+
+                        <button id="next" class="button">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
-
-                    <button id="previous" class="button">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </button>
-
-                    <button id="next" class="button">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-
                 </div>
 
                 <div class="car-informations-2">
@@ -80,7 +78,8 @@
                     <div class="basic-info">
                         <div class="basic-info-specific">
                             <div class="basic-info-specific-container">
-                                <h3  style="font-size: 20px;">AirBag: <spa id="carro-airbag"n></spa></h3>
+                                <h3 style="font-size: 20px;">AirBag: <spa id="carro-airbag" n></spa>
+                                </h3>
                             </div>
                             <div class="basic-info-specific-container">
                                 <h3 style="font-size: 20px;">Freios ABS: <span id="carro-freio"></span></h3>
@@ -103,10 +102,12 @@
                                 <h3 style="font-size: 20px;">Teto solar: <span id="carro-tetoSolar"></span></h3>
                             </div>
                             <div class="basic-info-specific-container">
-                                <h3 style="font-size: 20px;">Vidros elétricos: <span id="carro-vidrosEletricos"></span></h3>
+                                <h3 style="font-size: 20px;">Vidros elétricos: <span id="carro-vidrosEletricos"></span>
+                                </h3>
                             </div>
                             <div class="basic-info-specific-container">
-                                <h3 style="font-size: 20px;">Ar condicionado: <span id="carro-arCondicionado"></span></h3>
+                                <h3 style="font-size: 20px;">Ar condicionado: <span id="carro-arCondicionado"></span>
+                                </h3>
                             </div>
                             <div class="basic-info-specific-container">
                                 <h3 style="font-size: 20px;">Bancos em couro: <span id="carro-bancoEmCouro"></span></h3>
@@ -115,7 +116,8 @@
                                 <h3 style="font-size: 20px;">Alarme: <span id="carro-alarme"></span></h3>
                             </div>
                             <div class="basic-info-specific-container">
-                                <h3 style="font-size: 20px;">Retrovisores elétricos: <span id="carro-retrovisorEletrico"></span></h3>
+                                <h3 style="font-size: 20px;">Retrovisores elétricos: <span
+                                        id="carro-retrovisorEletrico"></span></h3>
                             </div>
                         </div>
                     </div>
@@ -126,7 +128,8 @@
                     <div class="title-car">
                         <h1 id="nome-carro">
                             <span id="marca-carro">VOLKSWAGEN </span>
-                            <span id="modelo-carro">JETTA GLI</span></h1>
+                            <span id="modelo-carro">JETTA GLI</span>
+                        </h1>
                         <h2 id="motor-carro">2.0 350 TSI GASOLINA GLI DSG</h2>
                     </div>
 
@@ -193,7 +196,7 @@
                     <div id="car-items">
                         <p>Vendedor</p>
                     </div>
-                    <div class="basic-info">
+                    <div class="basic-info-seller">
                         <div class="seller-username-info">
                             <div class="user-circle">
                                 <i id="userimg" class="fa-solid fa-user"></i>
@@ -202,20 +205,12 @@
                             <div class="seller-name">
                                 <p id="vendedor">Guilherme Taborda</p>
                             </div>
-
-                            <div class="seller-rank">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
                         </div>
 
                         <div class="seller-username-info">
                             <div class="seller-contact">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <p id="telefone"></p>
+                                <i id="whatsapp" class="fa-brands fa-whatsapp"></i>
+                                <p id="telefone">123467898765</p>
                             </div>
                         </div>
                     </div>

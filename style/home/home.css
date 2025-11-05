@@ -64,3 +64,79 @@
 .favorities:hover {
     color: #1f75eb;
 }
+
+
+@media screen and (max-width: 768px) {
+    .home-header {
+        /* Reduzir as colunas para dar mais espaço à navegação */
+        grid-template-columns: 1fr 2fr 1fr;
+        font-size: 1.6rem; /* Reduzir um pouco a fonte */
+        gap: 1.5rem; /* Reduzir o espaçamento */
+        padding: 1.5rem;
+    }
+
+    .home-logo {
+        max-width: 80%; /* Ocupar um pouco mais de espaço na coluna */
+    }
+
+    .home-nav {
+        /* Manter flex, mas não precisa ser tão espaçado quanto no desktop */
+        justify-content: space-between;
+    }
+
+    .account i {
+        font-size: 2.5rem; /* Ícone um pouco menor */
+    }
+
+    .favorities {
+        font-size: 2.5rem; /* Ícone de favoritos menor */
+    }
+}
+
+/* Media Query para Smartphones (largura máxima de 480px) */
+@media screen and (max-width: 480px) {
+    .home-header {
+        /* Mudar para flexbox e empilhar os itens */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centralizar os itens */
+        font-size: 1.4rem;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .home-logo {
+        max-width: 50%; /* O logo no topo, centralizado */
+        margin-bottom: 1rem;
+    }
+
+    .home-nav {
+        /* Navegação horizontal compacta, ocupando a largura total */
+        width: 90%;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .home-anchor p {
+        /* Reduzir um pouco o espaçamento do texto do link */
+        margin: 0;
+    }
+
+    .home-account {
+        /* Conta e favoritos lado a lado no final */
+        width: 90%;
+        justify-content: space-around;
+    }
+    
+    .account {
+        gap: 1rem; /* Reduzir a distância entre ícone e texto */
+    }
+
+    .account i {
+        font-size: 2rem;
+    }
+
+    .favorities {
+        font-size: 2rem;
+    }
+}

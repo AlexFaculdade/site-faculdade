@@ -185,3 +185,129 @@ main {
     margin-top: 5rem;
     margin-left: 2rem;
 }
+
+/* Media Query para Tablets (largura máxima de 768px) */
+@media screen and (max-width: 768px) {
+    /* Carrossel */
+    .carrossel-container {
+        height: 50vh; /* Diminuir a altura do carrossel */
+        margin-bottom: 2rem;
+    }
+
+    /* Títulos e Botão 'Ver tudo' */
+    .maisbuscados-title {
+        font-size: 2rem;
+        margin-left: 2rem;
+    }
+
+    .vertudo a {
+        font-size: 1.3rem;
+        margin-right: 2rem;
+    }
+
+    /* Grid de Carros/Marcas/Categorias */
+    .grid-maisbuscados {
+        /* Mudar de 5 colunas para 3 colunas */
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem; /* Reduzir o espaçamento */
+        padding: 2rem 3rem; /* Diminuir o padding lateral */
+    }
+    
+    /* Cards de Carros (conteúdo) */
+    .card-maisbuscados__content p {
+        font-size: 1.3rem;
+    }
+
+    .card-maisbuscados__content h3 {
+        font-size: 1.7rem;
+    }
+    
+    /* Cards de Categorias (conteúdo) */
+    .categoria {
+        font-size: 1.7rem;
+        margin-top: 3rem;
+        margin-left: 1.5rem;
+    }
+
+    /* Botões do Carrossel */
+    .btn-carrossel.next {
+        right: 15px; /* Mover um pouco para a esquerda */
+    }
+}
+
+/* Media Query para Smartphones (largura máxima de 480px) */
+@media screen and (max-width: 480px) {
+    /* Carrossel */
+    .carrossel-container {
+        height: 35vh; /* Tornar o carrossel mais curto */
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-carrossel {
+        padding: 10px 8px; /* Botões menores */
+        font-size: 20px;
+    }
+
+    .btn-carrossel.prev {
+        left: 5px;
+    }
+
+    .btn-carrossel.next {
+        right: 5px;
+    }
+
+    /* Seção de Títulos */
+    .grid-content {
+        padding: 1rem;
+    }
+
+    .vertudo {
+        /* Melhorar o espaçamento e alinhamento do título e do link */
+        justify-content: space-between;
+        padding: 0 1rem; 
+    }
+
+    .maisbuscados-title {
+        font-size: 1.8rem;
+        margin-left: 0;
+    }
+
+    .vertudo a {
+        font-size: 1.1rem;
+        margin-right: 0;
+    }
+
+    /* Grid de Carros/Marcas/Categorias */
+    .grid-maisbuscados {
+        /* Mudar para 2 colunas */
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem; /* Espaçamento menor */
+        padding: 1.5rem 1rem; /* Padding lateral bem menor */
+    }
+
+    /* Cards - Ajustar escala de hover para não quebrar o layout */
+    .card-maisbuscados:hover,
+    .card-marcas:hover {
+        transform: scale(1.05); /* Escala menor para mobile */
+    }
+
+    /* Cards de Carros (conteúdo) */
+    .card-maisbuscados {
+        height: 20rem; /* Cards mais curtos */
+    }
+    
+    .card-maisbuscados__content p {
+        font-size: 1.1rem;
+    }
+
+    .card-maisbuscados__content h3 {
+        font-size: 1.4rem;
+    }
+    
+    /* Cards de Categorias (conteúdo) */
+    .categoria {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+}

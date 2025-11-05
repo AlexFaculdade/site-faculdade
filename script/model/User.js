@@ -3,6 +3,7 @@ class User {
     nome
     email
     senha
+    carrosFavoritados
     constructor(nome, email, senha) {
         this.nome = nome
         this.email = email

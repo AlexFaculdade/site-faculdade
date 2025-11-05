@@ -154,8 +154,9 @@ function renderizarCarroCard(anuncio) {
                 <img src="${anuncio.imagens[0]}" alt="${anuncio.car.marca} ${anuncio.car.modelo}">
             </div>
             <div class="card-car--content">
-                <div>
+                <div class="card-car--title">
                     <h2>${anuncio.car.marca} ${anuncio.car.modelo}</h2>
+                    <i onclick="Anuncio.favoritar('${anuncio.id}')" class="fa-solid fa-bookmark"></i>
                 </div>
                 <p>${anuncio.car.motor} - ${anuncio.car.cambio}</p>
                 <div class="card-car--content--info">
@@ -169,6 +170,7 @@ function renderizarCarroCard(anuncio) {
                     </div>
                 </div>
                 <h2>${precoFormatado}</h2>
+                
                 <button>Ver Parcelas</button>
             </div>
         </div>

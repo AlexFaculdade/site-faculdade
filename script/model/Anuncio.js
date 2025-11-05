@@ -20,4 +20,8 @@ class Anuncio {
         Database.setAnuncioId(id)
         window.location.href="./paginaproduto.html"
     }
+
+    static favoritar(id) {
+        Database.setFavorito(id)
+    }
 }

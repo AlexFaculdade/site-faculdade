@@ -90,3 +90,84 @@ body {
     font-size: 1.8rem;
     margin: 1rem 0;
 }
+
+@media screen and (max-width: 768px) {
+    .form-registrar {
+        width: 90%; 
+        padding: 2rem; 
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .registrar-input label {
+        font-size: 1.4rem;
+    }
+
+    .registrar-input input {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .button-submit {
+        padding: 1.1rem;
+        font-size: 1.3rem;
+    }
+
+    .own-account,
+    .termo {
+        font-size: 1.1rem;
+    }
+}
+
+/* 2. Mobile View (Máximo de 480px) */
+@media screen and (max-width: 480px) {
+    /* Remove a sombra e arredondamento para um visual de tela cheia */
+    .form-registrar {
+        width: 100%;
+        min-height: 100vh; /* Garante que ocupa a tela inteira */
+        padding: 1rem; 
+        box-shadow: none; 
+        border-radius: 0;
+        justify-content: flex-start; /* Alinha o conteúdo ao topo (melhor para formulários longos) */
+        padding-top: 2rem;
+    }
+    
+    /* Garante que o body não tente centralizar verticalmente em 100vh, mas sim o topo */
+    body {
+        align-items: flex-start;
+    }
+    
+    .logo {
+        max-width: 200px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .form-content {
+        gap: 1.2rem;
+    }
+
+    .registrar-input label {
+        font-size: 1.2rem;
+    }
+    
+    .registrar-input input {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .button-submit {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .own-account,
+    .termo,
+    #erro {
+        font-size: 1rem;
+    }
+}
