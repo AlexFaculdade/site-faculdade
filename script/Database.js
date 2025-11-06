@@ -58,6 +58,10 @@ class Database {
         return currentId
     }
 
+    static getAnuncioFavorito(id) {
+        return Database.anuncios[id]
+    }
+
     static setAnuncioId(id) {
         let anuncioHash = Database.anuncios[id]
         localStorage.setItem(ANUNCIO_CLICADO, JSON.stringify(anuncioHash))

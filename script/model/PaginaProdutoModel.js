@@ -43,7 +43,6 @@ class PaginaProdutoModel {
         PaginaProdutoModel.modelo.textContent = anuncio.car.modelo
         PaginaProdutoModel.motor.textContent = anuncio.car.motor
         PaginaProdutoModel.preco.textContent = "R$ " + anuncio.car.valor + ",00"
-        PaginaProdutoModel.cidade.textContent = "curitiba pr"
         PaginaProdutoModel.quilometragem.textContent = anuncio.car.quilometragem
         PaginaProdutoModel.cor.textContent =  anuncio.car.cor
         PaginaProdutoModel.carroceria.textContent = "sedan"

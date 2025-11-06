@@ -156,7 +156,7 @@ function renderizarCarroCard(anuncio) {
             <div class="card-car--content">
                 <div class="card-car--title">
                     <h2>${anuncio.car.marca} ${anuncio.car.modelo}</h2>
-                    <i onclick="Anuncio.favoritar('${anuncio.id}')" class="fa-solid fa-bookmark"></i>
+                    <i class="fa-solid fa-bookmark favorito"></i>
                 </div>
                 <p>${anuncio.car.motor} - ${anuncio.car.cambio}</p>
                 <div class="card-car--content--info">

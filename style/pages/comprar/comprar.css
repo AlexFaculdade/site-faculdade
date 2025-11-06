@@ -115,6 +115,14 @@ main {
     color: #fff;
 }
 
+.favorito {
+    transition: 0.25s;
+}
+
+.favorito:hover {
+    color: #FFD300;
+}
+
 /* Media Query para Laptops menores e Tablets Grandes (máximo de 1024px) */
 @media screen and (max-width: 1024px) {
     /* Ajuste do Container Principal */

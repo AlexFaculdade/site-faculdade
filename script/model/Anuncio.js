@@ -17,11 +17,8 @@ class Anuncio {
     }
 
     static cardAnuncio(id) {
+        console.log("clicado")
         Database.setAnuncioId(id)
         window.location.href="./paginaproduto.html"
-    }
-
-    static favoritar(id) {
-        Database.setFavorito(id)
     }
 }
