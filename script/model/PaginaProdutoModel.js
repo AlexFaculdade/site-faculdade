@@ -11,7 +11,6 @@ class PaginaProdutoModel {
     static anoFabricado = document.getElementById("ano-modelo-carro")
     static cambio = document.getElementById("cambio-carro")
     static combustivel = document.getElementById("combustivel-carro")
-    static blindado = document.getElementById("blindado-carro")
     static imgs = document.querySelectorAll(".buy-image")
 
     // Complementos
@@ -49,7 +48,6 @@ class PaginaProdutoModel {
         PaginaProdutoModel.anoModelo.textContent =  anuncio.car.anoModelo
         PaginaProdutoModel.anoFabricado.textContent =  anuncio.car.anoFabricacao
         PaginaProdutoModel.cambio.textContent =  anuncio.car.cambio
-        PaginaProdutoModel.blindado.textContent = "sim"
         PaginaProdutoModel.combustivel.textContent =  "gasolina"
 
         PaginaProdutoModel.imgs[0].src = anuncio.imagens[0]
