@@ -123,30 +123,25 @@ main {
     color: #FFD300;
 }
 
-/* Media Query para Laptops menores e Tablets Grandes (máximo de 1024px) */
 @media screen and (max-width: 1024px) {
-    /* Ajuste do Container Principal */
     main {
-        padding: 0rem 2rem 3rem 5rem; /* Reduzir padding geral, especialmente o esquerdo */
+        padding: 0rem 2rem 3rem 5rem;
     }
 
-    /* Layout Principal: Sidebar (Filtro) + Resultados */
     .comprar-grid {
-        grid-template-columns: 30% 65%; /* Dar um pouco mais de espaço para o filtro */
+        grid-template-columns: 30% 65%;
         column-gap: 3rem;
     }
 
-    /* Grid de Cards de Carros */
     .grid-cards-car {
-        grid-template-columns: 1fr 1fr 1fr; /* Mudar de 4 para 3 colunas */
+        grid-template-columns: 1fr 1fr 1fr;
         column-gap: 1.5rem;
         row-gap: 1.5rem;
         margin-top: 3rem;
     }
 
-    /* Cards */
     .card-car:hover {
-        transform: scale(1.05); /* Reduzir o zoom para evitar quebras de layout */
+        transform: scale(1.05);
     }
 
     .card-car--content {
@@ -161,49 +156,37 @@ main {
 }
 
 
-/* Media Query para Tablets (máximo de 768px) */
 @media screen and (max-width: 768px) {
-    /* Layout Principal: Empilhar Filtro e Resultados */
     .comprar-grid {
-        /* O filtro (`filter-fixed`) vai para 100% de largura no mobile,
-           e o grid de carros também ocupará a largura total. */
         grid-template-columns: 1fr; 
         column-gap: 0;
     }
     
-    /* Nota: Você precisará de JavaScript para esconder/mostrar o `.filter-fixed` em mobile.
-       Aqui, definimos que os resultados ocuparão o espaço todo disponível. */
-
-    /* Grid de Cards de Carros */
     .grid-cards-car {
-        grid-template-columns: 1fr 1fr; /* Mudar para 2 colunas */
+        grid-template-columns: 1fr 1fr; 
         column-gap: 1rem;
         row-gap: 1rem;
         margin-top: 2rem;
     }
 
-    /* Posição principal */
     main {
-        padding: 0rem 1rem 3rem 1rem; /* Reduzir padding para as bordas da tela */
+        padding: 0rem 1rem 3rem 1rem;
     }
 }
 
-/* Media Query para Smartphones (largura máxima de 480px) */
 @media screen and (max-width: 480px) {
-    /* Grid de Cards de Carros */
     .grid-cards-car {
-        grid-template-columns: 1fr; /* Mudar para 1 coluna */
+        grid-template-columns: 1fr;
         margin-top: 1rem;
     }
 
-    /* Cards */
     .card-car {
         margin: 0 auto;
-        max-width: 95%; /* Garantir que o card não toque nas bordas em alguns dispositivos */
+        max-width: 95%;
     }
 
     .card-car:hover {
-        transform: scale(1.02); /* Quase nenhum zoom para não quebrar o layout */
+        transform: scale(1.02);
     }
     
     .card-car--content {
@@ -217,7 +200,6 @@ main {
         font-size: 1rem;
     }
 
-    /* Paginação */
     #pagination-controls {
         gap: 0.5rem;
         margin-top: 2rem;

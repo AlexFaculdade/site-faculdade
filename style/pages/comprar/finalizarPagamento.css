@@ -11,15 +11,12 @@
     gap: 30px;
 }
 
-/* Coluna da Esquerda (Resumo do Carro) */
 .car-summary-column {
     flex: 1;
-    min-width: 300px; /* Largura mínima */
-    
-    /* "Gruda" o card no topo ao rolar a página */
+    min-width: 300px;
     position: sticky;
     top: 30px; 
-    align-self: flex-start; /* Alinha ao topo do container flex */
+    align-self: flex-start;
 }
 
 .car-summary-card {
@@ -27,14 +24,14 @@
     border-radius: 12px;
     background: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    overflow: hidden; /* Garante que a imagem respeite o radius */
+    overflow: hidden;
 }
 
 .car-summary-card img {
     width: 100%;
     height: auto;
     display: block;
-    aspect-ratio: 16/10; /* Proporção da imagem */
+    aspect-ratio: 16/10;
     object-fit: cover;
 }
 
@@ -64,7 +61,7 @@
     margin-top: 10px;
     border-top: 1px solid #e9ecef;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas de detalhes */
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     font-size: 14px;
     color: #495057;
@@ -77,9 +74,8 @@
 }
 
 
-/* Coluna da Direita (Simulador e Ações) */
 .simulation-main-column {
-    flex: 2; /* Ocupa 2/3 do espaço */
+    flex: 2;
     min-width: 320px;
 }
 
@@ -111,7 +107,6 @@
     margin-bottom: 20px;
 }
 
-/* Estilos do Formulário */
 .form-group {
     margin-bottom: 20px;
 }
@@ -140,14 +135,13 @@
 .form-group select:focus,
 .action-card textarea:focus {
     outline: none;
-    border-color: #7a99d8; /* Cor do botão (azul) */
+    border-color: #7a99d8;
     box-shadow: 0 0 0 3px rgba(122, 153, 216, 0.25);
 }
 
 .form-group input[type="range"] {
     width: 100%;
     margin-top: 10px;
-    /* Cor do slider no Chrome/Safari/Edge */
     accent-color: #7a99d8; 
 }
 
@@ -156,14 +150,13 @@
     resize: vertical;
 }
 
-/* Botões */
 .btn-primary, .btn-secondary {
     width: 100%;
     padding: 16px;
     font-size: 16px;
     font-weight: 600;
     border: none;
-    border-radius: 30px; /* Bem arredondado como na imagem */
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.2s ease;
     text-align: center;
@@ -173,7 +166,7 @@
 }
 
 .btn-primary {
-    background-color: #7a99d8; /* Azul da imagem "Ver parcelas" */
+    background-color: #7a99d8;
     color: white;
 }
 
@@ -206,7 +199,6 @@
     margin-right: 8px;
 }
 
-/* Div de Resultado da Simulação */
 #resultado-simulacao {
     background-color: #f8f9fa;
     border-radius: 8px;
@@ -228,12 +220,10 @@
     margin-bottom: 15px;
 }
 
-/* Opções de Pagamento */
 .payment-options {
     display: flex;
     gap: 15px;
 }
-/* Responsivo para os botões de pagamento */
 @media (max-width: 500px) {
     .payment-options {
         flex-direction: column;

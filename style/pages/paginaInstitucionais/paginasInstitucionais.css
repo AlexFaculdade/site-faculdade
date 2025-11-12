@@ -1,0 +1,150 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+    width: 100%;
+}
+
+.about-us-container,
+.content-container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #fff;
+    padding: 3rem 4rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.about-us-container h1,
+.content-container h1 {
+    font-size: 2.8rem;
+    color: #1f75eb;
+    margin-bottom: 1rem;
+}
+
+.about-us-container h2,
+.content-container h2 {
+    font-size: 1.9rem;
+    color: #222;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.about-us-container h2::after,
+.content-container h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #1f75eb;
+    border-radius: 3px;
+    margin-top: 0.6rem;
+}
+
+.about-us-container p,
+.content-container p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #444;
+    margin-bottom: 1.6rem;
+}
+
+.about-us-container ul,
+.content-container ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-us-container li,
+.content-container li {
+    font-size: 1.6rem;
+    color: #444;
+    margin-bottom: 0.8rem;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.values-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.values-list i {
+    color: #1f75eb;
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+}
+
+.blog-separator {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 2.5rem 0;
+}
+
+.disclaimer-box {
+    background-color: #fffbe6;
+    border-left: 5px solid #ffc107;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 4px;
+}
+
+.disclaimer-box strong {
+    color: #c59000;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 2rem;
+    }
+
+    .about-us-container,
+    .content-container {
+        padding: 2.5rem;
+    }
+
+    .about-us-container h1,
+    .content-container h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .about-us-container h2,
+    .content-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-us-container p,
+    .content-container p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-container,
+    .content-container {
+        padding: 2rem;
+    }
+
+    .about-us-container h1,
+    .content-container h1 {
+        font-size: 2rem;
+    }
+
+    .about-us-container p,
+    .content-container p,
+    .about-us-container li,
+    .content-container li {
+        font-size: 1.3rem;
+    }
+}

@@ -93,29 +93,21 @@ body {
     margin: 1rem 0;
 }
 
-/* --- Media Queries --- */
-
-/* 1. Tablet e Telas Menores (Máximo de 768px) */
 @media screen and (max-width: 768px) {
-    /* Ajusta o container principal para ocupar mais espaço na tela */
     .form-login {
-        width: 85%; /* Aumenta para 85% para não ficar muito estreito */
-        max-width: 450px; /* Garante que ele não ultrapasse um tamanho confortável */
-        padding: 1.5rem; /* Reduz o padding interno */
+        width: 85%; 
+        max-width: 450px;
+        padding: 1.5rem;
     }
 
-    /* Reduz o tamanho da fonte do título */
     .title {
         font-size: 2.5rem;
         margin-top: 1.5rem;
     }
 
-    /* Reduz o tamanho da fonte dos labels */
     .login-input label {
         font-size: 1.5rem;
     }
-
-    /* Reduz o padding dos inputs e botões */
     .login-input input {
         padding: 1rem;
     }
@@ -125,7 +117,6 @@ body {
         font-size: 1.3rem;
     }
 
-    /* Links de rodapé e erro */
     .forget-password,
     #erro {
         font-size: 1.3rem;
@@ -133,26 +124,22 @@ body {
     }
 }
 
-/* 2. Mobile View (Máximo de 480px) */
+
 @media screen and (max-width: 480px) {
-    /* Remove a sombra e arredondamento para um visual de tela cheia */
     .form-login {
         width: 100%;
-        height: 100vh; /* Ocupa a altura total da viewport */
+        height: 100vh;
         padding: 1rem; 
         box-shadow: none; 
         border-radius: 0;
-        
-        /* Garante que o conteúdo fique centralizado verticalmente na tela */
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
     
-    /* Logo menor em telas muito pequenas */
     .logo {
         width: 80%;
-        margin: 0 auto 1rem; /* Centraliza a logo */
+        margin: 0 auto 1rem;
     }
     
     .hr {
@@ -178,7 +165,6 @@ body {
         font-size: 1.2rem;
     }
     
-    /* Links de rodapé e erro */
     .forget-password,
     #erro {
         font-size: 1.1rem;

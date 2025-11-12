@@ -1,17 +1,3 @@
-/* --- Reset Básico e Fontes --- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8f9fa; /* Um cinza bem claro para o fundo */
-    color: #333;
-    line-height: 1.5;
-}
-
 main {
     max-width: 1240px;
     margin: 30px auto;
@@ -19,7 +5,6 @@ main {
     min-height: 50vh;
 }
 
-/* --- Estilo do Header (Baseado na sua imagem) --- */
 header {
     background-color: #ffffff;
     display: flex;
@@ -37,7 +22,6 @@ header {
 }
 
 .logo span {
-    /* Cor azul do ícone da sua imagem (aproximada) */
     color: #4a69bd; 
 }
 
@@ -52,7 +36,7 @@ nav ul li a {
     color: #495057;
     font-size: 16px;
     font-weight: 500;
-    text-transform: capitalize; /* Como na imagem */
+    text-transform: capitalize;
     transition: color 0.2s ease;
 }
 
@@ -69,7 +53,6 @@ nav ul li a.active {
     font-weight: 500;
 }
 
-/* --- Título da Seção (Carros mais buscados / Meus Favoritos) --- */
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -89,10 +72,8 @@ nav ul li a.active {
     font-weight: 500;
 }
 
-/* --- Grid e Cards de Carros --- */
 .car-grid {
     display: grid;
-    /* Grid responsivo */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
@@ -114,7 +95,7 @@ nav ul li a.active {
 .car-card img {
     width: 100%;
     height: 180px;
-    object-fit: cover; /* Garante que a imagem cubra o espaço */
+    object-fit: cover;
     display: block;
 }
 
@@ -156,13 +137,12 @@ nav ul li a.active {
     color: #6c757d;
 }
 
-/* --- Botão de Favorito --- */
 .favorite-btn {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 22px;
-    color: #adb5bd; /* Cor do ícone vazio */
+    color: #adb5bd; 
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -171,14 +151,13 @@ nav ul li a.active {
 }
 
 .favorite-btn.active {
-    color: #e74c3c; /* Cor vermelha para "favoritado" */
+    color: #e74c3c;
 }
 
-/* Mensagem de grade vazia */
 .empty-message {
     font-size: 16px;
     color: #6c757d;
-    grid-column: 1 / -1; /* Ocupa a linha inteira do grid */
+    grid-column: 1 / -1;
     text-align: center;
     padding: 40px;
 }

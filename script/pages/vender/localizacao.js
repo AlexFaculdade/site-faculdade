@@ -56,16 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     
-    // 2. Lida com a mudança de Estado e preenche as Cidades
     const handleEstadoChange = () => {
         const estadoSelecionado = selectEstado.value;
         
-        // Limpa e desabilita o campo de Cidade
         selectCidade.innerHTML = '<option value="">Selecione a Cidade</option>';
         selectCidade.disabled = true;
         selectCidade.value = "";
-        
-        // Se um estado válido e mapeado foi selecionado:
         if (estadoSelecionado && DADOS_LOCALIZACAO[estadoSelecionado]) {
             const cidades = DADOS_LOCALIZACAO[estadoSelecionado].sort();
             
@@ -76,11 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 selectCidade.appendChild(option);
             });
             
-            selectCidade.disabled = false; // Habilita o campo de Cidade
+            selectCidade.disabled = false; 
         }
     };
     
-    // --- INICIALIZAÇÃO E ESCUTAS ---
     
     popularEstados();
     selectEstado.addEventListener('change', handleEstadoChange);

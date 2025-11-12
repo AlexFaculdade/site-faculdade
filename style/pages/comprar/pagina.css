@@ -229,26 +229,24 @@
     font-size: 40px;
 }
 
-/* ======== CONTÊINER DO VÍDEO ======== */
 .video-container {
     position: relative;
     width: 100%;
     height: auto;
-    max-width: 100%; /* Limita a largura máxima */
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0; /* Espaçamento para o vídeo */
+    margin: 20px 0;
 }
 
-/* ======== PLAYER DE VÍDEO ======== */
 .video-player {
-    width: 100%; /* Faz o vídeo ocupar 100% da largura disponível */
-    height: 60vh; /* Mantém a proporção do vídeo */
-    max-width: 800px; /* Define uma largura máxima para o vídeo */
-    border-radius: 10px; /* Bordas arredondadas para o player */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
-    transition: transform 0.3s ease; /* Transição suave no efeito hover */
+    width: 100%;
+    height: 60vh;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 
