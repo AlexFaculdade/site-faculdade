@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Hub</title>
+    <link rel="shortcut icon" href="../.././img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/home/home.css">
+    <link rel="stylesheet" href="../../style/pages/comprar/comprar.css">
+    <link rel="stylesheet" href="../../style/home/footer.css">
+    <link rel="stylesheet" href="../../style/pages/comprar/sidebar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="home-header">
+        <img onclick="window.location.href='../.././index.html'" class="home-logo" src="../.././img/logo.png" alt="">
+        <div class="home-nav">
+            <a class="home-anchor" href="../../index.html">
+                <p>home</p>
+            </a>
+            <a class="home-anchor" href="./comprar.html">
+                <p>comprar</p>
+            </a>
+            <a class="home-anchor" href="./vender.html">
+                <p>vender</p>
+            </a>
+            <a class="home-anchor" href="../suporte/ajuda.html">
+                <p>ajuda</p>
+            </a>
+
+        </div>
+        <div class="home-account">
+            <div>
+                <a class="account" href="../../auth/login.html">
+                    <i class="fa-solid fa-user"></i>
+                    <p id="nomePerfilHeader">entrar</p>
+                </a>
+            </div>
+            <a class="favorities" href="../favorito/favorito.html">
+                <i class="fa-solid fa-bookmark"></i>
+            </a>
+
+        </div>
+    </header>
+    <hr>
+
+    <main>
+        <section class="comprar-grid">
+            <div class="filter-fixed">
+                <div class="container-filter">
+                    <div class="container-filter--pattern">
+                        <div class="filter-container">
+                            <h2>Localização</h2>
+                            <div class="filtro" id="filtro">
+                                <i class="fa-solid fa-filter"></i>
+                                <p>Limpar Filtros</p>
+                            </div>
+                        </div>
+                        
+                        <div class="container-search">
+                            <input id="localizacao" type="text" placeholder="Digite seu estado ou cidade">
+                            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h2 style="margin: 2rem 0 1rem 0;">Modelo do carro</h2>
+                        <div class="container-search" >
+                            <input id="modelo" type="text" placeholder="Digite o modelo do carro">
+                            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div class="container-filter--pattern">
+                        <h2>Marca</h2>
+                        <div class="container-marcas">
+                            <div class="container-marcas--individual" data-marca="chevrolet">
+                                <div>
+                                    <img src="../../img/comprar/marcas/chevrolet.webp" alt="">
+                                </div>
+                                <p>Chevrolet</p>
+                            </div>
+                            <div class="container-marcas--individual" data-marca="ford">
+                                <div>
+                                    <img src="../../img/comprar/marcas/ford.webp" alt="">
+                                </div>
+                                
+                                <p>Ford</p>
+                            </div>
+                            <div class="container-marcas--individual" data-marca="honda">
+                                <div>
+                                    <img src="../../img/comprar/marcas/honda.webp" alt="">
+                                </div>
+                                <p>Honda</p>
+                            </div>
+                            <div class="container-marcas--individual" data-marca="hyundai">
+                                <div>
+                                    <img src="../../img/comprar/marcas/hyundai.webp" alt="">
+                                </div>
+                                
+                                <p>Hyundai</p>
+                            </div>
+                            <div class="container-marcas--individual" data-marca="toyota">
+                                <div>
+                                    <img src="../../img/comprar/marcas/toyota.webp" alt="">
+                                </div>
+                                
+                                <p>Toyota</p>
+                            </div>
+                            <div class="container-marcas--individual" data-marca="volkswagen">
+                                <div>
+                                    <img src="../../img/comprar/marcas/volkswagen.webp" alt="">
+                                </div>
+                                <p>Volkswagen</p>
+                            </div>
+                            <div class="container-marcas--individual" data-marca="renault">
+                                <div>
+                                    <img src="../../img/comprar/marcas/renault.webp" alt="">
+                                </div>
+                                <p>Renault</p>
+                            </div>
+                            <div class="container-marcas--individual" data-marca="fiat">
+                                <div>
+                                    <img src="../../img/comprar/marcas/fiat.webp" alt="">
+                                </div>
+                                <p>Fiat</p>
+                            </div>
+                            <div class="container-marcas--individual" data-marca="mitsubishi">
+                                <div>
+                                     <img src="../../img/comprar/marcas/mitsubishi.webp" alt="">
+                                </div>
+                                <p>Mitsubishi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-filter--pattern">
+                        <h2>Ano</h2>
+                        <div class="container-interval--wrapper">
+                            <p>Escolha um intervalo</p>
+                            <div class="container-interval">
+                                <input id="minimoAno" type="text" placeholder="Ano mínimo">
+                                <input id="maximoAno" type="text" placeholder="Ano máximo">
+                            </div>
+                        </div>
+                        <p class="paragraph-specific">Escolha por ano específico</p>
+                        <div class="container-specific">
+                            <p class="anoEspecifico">2025</p>
+                            <p class="anoEspecifico">2024</p>
+                            <p class="anoEspecifico">2023</p>
+                            <p class="anoEspecifico">2022</p>
+                            <p class="anoEspecifico">2021</p>
+                            <p class="anoEspecifico">2020</p>
+                            <p class="anoEspecifico">2019</p>
+                            <p class="anoEspecifico">2018</p>
+                            <p class="anoEspecifico">2017</p>
+                            <p class="anoEspecifico">2016</p>
+                        </div>
+                    </div>
+                    <div class="container-filter--pattern">
+                        <h2>Preço</h2>
+                        <div class="container-interval--wrapper">
+                            <p>Escolha um intervalo</p>
+                            <div class="container-interval">
+                                <input id="precoMinimo" type="text" placeholder="Preço mínimo">
+                                <input id="precoMaximo" type="text" placeholder="Preço máximo">
+                            </div>
+                        </div>
+                        <p class="paragraph-specific">Escolha uma faixa de preço</p>
+                        <div class="container-specific--price">
+                            <p class="precoEspecifico">Até 60 mil</p>
+                            <p class="precoEspecifico">Até 70 mil</p>
+                            <p class="precoEspecifico">Até 80 mil</p>
+                            <p class="precoEspecifico">Até 90 mil</p>
+                            <p class="precoEspecifico">Até 100 mil</p>
+                            <p class="precoEspecifico">Até 150 mil</p>
+                            <p class="precoEspecifico">Até 200 mil</p>
+                        </div>
+                    </div>
+                    <div class="container-filter--pattern">
+                        <div class="container-interval--wrapper">
+                            <h3>Quilometragem</h3>
+                            <div class="container-interval">
+                                <input id="quilometragemMinima" type="text" placeholder="Km mínimo">
+                                <input id="quilometragemMaxima" type="text" placeholder="Km máximo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-filter--pattern">
+                        <h2>Câmbio</h2>
+                        <select name="" id="select-cambio">
+                            <option value="valor1">Ambos</option>
+                            <option value="valor2">Manual</option>
+                            <option value="valor3">Automático</option>
+                        </select>
+                    </div>
+                    <div class="container-filter--pattern container-filter--checkbox">
+                        <h2>Cor</h2>
+                        <div>
+                            <input type="checkbox" class="checkbox-cor" class="checkbox-cor">
+                            <p>Branco</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="checkbox-cor">
+                            <p>Preto</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="checkbox-cor">
+                            <p>Prata</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="checkbox-cor">
+                            <p>Vermelho</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="checkbox-cor">
+                            <p>Cinza</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="checkbox-cor">
+                            <p>Azul</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="checkbox-cor">
+                            <p>Outros</p>
+                        </div>
+                        
+    
+                    </div>
+                    <div class="container-filter--pattern container-filter--checkbox">
+                        <h2>Carroceria</h2>
+                        <div>
+                            <input type="checkbox" class="carroceria">
+                            <p>Coupê</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="carroceria">
+                            <p>Hatch</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="carroceria">
+                            <p>Sedan</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="carroceria">
+                            <p>Picape</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="carroceria">
+                            <p>SUV</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="carroceria">
+                            <p>Perua</p>
+                        </div>
+                    </div>
+                    <div class="container-filter--pattern container-filter--checkbox">
+                        <h2>Portas</h2>
+                        <div>
+                            <input type="checkbox" class="portas">
+                            <p>2</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="portas">
+                            <p>3</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="portas">
+                            <p>4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="grid-cards-car">
+                </div>
+                <div id="pagination-controls"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-link">
+            <ul class="footer-column">
+                <h2>Comprar e Vender </h2>
+                <li>
+                    <a href="./comprar.html">Comprar Carro</a>
+                </li>
+                <li>
+                    <a href="./vender.html">Vender Meu Carro</a>
+                </li>
+                <li>
+                    <a href="">Simular Parcelamento</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Institucional</h2>
+                <li>
+                    <a href="../sobre/sobre.html">Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="">Blog/Dicas</a>
+                </li>
+                <li>
+                    <a href="">FAQ (Perguntas Frequentes)</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Suporte</h2>
+                <li>
+                    <a href="">Central de Ajuda</a>
+                </li>
+                <li>
+                    <a href="">Fale Conosco</a>
+                </li>
+                <li>
+                    <a href="">Denunciar Anúncio</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Legal</h2>
+                <li><a href="../termos/termo.html">Termos de Uso</a></li>
+                <li><a href="../privacidade/politica.html">Política de Privacidade</a></li>
+                <li><a href="../privacidade/politica.html">Política de Cookies</a></li>
+                <li><a href="../seguranca/seguranca.html">Segurança</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h2>Siga-nos</h2>
+            <div class="footer-social__link">
+                <a href="https://instagram.com/motorhub" target="_blnk">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/motorhub" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy;2024-2025 Motors Hub. Todos os direitos Reservados</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/f2a6af5805.js" crossorigin="anonymous"></script>
+    <script src="../../script/Database.js"></script>
+    <script src="../../script/util/util.js"></script>
+    <script src="../../script/model/Anuncio.js"></script>
+    <script src="../../script/model/Car.js"></script>
+    <script src="../../script/pages/home/HeaderAlteravel.js"></script>
+    <script src="../../script/pages/HeaderInfo.js"></script>
+    <script src="../../script/util/Filter.js"></script>
+    <script src="../../script/pages/comprar/paginacao.js"></script>
+    <script src="../../script/pages/comprar/FilterEvents.js"></script>
+    <script src="../../script/pages/comprar/comprar.js"></script>
+</body>
+</html>

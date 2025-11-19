@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Hub - Login</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/auth/login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="" class="form-login" id="form-login">
+        <a href="../index.html">
+            <img class="logo" src="../img/logo.png" alt="logo do motor hub">
+        </a>
+        <hr>
+        <div class="form-content">
+            <h1 class="title">Logue sua Conta</h1>
+            <div class="login-input">
+                <label for="email">Insira seu e-mail</label>
+                <input id="email" type="email" name="email" required>
+            </div>
+            <div class="login-input">
+                <label for="password">Insira sua senha</label>
+                <input id="senha" type="password" name="password" id="" required>
+            </div>
+            <button class="button-submit" type="submit">Logar na conta</button>
+        </div>
+        <p id="erro"></p>
+        <a class="forget-password" href="./registrar.html">Não possui uma conta ainda?</a>
+        <a class="forget-password" href="./forgetPassword.html">Esqueceu sua senha?</a>
+    </form> 
+    <script src="../script/util/VerificarLogin.js"></script>
+    <script src="../script/util/alteracoesPagina.js"></script>
+    <script src="../script/Database.js"></script>
+    <script src="../script/auth/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Favoritos - Motor Hub</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/home/home.css">
+    <link rel="stylesheet" href="../../style/home/footer.css">
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../style/pages/favorito/favorito.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+
+    <header class="home-header">
+        <img onclick="window.location.href='../../index.html'" class="home-logo" src="../../img/logo.png" alt="">
+        <div class="home-nav">
+            <a class="home-anchor" href="../../index.html">
+                <p>home</p>
+            </a>
+            <a class="home-anchor" href="../../pages/negocios/comprar.html">
+                <p>comprar</p>
+            </a>
+            <a class="home-anchor" href="../../pages/negocios/vender.html">
+                <p>vender</p>
+            </a>
+            <a class="home-anchor" href="">
+                <p>ajuda</p>
+            </a>
+
+        </div>
+        <div class="home-account">
+            <div>
+                <a class="account" href="../../auth/login.html">
+                    <i class="fa-solid fa-user"></i>
+                    <p id="nomePerfilHeader">entrar</p>
+                </a>
+            </div>
+            <a class="favorities" href="../../pages/favorito/favorito.html">
+                <i class="fa-solid fa-bookmark"></i>
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="section-header">
+            <h2>Meus Favoritos</h2>
+        </div>
+        
+        <div id="favorites-grid" class="car-grid">
+            </div>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-link">
+            <ul class="footer-column">
+                <h2>Comprar e Vender </h2>
+                <li>
+                    <a href="../negocios/comprar.html">Comprar Carro</a>
+                </li>
+                <li>
+                    <a href="../negocios/vender.html">Vender Meu Carro</a>
+                </li>
+                <li>
+                    <a href="">Simular Parcelamento</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Institucional</h2>
+                <li>
+                    <a href="../sobre/sobre.html">Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="">Blog/Dicas</a>
+                </li>
+                <li>
+                    <a href="">FAQ (Perguntas Frequentes)</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Suporte</h2>
+                <li>
+                    <a href="">Central de Ajuda</a>
+                </li>
+                <li>
+                    <a href="">Fale Conosco</a>
+                </li>
+                <li>
+                    <a href="">Denunciar Anúncio</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Legal</h2>
+                <li><a href="../termos/termo.html">Termos de Uso</a></li>
+                <li><a href="../privacidade/politica.html">Política de Privacidade</a></li>
+                <li><a href="../cookies/cookies.html">Política de Cookies</a></li>
+                <li><a href="../seguranca/seguranca.html">Segurança</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h2>Siga-nos</h2>
+            <div class="footer-social__link">
+                <a href="https://instagram.com/motorhub" target="_blnk">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/motorhub" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy;2024-2025 Motors Hub. Todos os direitos Reservados</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/f2a6af5805.js" crossorigin="anonymous"></script>
+    <script src="../../script/Database.js"></script>
+    <script src="../../script/util/util.js"></script>
+    <script src="../../script/model/Anuncio.js"></script>
+    <script src="../../script/model/Car.js"></script>
+    <script src="../../script/pages/home/HeaderAlteravel.js"></script>
+    <script src="../../script/pages/HeaderInfo.js"></script>
+    <script src="../../script/util/Filter.js"></script>
+    <script src="../../script/pages/comprar/paginacao.js"></script>
+    <script src="../../script/pages/comprar/FilterEvents.js"></script>
+    <script src="../../script/pages/comprar/comprar.js"></script>
+</body>
+</html>

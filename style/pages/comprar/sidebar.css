@@ -1,0 +1,347 @@
+main {
+    position: relative;
+}
+
+.filter-fixed {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: sticky;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 100vh;
+    top: 0;
+}
+
+.container-filter {
+    width: 100%;
+    padding: 1rem;   
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    overflow-y: auto;
+}
+
+
+.filter-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.filtro {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.fitro i {
+    font-size: 1rem;
+}
+
+.filtro:hover {
+    color: #fff;
+    background-color:  #000;
+}
+
+.container-filter--pattern {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container-search {
+    position: relative;   
+}
+
+.container-search input {
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+}
+
+#search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 1.5rem;
+}
+
+.container-marcas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.container-marcas--individual {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.container-marcas--individual:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.container-marcas--individual div {
+    min-height: 70%;
+}
+
+.container-interval {
+    display: flex;
+    gap: 3rem;
+}
+
+.container-interval input {
+    width: 45%;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.container-interval--wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.container-interval input:focus {
+    outline: none;
+    border: 2px solid #000;
+}
+
+.paragraph-specific {
+    font-size: 1.3rem;
+}
+
+.container-specific {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.container-specific--price {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.container-specific p,
+.container-specific--price p {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.container-specific p:hover,
+.container-specific--price p:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#select-cambio {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1.5rem;
+}
+
+#select-cambio:focus {
+    outline: none;
+    border: 2px solid #000;
+}
+
+.container-filter--checkbox div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1.5rem;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.3rem;
+    border-radius: 8px;
+}
+
+.container-filter--checkbox div:hover {
+    background-color: #ccc;
+    transition: 0.3s;
+}
+
+.container-filter--checkbox div input {
+    transform: scale(1.5);
+}
+
+
+.container-marcas--individual.selecionada {
+    border: 2px solid #007bff;
+    background-color: #e9f5ff;     
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); 
+}
+.anoEspecifico.selecionada {
+    border: 2px solid #007bff;
+    background-color: #e9f5ff;     
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); 
+}
+
+.precoEspecifico.selecionada {
+    border: 2px solid #007bff;
+    background-color: #e9f5ff;     
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); 
+}
+
+@media screen and (max-width: 768px) {
+    .filter-fixed {
+        padding: 0.8rem;
+    }
+    
+    .container-filter {
+        gap: 1.5rem;
+        padding: 0.8rem;
+    }
+
+    .container-filter h2 {
+        font-size: 1.8rem;
+    }
+
+    .filtro {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+
+    .container-interval {
+        gap: 1.5rem; 
+    }
+
+    .container-interval input {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .container-interval--wrapper {
+        font-size: 1.1rem;
+    }
+
+    .container-marcas {
+        grid-template-columns: 1fr 1fr; 
+        gap: 0.8rem;
+    }
+
+    .container-marcas--individual {
+        font-size: 1.1rem;
+        padding: 1rem 0.5rem;
+    }
+    
+
+    .container-specific {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.8rem;
+    }
+    
+    .container-specific--price {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+
+    .container-specific p,
+    .container-specific--price p {
+        font-size: 1.1rem;
+    }
+
+
+    .container-filter--checkbox div {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .filter-fixed {
+        width: 100%;
+        max-height: 80vh;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        top: auto;
+    }
+
+    .container-filter {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .container-filter h2 {
+        font-size: 1.6rem;
+    }
+    
+    .container-marcas {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    .container-marcas--individual {
+        font-size: 1rem;
+        padding: 0.8rem 0.3rem;
+    }
+
+    .container-search input {
+        padding: 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .container-interval {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .container-interval input {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .container-specific {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+    
+    .container-specific--price {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+    
+    .container-specific p,
+    .container-specific--price p {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .container-filter--checkbox div {
+        font-size: 1.1rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    .container-filter--checkbox div input {
+        transform: scale(1.2);
+    }
+}

@@ -1,0 +1,173 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login {
+    width: 40rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.login-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.login-input label {
+    font-size: 1.7rem;
+}
+
+.login-input input {
+    padding: 1.3rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #F0F0F0;
+}
+
+.login-input input:focus {
+    outline: none;
+}
+
+.button-submit {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    background-color: #1f75eb;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.button-submit:hover {
+    background-color: #fff;
+    color: #1f75eb;
+    border: 1px #1f75eb solid;
+    font-weight: bold;
+}
+
+.forget-password {
+    text-decoration: none;
+    display: block;
+    margin: 1rem 0;
+    color: #2162a1;
+    font-size: 1.5rem;
+}
+
+.termo {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    transition: 0.25s;
+}
+
+.forget-password:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+#erro {
+    display: none;
+    color: red;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .form-login {
+        width: 85%; 
+        max-width: 450px;
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .login-input label {
+        font-size: 1.5rem;
+    }
+    .login-input input {
+        padding: 1rem;
+    }
+
+    .button-submit {
+        padding: 1.2rem;
+        font-size: 1.3rem;
+    }
+
+    .forget-password,
+    #erro {
+        font-size: 1.3rem;
+        margin: 0.8rem 0;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .form-login {
+        width: 100%;
+        height: 100vh;
+        padding: 1rem; 
+        box-shadow: none; 
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .logo {
+        width: 80%;
+        margin: 0 auto 1rem;
+    }
+    
+    .hr {
+        margin: 1rem 0;
+    }
+
+    .title {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .form-content {
+        gap: 1.5rem;
+    }
+
+    .login-input label {
+        font-size: 1.3rem;
+    }
+    
+    .button-submit {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .forget-password,
+    #erro {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}

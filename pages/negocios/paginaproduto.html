@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo-pagina">Carro</title>
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/home/home.css">
+    <link rel="stylesheet" href="../../style/home/main.css">
+    <link rel="stylesheet" href="../../style/home/footer.css">
+    <link rel="stylesheet" href="../../style/pages/comprar/pagina.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="home-header">
+        <img onclick="window.location.href='../../index.html'" class="home-logo" src="../../img/logo.png" alt="">
+        <div class="home-nav">
+            <a class="home-anchor" href="../../index.html">
+                <p>home</p>
+            </a>
+            <a class="home-anchor" href="./comprar.html">
+                <p>comprar</p>
+            </a>
+            <a class="home-anchor" href="./vender.html">
+                <p>vender</p>
+            </a>
+            <a class="home-anchor" href="../ajuda/ajuda.html">
+                <p>ajuda</p>
+            </a>
+
+        </div>
+        <div class="home-account">
+            <div>
+                <a class="account" href="../../auth/login.html">
+                    <i class="fa-solid fa-user"></i>
+                    <p id="nomePerfilHeader">entrar</p>
+                </a>
+            </div>
+            <a class="favorities" href="../favorito/favorito.html">
+                <i class="fa-solid fa-bookmark"></i>
+            </a>
+
+        </div>
+    </header>
+    <hr>
+    <main>
+        <div class="tudo">
+            <div class="cima">
+                <div class="carrossel-buttons">
+                    <div class="buy-carrossel">
+                        <div class="buy-carrossel-img">
+                            <img class="buy-image" src="">
+                            <img class="buy-image" src="">
+                            <img class="buy-image" src="">
+                            <img class="buy-image" src="">
+                        </div>
+                        <button id="previous" class="button">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+
+                        <button id="next" class="button">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="car-informations">
+                    <div class="title-car">
+                        <h1 id="nome-carro">
+                            <span id="marca-carro">VOLKSWAGEN </span>
+                            <span id="modelo-carro">JETTA GLI</span>
+                        </h1>
+                        <h2 id="motor-carro">2.0 350 TSI GASOLINA GLI DSG</h2>
+                    </div>
+
+                    <div class="basic-info-first">
+                        <p id="preco-carro">R$ 159.900,00</p>
+                    </div>
+
+                    <div class="basic-info">
+                        <div class="basic-info-specific">
+                            <div class="basic-info-specific-container">
+                                <h1>Localização</h1>
+                                <h3><span id="cidade"></span> - <span id="estado"></span></h3>
+                            </div>
+
+                            <div class="basic-info-specific-container">
+                                <h1>Quilometragem</h1>
+                                <h3 id="quilometragem-carro">70.276 km</h3>
+                            </div>
+
+                            <div class="basic-info-specific-container">
+                                <h1>Cor</h1>
+                                <h3 id="cor-carro">Nardo Grey</h3>
+                            </div>
+
+                            <div class="basic-info-specific-container">
+                                <h1>Carroceria</h1>
+                                <h3 id="carroceria-carro">Sedan</h3>
+                            </div>
+                        </div>
+
+                        <div class="basic-info-specific">
+                            <div class="basic-info-specific-container">
+                                <h1>Ano</h1>
+                                <h3>
+                                    <span id="ano-fabricado-carro">2021</span>
+                                    <span>/</span>
+                                    <span id="ano-modelo-carro">2022</span>
+                                </h3>
+                            </div>
+
+                            <div class="basic-info-specific-container">
+                                <h1>Câmbio</h1>
+                                <h3 id="cambio-carro">Automatico</h3>
+                            </div>
+
+                            <div class="basic-info-specific-container">
+                                <h1>Combustível</h1>
+                                <h3 id="combustivel-carro">Gasolina</h3>
+                            </div>
+
+                            <div class="basic-info-specific-container">
+                                <h1>Blindado</h1>
+                                <h3 id="blindado-carro">Não</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="buy-button" type="button" onclick="window.location.href='./finalizarPagamento.html'">Ver parcelas</button>
+                    </div>
+                </div>
+            </div>
+            <div class="baixo">
+                <div class="car-informations-2">
+                    <div id="car-items">
+                        <p>Itens do veículo</p>
+                    </div>
+                    <div class="basic-info">
+                        <div class="basic-info-specific">
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">AirBag: <spa id="carro-airbag" n></spa>
+                                </h3>
+                            </div>
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">Freios ABS: <span id="carro-freio"></span></h3>
+                            </div>
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">Travas elétricas: <span id="carro-trava"></span></h3>
+                            </div>
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">Licenciado: <span id="carro-licenciado"></span></h3>
+                            </div>
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">Aceita troca: <span id="carro-troca"></span></h3>
+                            </div>
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">IPVA Pago: <span id="carro-ipva"></span></h3>
+                            </div>
+                        </div>
+                        <div class="basic-info-specific">
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">Teto solar: <span id="carro-tetoSolar"></span></h3>
+                            </div>
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">Vidros elétricos: <span id="carro-vidrosEletricos"></span>
+                                </h3>
+                            </div>
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">Ar condicionado: <span id="carro-arCondicionado"></span>
+                                </h3>
+                            </div>
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">Bancos em couro: <span id="carro-bancoEmCouro"></span></h3>
+                            </div>
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">Alarme: <span id="carro-alarme"></span></h3>
+                            </div>
+                            <div class="basic-info-specific-container">
+                                <h3 style="font-size: 20px;">Retrovisores elétricos: <span
+                                        id="carro-retrovisorEletrico"></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seller-informations">
+                    <div id="car-items">
+                        <p>Vendedor</p>
+                    </div>
+                    <div class="basic-info-seller">
+                        <div class="seller-username-info">
+                            <div class="user-circle">
+                                <i id="userimg" class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div class="seller-name">
+                                <p id="vendedor">Guilherme Taborda</p>
+                            </div>
+                        </div>
+
+                        <div class="seller-username-info">
+                            <div class="seller-contact">
+                                <i id="whatsapp" class="fa-brands fa-whatsapp"></i>
+                                <p id="telefone">123467898765</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-container" style="display: none;" id="video">
+            <video class="video-player" controls>
+                <source src="../../img/comprar/carros/civic-eg/honda-civic-eg-video.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento <code>video</code>.
+            </video>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-link">
+            <ul class="footer-column">
+                <h2>Comprar e Vender </h2>
+                <li>
+                    <a href="./comprar.html">Comprar Carro</a>
+                </li>
+                <li>
+                    <a href="./vender.html">Vender Meu Carro</a>
+                </li>
+                <li>
+                    <a href="">Simular Parcelamento</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Institucional</h2>
+                <li>
+                    <a href="../sobre/sobre.html">Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="">Blog/Dicas</a>
+                </li>
+                <li>
+                    <a href="">FAQ (Perguntas Frequentes)</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Suporte</h2>
+                <li>
+                    <a href="">Central de Ajuda</a>
+                </li>
+                <li>
+                    <a href="">Fale Conosco</a>
+                </li>
+                <li>
+                    <a href="">Denunciar Anúncio</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Legal</h2>
+                <li><a href="../termos/termo.html">Termos de Uso</a></li>
+                <li><a href="../privacidade/politica.html">Política de Privacidade</a></li>
+                <li><a href="../cookies/cookies.html">Política de Cookies</a></li>
+                <li><a href="../seguranca/seguranca.html">Segurança</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h2>Siga-nos</h2>
+            <div class="footer-social__link">
+                <a href="https://facebook.com/motorhub" target="_blnk">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://instagram.com/motorhub" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com/motorhub" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy;2024-2025 Motors Hub. Todos os direitos Reservados</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/f2a6af5805.js" crossorigin="anonymous"></script>
+    <script src="../../script/Database.js"></script>
+    <script src="../../script/util/util.js"></script>
+    <script src="../../script/model/Anuncio.js"></script>
+    <script src="../../script/model/Car.js"></script>
+    <script src="../../script/model/PaginaProdutoModel.js"></script>
+    <script src="../../script/pages/comprar/paginaprodutojs/carrossel.js"></script>
+    <script src="../../script/pages/home/HeaderAlteravel.js"></script>
+    <script src="../../script/pages/HeaderInfo.js"></script>
+    <script src="../../script/pages/comprar/paginaProduto.js"></script>
+</body>
+
+</html>

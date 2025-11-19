@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender Veículo - Motor Hub</title>
+    <link rel="stylesheet" href="../../style/pages/vender/style-venda.css">
+    <link rel="stylesheet" href="../../style/home/footer.css">
+    <link rel="stylesheet" href="../../style/home/home.css">
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="home-header">
+        <img onclick="window.location.href='../../index.html'" class="home-logo" src="../../img/logo.png" alt="">
+        <div class="home-nav">
+            <a class="home-anchor" href="../../index.html">
+                <p>home</p>
+            </a>
+            <a class="home-anchor" href="./comprar.html">
+                <p>comprar</p>
+            </a>
+            <a class="home-anchor" href="./vender.html">
+                <p>vender</p>
+            </a>
+            <a class="home-anchor" href="../ajuda/ajuda.html">
+                <p>ajuda</p>
+            </a>
+        </div>
+        <div class="home-account">
+            <div>
+                <a class="account" href="../../auth/login.html">
+                    <i class="fa-solid fa-user"></i>
+                    <p id="nomePerfilHeader">entrar</p>
+                </a>
+            </div>
+            <a class="favorities" href="../favorito/favorito.html">
+                <i class="fa-solid fa-bookmark"></i>
+            </a>
+        </div>
+    </header>
+    <hr>
+
+    <main class="form-container">
+        <header class="form-header">
+            <h1>Anuncie seu Veículo</h1>
+            <p>Preencha as informações para criar seu anúncio.</p>
+        </header>
+
+        <form id="form-anuncio">
+
+            <fieldset>
+                <legend>Informações Básicas</legend>
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="marca">Marca</label>
+                        <select id="marca" name="marca" required>
+                            <option value="">Selecione</option>
+                            <option value="chevrolet">Chevrolet</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="ford">Ford</option>
+                            <option value="honda">Honda</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="jeep">Jeep</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="renault">Renault</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="volkswagen">Volkswagen</option>
+                            <option value="outra">Outra</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" id="modelo" name="modelo" placeholder="Ex: Jetta GLI" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="carroceria">Carroceria</label>
+                        <select id="carroceria" name="carroceria" required>
+                            <option value="">Selecione</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="sedan">Coupê</option>
+                            <option value="hatch">Hatch</option>
+                            <option value="suv">SUV</option>
+                            <option value="pickup">Picape</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cor">Cor</label>
+                        <select id="cor" name="cor" required>
+                            <option value="">Selecione</option>
+                            <option value="branco">Branco</option>
+                            <option value="preto">Preto</option>
+                            <option value="prata">Prata</option>
+                            <option value="vermelho">Vermelho</option>
+                            <option value="cinza">Cinza</option>
+                            <option value="azul">Azul</option>
+                            <option value="outra">Outra</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="chassi">Número do Chassi</label>
+                        <input type="text" id="chassi" name="chassi" placeholder="Apenas para fins de cadastro">
+                    </div>
+                    <div class="form-group">
+                        <label for="placa">Placa do Carro</label>
+                        <input type="text" id="placa" name="placa" placeholder="Formato: LLLNLNN" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalhes Técnicos</legend>
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="anoFabricacao">Ano Fabricação</label>
+                        <input type="number" id="anoFabricacao" name="anoFabricacao" placeholder="Ex: 2021" min="1900"
+                            max="2050" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="anoModelo">Ano Modelo</label>
+                        <input type="number" id="anoModelo" name="anoModelo" placeholder="Ex: 2022" min="1900"
+                            max="2050" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="km">Quilometragem</label>
+                        <input type="number" id="km" name="km" placeholder="Ex: 70000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="motor">Motor</label>
+                        <input type="text" id="motor" name="motor" placeholder="Ex: 2.0 TSI" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cambio">Câmbio</label>
+                        <select id="cambio" name="cambio" required>
+                            <option value="">Selecione</option>
+                            <option value="automatico">Automático</option>
+                            <option value="manual">Manual</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="portas">Portas</label>
+                        <select id="portas" name="portas" required>
+                            <option value="">Selecione</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Situação Legal e Valor</legend>
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="preco">Preço (R$)</label>
+                        <input type="number" id="valor" name="valor" placeholder="Ex: 159900" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bancosMaterial">Bancos</label>
+                        <select id="bancosMaterial" name="bancosMaterial" required>
+                            <option value="">Selecione</option>
+                            <option value="couro">Couro</option>
+                            <option value="tecido">Tecido</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="checkbox-grid-3">
+                    <div class="checkbox-item"><input type="checkbox" id="licenciado"> <label
+                            for="licenciado">Licenciado</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="aceitaTroca"> <label for="aceitaTroca">Aceita
+                            Troca</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="ipvaPago"> <label for="ipvaPago">IPVA
+                            Pago</label></div>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Opcionais e Acessórios</legend>
+                <div class="checkbox-grid-3">
+                    <div class="checkbox-item"><input type="checkbox" id="airbag"> <label for="airbag">AirBag</label>
+                    </div>
+                    <div class="checkbox-item"><input type="checkbox" id="freios"> <label for="freios">Freio ABS</label>
+                    </div>
+                    <div class="checkbox-item"><input type="checkbox" id="tetoSolar"> <label for="tetoSolar">Teto
+                            Solar</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="travasEletricas"> <label
+                            for="travasEletricas">Travas Elétricas</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="vidrosEletricos"> <label
+                            for="vidrosEletricos">Vidros Elétricos</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="arCondicionado"> <label
+                            for="arCondicionado">Ar Condicionado</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="alarme"> <label for="alarme">Alarme</label>
+                    </div>
+                    <div class="checkbox-item"><input type="checkbox" id="retrovisorEletrico"> <label
+                            for="retrovisorEletrico">Retrovisor Elétrico</label></div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Fotos do Veículo</legend>
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="foto1">Link da Foto 1 (Principal)</label>
+                        <input type="url" id="foto1" name="foto1"
+                            placeholder="Ex: https://i.imgur.com/foto_principal.jpg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="foto2">Link da Foto 2</label>
+                        <input type="url" id="foto2" name="foto2"
+                            placeholder="Ex: https://i.imgur.com/foto_traseira.jpg">
+                    </div>
+                    <div class="form-group">
+                        <label for="foto3">Link da Foto 3</label>
+                        <input type="url" id="foto3" name="foto3"
+                            placeholder="Ex: https://i.imgur.com/foto_interior.jpg">
+                    </div>
+                    <div class="form-group">
+                        <label for="foto4">Link da Foto 4</label>
+                        <input type="url" id="foto4" name="foto4" placeholder="Ex: https://i.imgur.com/foto_motor.jpg">
+                    </div>
+                </div>
+            </fieldset>
+            </fieldset>
+
+            <fieldset>
+                <legend>Título do anúncio</legend>
+                <div class="form-group">
+                    <input type="text" id="titulo" name="modelo" placeholder="Ex: Jetta GLI de cor preta..." required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Localização do Veículo</legend>
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione o Estado</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <select id="cidade" name="cidade" required disabled>
+                            <option value="">Selecione a Cidade</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Suas informações de vendedor</legend>
+                <div class="form-group user-info">
+                    <i class="fa-solid fa-user"></i>
+                    <p id="username"></p>
+                </div>
+                <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" name="telefone" placeholder="Ex: 41987654321">
+                </div>
+            </fieldset>
+
+            <div id="mensagem-sucesso" class="mensagem-sucesso">
+                Anúncio enviado com sucesso!
+            </div>
+            <p id="erro"></p>
+            <button id="buttonAnunciar" type="submit" class="btn-submit">Anunciar Carro</button>
+        </form>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-link">
+            <ul class="footer-column">
+                <h2>Comprar e Vender </h2>
+                <li>
+                    <a href="./comprar.html">Comprar Carro</a>
+                </li>
+                <li>
+                    <a href="./vender.html">Vender Meu Carro</a>
+                </li>
+                <li>
+                    <a href="">Simular Parcelamento</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Institucional</h2>
+                <li>
+                    <a href="../sobre/sobre.html">Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="">Blog/Dicas</a>
+                </li>
+                <li>
+                    <a href="">FAQ (Perguntas Frequentes)</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Suporte</h2>
+                <li>
+                    <a href="">Central de Ajuda</a>
+                </li>
+                <li>
+                    <a href="">Fale Conosco</a>
+                </li>
+                <li>2000
+                    <a href="">Denunciar Anúncio</a>
+                </li>
+            </ul>
+            <ul class="footer-column">
+                <h2>Legal</h2>
+                <li><a href="../termos/termo.html">Termos de Uso</a></li>
+                <li><a href="../privacidade/politica.html">Política de Privacidade</a></li>
+                <li><a href="../cookies/cookies.html">Política de Cookies</a></li>
+                <li><a href="../seguranca/seguranca.html">Segurança</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h2>Siga-nos</h2>
+            <div class="footer-social__link">
+                <a href="https://instagram.com/motorhub" target="_blnk">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/motorhub" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy;2024-2025 Motors Hub. Todos os direitos Reservados</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/f2a6af5805.js" crossorigin="anonymous"></script>
+    <script src="../../script/util/alteracoesPagina.js"></script>
+    <script src="../../script/Database.js"></script>
+    <script src="../../script/util/util.js"></script>
+    <script src="../../script/model/Anuncio.js"></script>
+    <script src="../../script/model/Car.js"></script>
+    <script src="../../script/verificarUserLogado.js"></script>
+    <script src="../../script/pages/home/HeaderAlteravel.js"></script>
+    <script src="../../script/pages/HeaderInfo.js"></script>
+    <script src="../../script/pages/vender/VerificacaoCamposVenda.js"></script>
+    <script src="../../script/pages/vender/script-venda.js"></script>
+    <script src="../../script/pages/vender/localizacao.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+main {
+    width: 100%;
+}
+
+.carrossel-container {
+    width: 100vw;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 3rem;
+}
+
+.slides {
+    display: flex;
+    width: 500vw;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100vw;
+    flex-shrink: 0;
+    height: 100%;
+    background-color: #fff;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.btn-carrossel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 24px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.btn-carrossel:hover {
+    opacity: 1;
+}
+
+.btn-carrossel.prev {
+    left: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.btn-carrossel.next {
+    right: 30px;
+    border-radius: 5px 0 0 5px;
+}
+
+
+.grid-content {
+    padding: 2rem;
+}
+
+.vertudo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.maisbuscados-title {
+    margin-left: 3rem;
+}
+
+.vertudo a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    margin-right: 3rem;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.vertudo p:hover {
+    color: #1f75eb;
+
+}
+
+.maisbuscados-title {
+    font-size: 2.5rem;
+}
+
+.grid-maisbuscados {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5rem;
+    padding: 2.5rem 8rem;
+    margin-bottom: 3rem;
+}
+
+.grid-maisbuscados a {
+    text-decoration: none;
+}
+
+.card-maisbuscados {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    cursor: pointer;
+    border-radius: 16px;
+    overflow-x: hidden;
+    background-color: lightgrey;
+    height: 25rem;
+    transition: 1s;
+}
+
+.card-maisbuscados:hover {
+    transform: scale(1.2);
+}
+
+.card-maisbuscados--container__img {
+    height: 60%;
+    object-fit: cover;
+}
+
+.card-maisbuscados--container__img img {
+    width: 120%;
+    height: 100%;
+}
+
+.card-maisbuscados__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(lightgrey, black);
+    height: 40%;
+}
+
+.card-maisbuscados__content p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.card-maisbuscados__content h3 {
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+
+.card-marcas {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    cursor: pointer;
+    border-radius: 16px;
+    overflow-x: hidden;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+
+.card-marcas:hover {
+    transform: scale(1.2);
+}
+
+.card-marcas img {
+    width: 100%;
+}
+
+.card-categorias__content {
+    display: flex;
+    background: linear-gradient(lightgrey, black);
+    height: 40%;
+}
+
+.categoria {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 5rem;
+    margin-left: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    /* Carrossel */
+    .carrossel-container {
+        height: 50vh;
+        margin-bottom: 2rem;
+    }
+
+    .maisbuscados-title {
+        font-size: 2rem;
+        margin-left: 2rem;
+    }
+
+    .vertudo a {
+        font-size: 1.3rem;
+        margin-right: 2rem;
+    }
+
+    .grid-maisbuscados {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem; 
+        padding: 2rem 3rem;
+    }
+    
+    .card-maisbuscados__content p {
+        font-size: 1.3rem;
+    }
+
+    .card-maisbuscados__content h3 {
+        font-size: 1.7rem;
+    }
+    
+    .categoria {
+        font-size: 1.7rem;
+        margin-top: 3rem;
+        margin-left: 1.5rem;
+    }
+
+    .btn-carrossel.next {
+        right: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carrossel-container {
+        height: 35vh;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-carrossel {
+        padding: 10px 8px;
+        font-size: 20px;
+    }
+
+    .btn-carrossel.prev {
+        left: 5px;
+    }
+
+    .btn-carrossel.next {
+        right: 5px;
+    }
+
+    .grid-content {
+        padding: 1rem;
+    }
+
+    .vertudo {
+        justify-content: space-between;
+        padding: 0 1rem; 
+    }
+
+    .maisbuscados-title {
+        font-size: 1.8rem;
+        margin-left: 0;
+    }
+
+    .vertudo a {
+        font-size: 1.1rem;
+        margin-right: 0;
+    }
+
+    .grid-maisbuscados {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem; 
+    }
+
+    .card-maisbuscados:hover,
+    .card-marcas:hover {
+        transform: scale(1.05);
+    }
+
+    .card-maisbuscados {
+        height: 20rem;
+    }
+    
+    .card-maisbuscados__content p {
+        font-size: 1.1rem;
+    }
+
+    .card-maisbuscados__content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .categoria {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+}

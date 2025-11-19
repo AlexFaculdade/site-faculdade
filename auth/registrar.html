@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Hub - Login</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/auth/registrar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="" class="form-registrar" id="form-registrar">
+        <a href="../index.html">
+            <img class="logo" src="../img/logo.png" alt="logo do motor hub">
+        </a>
+        <hr>
+        <div class="form-content">
+            <h1 class="title">Criar uma conta</h1>
+            <div class="registrar-input">
+                <label for="email">Insira um e-mail</label>
+                <input id="email" type="text" name="email" >
+            </div>
+            <div class="registrar-input">
+                <label for="name">Insira um nome</label>
+                <input id="nome" type="text" name="name" >
+            </div>
+            <div class="registrar-input">
+                <label for="password">Insira uma senha</label>
+                <input id="senha" type="password" name="password">
+            </div>
+            <div class="registrar-input">
+                <label for="passwordConfirm">Insira a senha novamente</label>
+                <input id="confirmaSenha" type="password" name="passwordConfirm" >
+            </div>
+            <button class="button-submit" type="submit">Criar conta</button>
+        </div>
+        <p id="erro"></p>
+        <p class="termo">
+            Ao continuar, você concorda com as <a href="" class="own-account">Condições de Uso</a> da Motor Hub.
+        </p>
+        <a class="own-account" href="./login.html">Já possui uma conta?</a>
+    </form>
+    <script src="../script/model/User.js"></script>
+    <script src="../script/Database.js"></script>
+    <script src="../script/util/util.js"></script>
+    <script src="../script/util/alteracoesPagina.js"></script>
+    <script src="../script/auth/registrar.js"></script>
+
+</body>
+</html>

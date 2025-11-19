@@ -1,0 +1,231 @@
+
+.page-container {
+    max-width: 1240px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.simulation-layout {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px;
+}
+
+.car-summary-column {
+    flex: 1;
+    min-width: 300px;
+    position: sticky;
+    top: 30px; 
+    align-self: flex-start;
+}
+
+.car-summary-card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.car-summary-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+}
+
+.car-summary-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #212529;
+    padding: 15px 20px 0 20px;
+}
+
+.car-summary-card .spec {
+    font-size: 16px;
+    color: #6c757d;
+    padding: 0 20px;
+}
+
+.car-summary-card .price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    padding: 10px 20px;
+}
+
+.car-summary-card .details-list {
+    list-style: none;
+    padding: 15px 20px;
+    margin-top: 10px;
+    border-top: 1px solid #e9ecef;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 14px;
+    color: #495057;
+}
+
+.car-summary-card .details-list strong {
+    color: #212529;
+    display: block;
+    font-weight: 500;
+}
+
+
+.simulation-main-column {
+    flex: 2;
+    min-width: 320px;
+}
+
+.simulation-main-column h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #212529;
+}
+
+.simulation-subtitle {
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+.action-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.action-card h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.action-card textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus,
+.action-card textarea:focus {
+    outline: none;
+    border-color: #7a99d8;
+    box-shadow: 0 0 0 3px rgba(122, 153, 216, 0.25);
+}
+
+.form-group input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+    accent-color: #7a99d8; 
+}
+
+.action-card textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #7a99d8;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #6a88c6;
+    box-shadow: 0 4px 10px rgba(122, 153, 216, 0.4);
+}
+
+.btn-secondary {
+    background-color: #f1f3f5;
+    color: #343a40;
+    border: 1px solid #e9ecef;
+}
+
+.btn-secondary:hover {
+    background-color: #e9ecef;
+}
+
+.btn-primary.whatsapp {
+    background-color: #25D366;
+}
+
+.btn-primary.whatsapp:hover {
+    background-color: #20b858;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.btn-secondary i,
+.btn-primary i {
+    margin-right: 8px;
+}
+
+#resultado-simulacao {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#resultado-simulacao p {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+#resultado-simulacao #valor-parcela {
+    font-size: 28px;
+    font-weight: 700;
+    color: #343a40;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.payment-options {
+    display: flex;
+    gap: 15px;
+}
+@media (max-width: 500px) {
+    .payment-options {
+        flex-direction: column;
+    }
+}

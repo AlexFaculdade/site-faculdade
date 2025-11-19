@@ -1,0 +1,173 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-registrar {
+    width: 50rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.registrar-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.registrar-input label {
+    font-size: 1.7rem;
+}
+
+.registrar-input input {
+    padding: 1.3rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #F0F0F0;
+}
+
+.registrar-input input:focus {
+    outline: none;
+}
+
+.button-submit {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    background-color: #1f75eb;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.button-submit:hover {
+    background-color: #fff;
+    color: #1f75eb;
+    border: 1px #1f75eb solid;
+    font-weight: bold;
+}
+
+.own-account {
+    text-decoration: none;
+    color: #2162a1;
+    font-size: 1.5rem;
+}
+
+.termo {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    transition: 0.25s;
+}
+
+.own-account:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+#erro {
+    display: none;
+    color: red;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .form-registrar {
+        width: 90%; 
+        padding: 2rem; 
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .registrar-input label {
+        font-size: 1.4rem;
+    }
+
+    .registrar-input input {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .button-submit {
+        padding: 1.1rem;
+        font-size: 1.3rem;
+    }
+
+    .own-account,
+    .termo {
+        font-size: 1.1rem;
+    }
+}
+
+/* 2. Mobile View (Máximo de 480px) */
+@media screen and (max-width: 480px) {
+    /* Remove a sombra e arredondamento para um visual de tela cheia */
+    .form-registrar {
+        width: 100%;
+        min-height: 100vh; /* Garante que ocupa a tela inteira */
+        padding: 1rem; 
+        box-shadow: none; 
+        border-radius: 0;
+        justify-content: flex-start; /* Alinha o conteúdo ao topo (melhor para formulários longos) */
+        padding-top: 2rem;
+    }
+    
+    /* Garante que o body não tente centralizar verticalmente em 100vh, mas sim o topo */
+    body {
+        align-items: flex-start;
+    }
+    
+    .logo {
+        max-width: 200px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .form-content {
+        gap: 1.2rem;
+    }
+
+    .registrar-input label {
+        font-size: 1.2rem;
+    }
+    
+    .registrar-input input {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .button-submit {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .own-account,
+    .termo,
+    #erro {
+        font-size: 1rem;
+    }
+}

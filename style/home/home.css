@@ -1,0 +1,135 @@
+.home-header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    font-size: 2rem;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.home-logo {
+    max-width: 75%;
+    object-fit: cover;
+    display: flex;
+    justify-self: center;
+}
+
+.home-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-anchor {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.home-anchor:hover {
+    color: #1f75eb;
+}
+
+.home-account {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.account {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.account i {
+    font-size: 3rem;
+}
+
+.account:hover {
+    color: #1f75eb;
+}
+
+.favorities {
+    color: #000;
+    font-size: 3rem;
+}
+
+.favorities:hover {
+    color: #1f75eb;
+}
+
+
+@media screen and (max-width: 768px) {
+    .home-header {
+        grid-template-columns: 1fr 2fr 1fr;
+        font-size: 1.6rem;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .home-logo {
+        max-width: 80%;
+    }
+
+    .home-nav {
+        justify-content: space-between;
+    }
+
+    .account i {
+        font-size: 2.5rem;
+    }
+
+    .favorities {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.4rem;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .home-logo {
+        max-width: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .home-nav {
+        width: 90%;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .home-anchor p {
+        margin: 0;
+    }
+
+    .home-account {
+        width: 90%;
+        justify-content: space-around;
+    }
+    
+    .account {
+        gap: 1rem;
+    }
+
+    .account i {
+        font-size: 2rem;
+    }
+
+    .favorities {
+        font-size: 2rem;
+    }
+}
