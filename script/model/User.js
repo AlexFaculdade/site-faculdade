@@ -1,4 +1,4 @@
-// Classe para o objeto do user
+
 class User {
     nome
     email

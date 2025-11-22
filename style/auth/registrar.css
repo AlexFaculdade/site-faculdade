@@ -121,20 +121,17 @@ body {
     }
 }
 
-/* 2. Mobile View (Máximo de 480px) */
 @media screen and (max-width: 480px) {
-    /* Remove a sombra e arredondamento para um visual de tela cheia */
     .form-registrar {
         width: 100%;
-        min-height: 100vh; /* Garante que ocupa a tela inteira */
+        min-height: 100vh;
         padding: 1rem; 
         box-shadow: none; 
         border-radius: 0;
-        justify-content: flex-start; /* Alinha o conteúdo ao topo (melhor para formulários longos) */
+        justify-content: flex-start;
         padding-top: 2rem;
     }
     
-    /* Garante que o body não tente centralizar verticalmente em 100vh, mas sim o topo */
     body {
         align-items: flex-start;
     }

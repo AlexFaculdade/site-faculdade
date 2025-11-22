@@ -19,15 +19,19 @@ class FilterEvents {
   static checkboxesCarroceria = document.querySelectorAll(".carroceria");
   static checkboxesPortas = document.querySelectorAll(".portas");
 
+
   static refreshDatabase() {
     FilterEvents.anuncios = [...Object.values(Database.anuncios)];
   }
 
+  
   static getCambioSelecionado() {
     const valor = FilterEvents.selectCambio.value;
+    
     if (valor === 'valor1') {
         return null; 
     }
+    
     return FilterEvents.selectCambio.options[FilterEvents.selectCambio.selectedIndex].textContent.trim();
   }
 
@@ -35,14 +39,14 @@ class FilterEvents {
     const valores = [];
     checkboxList.forEach(checkbox => {
         if (checkbox.checked) {
-            // Pega o texto do parágrafo vizinho (ex: 'Amarelo', 'Hatch', '4')
+           
             const texto = checkbox.nextElementSibling.textContent.trim();
             valores.push(texto);
         }
     });
     return valores;
   }
-
+  
   static getCoresSelecionadas() {
       return FilterEvents.getCheckboxValues(FilterEvents.checkboxesCor);
   }
@@ -52,10 +56,10 @@ class FilterEvents {
   }
 
   static getPortasSelecionadas() {
-      // Os valores das portas são números, vamos convertê-los aqui
+     
       return FilterEvents.getCheckboxValues(FilterEvents.checkboxesPortas).map(Number);
   }
-
+  
   static getSearchLocalizacao() {
     return FilterEvents.searchLocalizacao.value;
   }
@@ -86,12 +90,11 @@ class FilterEvents {
   static getQuilometragemMaxima() {
     return FilterEvents.quilometragemMaxima.value
   }
-
   static handleInputSearch() {
     FilterEvents.aplicarTodosFiltros()
   }
 
-
+  
   static getMarcasSelecionadas() {
     let marcas = []
     const elementosSelecionados = document.querySelectorAll('.container-marcas--individual.selecionada');
@@ -101,13 +104,14 @@ class FilterEvents {
     });
     return marcas
   }
-
+  
   static forcarSelecaoMarca(marcaNome) {
+    
     FilterEvents.containerMarcas.querySelectorAll('.container-marcas--individual')
         .forEach(el => el.classList.remove('selecionada'));
         
     let marcaEncontrada = null;
-
+    
     FilterEvents.containerMarcas.querySelectorAll('.container-marcas--individual').forEach(elemento => {
         const nomeMarca = elemento.querySelector('p').textContent.trim();
         
@@ -128,7 +132,7 @@ static forcarSelecaoCarroceria(valorCarroceria) {
 
     FilterEvents.checkboxesCarroceria.forEach(checkbox => {
         const textoCarroceria = checkbox.nextElementSibling.textContent.trim().toLowerCase();
-        
+       
         if (textoCarroceria === valorBusca) {
             checkbox.checked = true;
         } else {
@@ -136,7 +140,7 @@ static forcarSelecaoCarroceria(valorCarroceria) {
         }
     });
 }
-
+ 
   static aplicarTodosFiltros() {
     FilterEvents.refreshDatabase();
     let resultadosFinais = FilterEvents.anuncios;
@@ -179,7 +183,7 @@ static forcarSelecaoCarroceria(valorCarroceria) {
 
     const marcasAtivas = FilterEvents.getMarcasSelecionadas();
         if (marcasAtivas.length > 0) {
-            // Filtra o resultado da localização
+            
             resultadosFinais = Filter.filterMarca(resultadosFinais, marcasAtivas);
     }
     
@@ -214,7 +218,7 @@ static forcarSelecaoCarroceria(valorCarroceria) {
       );
     }
 
-    // NOVO: FILTRO DE CÂMBIO
+   
     const cambio = FilterEvents.getCambioSelecionado();
     if (cambio) {
       resultadosFinais = Filter.filterCambio(resultadosFinais, cambio);
@@ -272,11 +276,11 @@ FilterEvents.quilometragemMaxima.addEventListener("input",() => {
 })
 
 FilterEvents.containerMarcas.addEventListener("click", (e) => {
-    // Usa closest para garantir que pegamos o container pai, não o <img> ou <p>
+   
     const marcaElemento = e.target.closest('.container-marcas--individual');
 
     if (marcaElemento) {
-        // Alterna a classe de seleção
+       
         marcaElemento.classList.toggle('selecionada');
     }
     FilterEvents.aplicarTodosFiltros()
@@ -284,20 +288,20 @@ FilterEvents.containerMarcas.addEventListener("click", (e) => {
 
 FilterEvents.anoEspecifico.forEach((elementoAno) => {
   elementoAno.addEventListener("click", (e) => {
-    // Pega o texto do botão de ano clicado
+    
     const ano = elementoAno.textContent.trim();
-    // Pega o texto do botão de ano clicado
+   
     const isSelecionadoAtualmente = elementoAno.classList.contains('selecionada');
     Util.removerSelecaoEspecifica(FilterEvents.anoEspecifico);
 
     if(isSelecionadoAtualmente) {
       elementoAno.classList.remove('selecionada');
-        // Zera os inputs de intervalo
+       
         FilterEvents.anoMinimo.value = "";
         FilterEvents.anoMaximo.value = "";
     } else {
         elementoAno.classList.add('selecionada');
-        // Escreva nos inputs
+        
         FilterEvents.anoMinimo.value = ano;
         FilterEvents.anoMaximo.value = ano;
     }
@@ -312,11 +316,11 @@ FilterEvents.precoEspecifico.forEach((elementoPreco) => {
     
     const precoMaximo = Util.extrairValorInputPreco(textoPreco); 
     
-    // Zera o mínimo e coloca o máximo
+  
     FilterEvents.precoMinimo.value = ""; 
     FilterEvents.precoMaximo.value = precoMaximo;
     
-    // Lógica visual (opcional)
+    
     FilterEvents.precoEspecifico.forEach(el => el.classList.remove('selecionada'));
     elementoPreco.classList.add('selecionada');
 

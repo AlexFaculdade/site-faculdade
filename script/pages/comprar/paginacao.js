@@ -1,3 +1,4 @@
+
 const listaDeCarrosParaTeste = [
     new Car("Mitsubishi", "Eclipse", "Sedan", "Branca", "93YZZZ765BT014588", "AAA1A11", 2019, 2020, 50000, "2.0 Turbo", 125000, "Manual", 2, true, true, true, true, true, true, true, true, true, "Couro", true, true),
 
@@ -26,12 +27,17 @@ const listaDeCarrosParaTeste = [
     new Car("Honda", "Civic EG", "Hatch", "Branco", "WAUZZZ4G8EN012345","ZAA1A11", 1995, 1992, 187000,"1.5 16v", 40000, "Manual", 2, true, true, true, true, false, true, true, true, true, "Tecido", true, true)
 ];
 
+
+
 if(Object.keys(Database.anuncios).length === 0) {
+    
     for(let i = 0; i < listaDeCarrosParaTeste.length; i++) {
         try {
             let anuncio
+            
             switch(i) {
                 case 0:
+                    
                     anuncio = new Anuncio(listaDeCarrosParaTeste[i], [
                         "../../img/comprar/carros/eclipse/mitsubishi-eclipse-1.jpg",
                         "../../img/comprar/carros/eclipse/mitsubishi-eclipse-2.jpg",
@@ -143,14 +149,16 @@ if(Object.keys(Database.anuncios).length === 0) {
                         ], "", ["Paraná", "Curitiba"],"Daniel","41999999999");
                         break;
             }
+           
             Database.addAnuncio(anuncio);
         } catch(err) {
+            
             console.error("Erro ao criar anúncio de teste:", err);
         }
     }
 }
 const itensPorPagina = 60
-let paginaAtual = 1
+let paginaAtual = 1 
 const cardContainer = document.querySelector('.grid-cards-car')
 const paginationContainer = document.createElement('div')
 paginationContainer.id = 'pagination-controls'
@@ -159,7 +167,7 @@ paginationContainer.id = 'pagination-controls'
 function renderizarCarroCard(anuncio) {
     const imageUrl = `../../img/comprar/${anuncio.car.marca}-${anuncio.car.modelo}.webp`
     const precoFormatado = anuncio.car.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-    // cria o formato do card
+    
     return `
         <div class="card-car" onclick="Anuncio.cardAnuncio('${anuncio.id}')">
             <div class="card-car--image">
@@ -191,18 +199,22 @@ function renderizarCarroCard(anuncio) {
 
 
 function renderizarCarros(anuncios) {
+    
     const inicio = (paginaAtual - 1) * itensPorPagina
     const fim = inicio + itensPorPagina
+    
     const carrosDaPagina = anuncios.slice(inicio, fim)
     cardContainer.innerHTML = ''
+    
     const htmlCarros = carrosDaPagina.map(anuncio => renderizarCarroCard(anuncio)).join('')
+   
     cardContainer.innerHTML = htmlCarros
     gerarBotoesPaginacao(anuncios.length)
 }
 
 
 function gerarBotoesPaginacao(totalItens) {
-    const totalPaginas = Math.ceil(totalItens / itensPorPagina) // Faz os anunciiso do database / dividido pela quantidade de itens por pag
+    const totalPaginas = Math.ceil(totalItens / itensPorPagina)
     paginationContainer.innerHTML = ''
     for (let i = 1; i <= totalPaginas; i++) {
         const button = document.createElement('button')

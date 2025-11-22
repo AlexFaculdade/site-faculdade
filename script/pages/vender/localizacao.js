@@ -1,3 +1,4 @@
+
 const DADOS_LOCALIZACAO = {
     'AC': ['Rio Branco', 'Cruzeiro do Sul'],
     'AL': ['Maceió', 'Arapiraca', 'Rio Largo'],
@@ -58,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const handleEstadoChange = () => {
         const estadoSelecionado = selectEstado.value;
-        
+
+
         selectCidade.innerHTML = '<option value="">Selecione a Cidade</option>';
         selectCidade.disabled = true;
         selectCidade.value = "";
@@ -72,11 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 selectCidade.appendChild(option);
             });
             
+
             selectCidade.disabled = false; 
         }
     };
     
-    
     popularEstados();
+
     selectEstado.addEventListener('change', handleEstadoChange);
 })

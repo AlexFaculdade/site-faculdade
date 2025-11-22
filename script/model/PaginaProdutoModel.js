@@ -13,7 +13,6 @@ class PaginaProdutoModel {
     static combustivel = document.getElementById("combustivel-carro")
     static imgs = document.querySelectorAll(".buy-image")
 
-    // Complementos
     static airbag = document.getElementById("carro-airbag")
     static freio = document.getElementById("carro-freio")
     static trava = document.getElementById("carro-trava")
@@ -27,17 +26,14 @@ class PaginaProdutoModel {
     static alarme = document.getElementById("carro-alarme")
     static retrovisorEletrico = document.getElementById("carro-retrovisorEletrico")
 
-    // Localizacação
     static estado = document.getElementById("estado")
     static cidade = document.getElementById("cidade")
 
-    // vendedor
     static vendedor = document.getElementById("vendedor")
     static telefone = document.getElementById("telefone")
 
     static renderizarCarroPagina() {
         let anuncio = Database.anuncioClicado
-        console.log(anuncio)
         PaginaProdutoModel.marca.textContent = anuncio.car.marca
         PaginaProdutoModel.modelo.textContent = anuncio.car.modelo
         PaginaProdutoModel.motor.textContent = anuncio.car.motor

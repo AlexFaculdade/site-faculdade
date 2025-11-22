@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttonAnunciar = document.getElementById("buttonAnunciar");
     const mensagemSucesso = document.getElementById('mensagem-sucesso');
     VerificacaoCamposVenda.vendedor.textContent = Database.sessionUser().nome
-    console.log(VerificacaoCamposVenda.aceitaTroca.checked)
     buttonAnunciar.addEventListener('click', (event) => {
         
         event.preventDefault();
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             [VerificacaoCamposVenda.img1.value, VerificacaoCamposVenda.img2.value, VerificacaoCamposVenda.img3.value, VerificacaoCamposVenda.img4.value],
             VerificacaoCamposVenda.titulo.value,  [VerificacaoCamposVenda.estado.value, VerificacaoCamposVenda.cidade.value], Database.sessionUser().nome, VerificacaoCamposVenda.telefone.value
             )
-            console.log(anuncio)
             Database.addAnuncio(anuncio);
         } catch(error) {
             console.error("Não foi possível anunciar o carro")
@@ -25,10 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return
         }
         
-        
-
-    
-        console.log("Formulário pronto para enviar!");
 
         mensagemSucesso.style.display = 'block';
         form.reset();

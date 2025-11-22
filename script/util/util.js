@@ -50,10 +50,13 @@ class Util {
         })
     }
 
+    // Utiliza uma Regex para validar as placas conforme o formato da mercosul
     static validarPlacaMercoSul(placa) {
         const RegexPlacaMercoSul = new RegExp('^[A-Z]{3}[0-9][A-Z][0-9]{2}$')
         return RegexPlacaMercoSul.test(placa)
     }
+
+    // Valida o telefone fornecido com uma regex
     static validaTelefoneBr(telefone) {
         const regexBR = new RegExp('^[1-9]{2}(?:[2-9][0-9]{7}|[6-9][0-9]{8})$')
         const numeroLimpo = telefone.replace(/[^\d]/g, '');

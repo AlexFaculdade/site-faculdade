@@ -43,6 +43,9 @@ class VerificacaoCamposVenda {
     static vendedor = document.getElementById("username")
     
     static errorParagraph = document.getElementById("erro")
+    
+    // Basicamente toda esse method serve para validar os campos de venda que o user colocou. Na hora que ele
+    // clica para enviar o formulário é feita a validação de todos esses arquivos com a classe VerificacaoCamposVenda
 
     static validarCampos() {
         if(!VerificacaoCamposVenda.marca.value ) {
@@ -143,6 +146,9 @@ class VerificacaoCamposVenda {
 
         return true
     }
+
+    // Aqui ele basicamente cria um objeto do carro e do anúncio com seus respectivos constructors dentro da
+    // classe Anuncio.js e Car.js
 
     static criarAnuncioCarro() {
         let marca = VerificacaoCamposVenda.marca.value
